@@ -1,0 +1,226 @@
+[
+  {
+    "turn_number": 1,
+    "result": "게임 시작! 모두 가게 문을 열었어요.",
+    "news": "서커스단이 하늘을 나는 새 마법 묘기를 준비한다는 소문이 돌아요! 정말 멋질 것 같나요?",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "새 묘기가 성공하면 인기가 아주 많아질 거예요. 실패하면 실망할 수도 있어요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "서커스단의 새로운 하늘 나는 마법 묘기가 성공적으로 펼쳐져 모두에게 큰 감동을 주었어요!",
+    "news": "다음 주에 마을 전체에서 '별빛 축제'가 열린대요! 온 마을이 반짝일 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳",
+        "before_value": 100,
+        "current_value": 101,
+        "expectation": "축제 덕분에 손님이 많아져 인기가 오를 거예요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳",
+        "before_value": 100,
+        "current_value": 110,
+        "expectation": "축제 덕분에 손님이 많아져 인기가 오를 거예요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "축제 덕분에 손님이 많아져 인기가 오를 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "마을 전체에서 열린 별빛 축제 덕분에 모든 가게가 손님들로 북적이며 활기가 넘쳤어요!",
+    "news": "마법연구소에서 아주 오래된 '시간 되돌리기' 마법을 시도할 준비를 하고 있대요. 너무 위험하다는 소문도 있어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳",
+        "before_value": 101,
+        "current_value": 111,
+        "expectation": "마법이 성공하면 아주 유명해질 거예요. 하지만 실패하면 큰 문제가 생길 수도 있어요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳",
+        "before_value": 110,
+        "current_value": 115,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳",
+        "before_value": 100,
+        "current_value": 102,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "마법연구소의 시간 되돌리기 마법 시도가 예상치 못하게 실패하여 연구실이 어수선해졌어요.",
+    "news": "환상의 숲에서 온 무지개색 유니콘이 서커스단의 특별 손님으로 나타날지도 모른대요! 정말 올까요?",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳",
+        "before_value": 111,
+        "current_value": 91,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳",
+        "before_value": 115,
+        "current_value": 116,
+        "expectation": "유니콘이 오면 서커스단 인기가 하늘을 찌를 거예요. 안 오면 실망하는 손님도 있을 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳",
+        "before_value": 102,
+        "current_value": 102,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "환상의 숲에서 온 무지개색 유니콘이 서커스단에 나타나 멋진 공연을 함께하여 마을 사람들을 깜짝 놀라게 했어요!",
+    "news": "마법연구소 옆 동굴에서 신비한 '별가루 광석'이 발견됐어요! 새로운 마법에 쓸 수 있지만, 다루기 어렵대요.",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳",
+        "before_value": 91,
+        "current_value": 93,
+        "expectation": "별가루 광석으로 멋진 마법을 만들면 인기가 폭발할 거예요. 잘못 다루면 연구가 어려워질 수도 있어요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳",
+        "before_value": 116,
+        "current_value": 126,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳",
+        "before_value": 102,
+        "current_value": 103,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "마법연구소에서 신비한 별가루 광석을 성공적으로 다루어 새로운 마법을 개발하여 마을에 큰 기대를 주었어요!",
+    "news": "밤하늘에 행운의 별똥별이 쏟아질 예정이래요! 모두에게 좋은 기운을 줄 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳",
+        "before_value": 93,
+        "current_value": 113,
+        "expectation": "별똥별 덕분에 좋은 일이 생겨 가게에 활기가 넘칠 거예요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳",
+        "before_value": 126,
+        "current_value": 126,
+        "expectation": "별똥별 덕분에 좋은 일이 생겨 가게에 활기가 넘칠 거예요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳",
+        "before_value": 103,
+        "current_value": 104,
+        "expectation": "별똥별 덕분에 좋은 일이 생겨 가게에 활기가 넘칠 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "밤하늘에 아름다운 별똥별이 쏟아져 마을 전체에 행운의 기운을 불어넣어 모든 가게가 활기를 되찾았어요!",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳",
+        "before_value": 113,
+        "current_value": 123,
+        "expectation": ""
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳",
+        "before_value": 126,
+        "current_value": 131,
+        "expectation": ""
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳",
+        "before_value": 104,
+        "current_value": 106,
+        "expectation": ""
+      }
+    ]
+  }
+]
