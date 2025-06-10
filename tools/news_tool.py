@@ -32,7 +32,7 @@ def generate_news_scenario(
         ],
         generation_config={
             "temperature": temperature,
-            "max_output_tokens": 7000
+            "max_output_tokens": 10000
         }
     )
     result = response.candidates[0].content.parts[0].text

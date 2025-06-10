@@ -43,7 +43,7 @@ def generate_result(
         ],
         generation_config={
             "temperature": temperature,
-            "max_output_tokens": 10000
+            "max_output_tokens": 15000
         }
     )
     result = response.candidates[0].content.parts[0].text

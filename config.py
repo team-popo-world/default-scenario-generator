@@ -11,7 +11,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = "gpt-4.1-mini"
 
 # 디폴트 temperature
-DEFAULT_TEMPERATURE = 0.8
+DEFAULT_TEMPERATURE = 0.9
 
 # 프롬프트 경로
 PIG_NEWS_PROMPT_PATH = "./templates/pig/news_prompt.txt"
