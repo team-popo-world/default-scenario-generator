@@ -27,11 +27,11 @@ def main():
 
     # 3. 저장 (파일명 자동 생성, news_json_files 디렉토리 사용)
     print("2. 뉴스 JSON 파일 저장 중...")
-    save_json_to_dir(news_json, "news_json_files", f"{theme}_news_json")
+    save_json_to_dir(news_json, f"news_json_files\{theme}", f"{theme}_news_json")
 
     # 4. 뉴스 불러오기
     print("3. 테마에 해당하는 최신 뉴스 파일 불러오기...")
-    get_latest_json_file(theme)
+    get_latest_json_file(theme, f"news_json_files\{theme}")
 
     # 5. 최종 시나리오 생성
     print("4. 최종 시나리오(result) 생성 중...")
@@ -39,7 +39,8 @@ def main():
 
     # 6. 결과 저장
     print("5. 결과(result) 파일 저장 중...")
-    save_json_to_dir(result_json, "result_json_files", f"{theme}_result_json")
+    save_json_to_dir(result_json, f"result_json_files\{theme}", f"{theme}_result_json")
 
 if __name__ == "__main__":
     main()
+

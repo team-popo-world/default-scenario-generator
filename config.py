@@ -12,3 +12,6 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # 사용할 LLM 모델명
 GEMINI_MODEL = "gemini-2.5-flash-preview-05-20"
+
+# API 주소
+API_URL = os.getenv("API_URL")
