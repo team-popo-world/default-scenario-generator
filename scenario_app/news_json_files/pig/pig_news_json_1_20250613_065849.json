@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": "",
+    "news": "갑자기 거센 폭풍우가 몰려온다는 소식이 들려요! 하늘이 점점 어두워지고 있어요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "강한 비바람에 집 짓기가 어려워질 수 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "강한 비바람에 집 짓기가 어려워질 수 있어요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "강한 비바람에 집 짓기가 어려워질 수 있어요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "",
+    "news": "첫째 돼지 집 근처에서 지푸라기를 엮는 특별한 기계를 보았다는 소문이 돌아요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "기계가 있다면 집이 더 빨리 지어지겠지만, 없다면 시간 낭비가 클 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "",
+    "news": "둘째 돼지에게 튼튼한 나무를 아주 많이 가져다줄 숲속 거인 친구가 나타났다는 소문이 들려요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "거인의 도움이 있다면 집 짓기가 아주 빨라지겠지만, 아니라면 실망이 클 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "",
+    "news": "마을의 친절한 마녀 할머니가 모든 돼지들을 위해 힘이 솟는 마법 약을 선물했어요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "모두에게 힘이 솟아 집 짓는 속도가 더 빨라질 거예요!"
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "모두에게 힘이 솟아 집 짓는 속도가 더 빨라질 거예요!"
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "모두에게 힘이 솟아 집 짓는 속도가 더 빨라질 거예요!"
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "",
+    "news": "첫째 돼지의 지푸라기 집에 배고픈 벌레들이 모여들고 있다는 소문이 돌아요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "벌레들이 집을 망가뜨릴 수 있지만, 아무 일 없다면 안심하고 지을 수 있을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "",
+    "news": "둘째 돼지가 꿈에서 아주 특별한 나무를 단단하게 만드는 비법을 보았다는 소문이 들려요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "비법이 진짜라면 집이 아주 튼튼해지겠지만, 아니라면 기대했던 것보다 약할 수 있어요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": ""
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": ""
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": ""
+      }
+    ]
+  }
+]

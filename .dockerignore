@@ -1,0 +1,19 @@
+# Python/IDE 관련
+__pycache__/
+*.pyc
+*.pyo
+
+# 로그 파일
+*.log
+logs/
+
+# 환경/설정 파일 (로컬 전용)
+.env
+
+# Git 관련
+.git
+.gitignore
+
+# 시나리오 파일
+news_json_files/*
+result_json_files/*

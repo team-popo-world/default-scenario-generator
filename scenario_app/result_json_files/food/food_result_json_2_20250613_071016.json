@@ -1,0 +1,184 @@
+[
+  {
+    "turn_number": 1,
+    "result": "푸드트럭 마을에 새로운 하루가 시작되었어요!",
+    "news": "아이스크림 트럭 옆에 큰 놀이터가 생길 거라는 소문이 돌아요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 100,
+        "current_value": 100
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "놀이터가 생기면 손님이 많아져요! 안 생기면 실망해서 손님이 줄 수도 있어요.",
+        "before_value": 100,
+        "current_value": 100
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 100,
+        "current_value": 100
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "아이스크림 트럭 옆에 큰 놀이터가 정말로 생겨서 아이들이 북적였어요!",
+    "news": "갑자기 쨍한 햇빛이 쏟아져요! 푸드트럭 마을 전체가 따뜻해졌어요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "날씨가 따뜻해져 손님들이 푸드트럭을 더 많이 찾을 거예요!",
+        "before_value": 100,
+        "current_value": 101
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "날씨가 따뜻해져 손님들이 푸드트럭을 더 많이 찾을 거예요!",
+        "before_value": 100,
+        "current_value": 108
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "날씨가 따뜻해져 손님들이 푸드트럭을 더 많이 찾을 거예요!",
+        "before_value": 100,
+        "current_value": 101
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "따뜻한 햇빛 덕분에 푸드트럭 마을 전체에 손님들이 활짝 웃으며 찾아왔어요!",
+    "news": "퓨전 타코 트럭이 유명한 먹방 유튜버 '냠냠박사'의 방송에 나올 수도 있다는 소문이 돌고 있어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "방송에 나오면 인기가 폭발! 안 나오면 실망해서 손님이 줄 수도 있어요.",
+        "before_value": 101,
+        "current_value": 108
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 108,
+        "current_value": 112
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 101,
+        "current_value": 103
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "아쉽게도 퓨전 타코 트럭은 '냠냠박사' 방송에 나오지 않아 손님들이 살짝 실망했어요.",
+    "news": "아이스크림 재료를 싣고 오던 트럭이 갑자기 고장 났다는 소식이 들려요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 108,
+        "current_value": 93
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "재료가 늦게 오면 장사가 힘들 수 있지만, 해결되면 괜찮을 거예요.",
+        "before_value": 112,
+        "current_value": 113
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 103,
+        "current_value": 104
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "아이스크림 재료 트럭의 고장이 빨리 해결되어, 오히려 평소보다 더 신선한 재료가 도착했어요!",
+    "news": "마을 전체에 '푸드트럭 페스티벌' 포스터가 붙었어요! 다음 주말에 열린대요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "페스티벌 소식에 마을에 손님이 몰려들 거예요! 모두에게 좋은 소식이에요.",
+        "before_value": 93,
+        "current_value": 94
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "페스티벌 소식에 마을에 손님이 몰려들 거예요! 모두에게 좋은 소식이에요.",
+        "before_value": 113,
+        "current_value": 120
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "페스티벌 소식에 마을에 손님이 몰려들 거예요! 모두에게 좋은 소식이에요.",
+        "before_value": 104,
+        "current_value": 105
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "푸드트럭 페스티벌 소식에 마을 사람들이 기대하며 푸드트럭을 더 많이 찾았어요!",
+    "news": "퓨전 타코 트럭의 비밀 레시피가 담긴 공책이 잠시 없어졌다는 소문이 돌아요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "레시피를 못 찾으면 손님이 줄 수 있지만, 찾으면 안심할 거예요.",
+        "before_value": 94,
+        "current_value": 102
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 120,
+        "current_value": 125
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 105,
+        "current_value": 107
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "다행히 퓨전 타코 트럭의 비밀 레시피 공책이 무사히 발견되어 손님들이 안심했어요!",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "",
+        "before_value": 102,
+        "current_value": 112
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "",
+        "before_value": 125,
+        "current_value": 126
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "",
+        "before_value": 107,
+        "current_value": 108
+      }
+    ]
+  }
+]

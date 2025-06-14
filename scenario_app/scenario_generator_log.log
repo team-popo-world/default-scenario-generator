@@ -1,0 +1,59 @@
+INFO:root:[magic][1] [뉴스 생성] 시작
+INFO:root:[magic][1] [뉴스 생성] 성공
+INFO:root:[magic][1] [뉴스 저장] 시작
+INFO:root:[magic][1] [뉴스 저장] 성공
+INFO:root:[magic][1] [뉴스 불러오기] 시작
+INFO:root:[magic][1] [뉴스 불러오기] 성공
+INFO:root:[magic][1] [결과 생성] 시작
+INFO:root:[magic][1] [결과 생성] 성공
+INFO:root:[magic][1] [결과 저장] 시작
+INFO:root:[magic][1] [결과 저장] 성공
+INFO:root:[magic][1]번째 시나리오 전체 성공 (총 시도 1)
+INFO:root:[magic][2] [뉴스 생성] 시작
+INFO:root:[magic][2] [뉴스 생성] 성공
+INFO:root:[magic][2] [뉴스 저장] 시작
+INFO:root:[magic][2] [뉴스 저장] 성공
+INFO:root:[magic][2] [뉴스 불러오기] 시작
+INFO:root:[magic][2] [뉴스 불러오기] 성공
+INFO:root:[magic][2] [결과 생성] 시작
+INFO:root:[magic][2] [결과 생성] 성공
+INFO:root:[magic][2] [결과 저장] 시작
+INFO:root:[magic][2] [결과 저장] 성공
+INFO:root:[magic][2]번째 시나리오 전체 성공 (총 시도 2)
+INFO:root:[magic] 최종 2개 생성/저장 완료! (총 시도 2회)
+INFO:root:[pig][1] [뉴스 생성] 시작
+INFO:root:[pig][1] [뉴스 생성] 성공
+INFO:root:[pig][1] [뉴스 저장] 시작
+INFO:root:[pig][1] [뉴스 저장] 성공
+INFO:root:[pig][1] [뉴스 불러오기] 시작
+INFO:root:[pig][1] [뉴스 불러오기] 성공
+INFO:root:[pig][1] [결과 생성] 시작
+INFO:root:[pig][1] [결과 생성] 성공
+INFO:root:[pig][1] [결과 저장] 시작
+INFO:root:[pig][1] [결과 저장] 성공
+INFO:root:[pig][1]번째 시나리오 전체 성공 (총 시도 1)
+INFO:root:[pig] 최종 1개 생성/저장 완료! (총 시도 1회)
+INFO:root:[food][1] [뉴스 생성] 시작
+INFO:root:[food][1] [뉴스 생성] 성공
+INFO:root:[food][1] [뉴스 저장] 시작
+INFO:root:[food][1] [뉴스 저장] 성공
+INFO:root:[food][1] [뉴스 불러오기] 시작
+INFO:root:[food][1] [뉴스 불러오기] 성공
+INFO:root:[food][1] [결과 생성] 시작
+INFO:root:[food][1] [결과 생성] 성공
+INFO:root:[food][1] [결과 저장] 시작
+INFO:root:[food][1] [결과 저장] 성공
+INFO:root:[food][1]번째 시나리오 전체 성공 (총 시도 1)
+INFO:root:[food] 최종 1개 생성/저장 완료! (총 시도 1회)
+INFO:root:[magic][1] [뉴스 생성] 시작
+INFO:root:[magic][1] [뉴스 생성] 성공
+INFO:root:[magic][1] [뉴스 저장] 시작
+INFO:root:[magic][1] [뉴스 저장] 성공
+INFO:root:[magic][1] [뉴스 불러오기] 시작
+INFO:root:[magic][1] [뉴스 불러오기] 성공
+INFO:root:[magic][1] [결과 생성] 시작
+INFO:root:[magic][1] [결과 생성] 성공
+INFO:root:[magic][1] [결과 저장] 시작
+INFO:root:[magic][1] [결과 저장] 성공
+INFO:root:[magic][1]번째 시나리오 전체 성공 (총 시도 1)
+INFO:root:[magic] 최종 1개 생성/저장 완료! (총 시도 1회)

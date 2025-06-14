@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": "",
+    "news": "따뜻한 햇살이 가득한 날씨가 찾아왔어요! 집 짓기에 참 좋은 날씨네요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "햇살 덕분에 집 짓는 속도가 조금 빨라질 수 있어요!"
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "햇살 덕분에 집 짓는 속도가 조금 빨라질 수 있어요!"
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "햇살 덕분에 집 짓는 속도가 조금 빨라질 수 있어요!"
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "",
+    "news": "둘째 돼지에게 특별한 나무 자르기 도구를 빌려줄 거라는 소문이 돌아요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "도구를 빌리면 집이 빨리 지어질 수 있지만, 못 빌리면 속상할 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "",
+    "news": "갑자기 불어온 강한 바람 때문에 집 짓기가 조금 힘들어질 수도 있대요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "바람 때문에 집 짓는 속도가 조금 느려질 수 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "바람 때문에 집 짓는 속도가 조금 느려질 수 있어요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "바람 때문에 집 짓는 속도가 조금 느려질 수 있어요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "",
+    "news": "첫째 돼지가 지푸라기 집을 더 빨리 짓는 비밀 비법을 발견했다는 소문이 돌아요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "비법이 진짜라면 집이 아주 빨리 지어질 수 있지만, 아닐 수도 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "",
+    "news": "둘째 돼지의 나무 재료에 흠집이 있다는 소문이 돌아요. 잘 살펴봐야 할 것 같아요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "흠집이 진짜면 집 짓는 속도가 느려질 수 있지만, 거짓 소문일 수도 있어요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "",
+    "news": "늑대가 첫째 돼지 집 근처를 어슬렁거렸다는 소문이 돌아요! 조심해야겠어요.",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "늑대가 나타나면 집 짓기가 위험해질 수 있지만, 안 나타날 수도 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": ""
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": ""
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": ""
+      }
+    ]
+  }
+]

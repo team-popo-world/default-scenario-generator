@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": "",
+    "news": "쨍쨍한 햇살이 가득한 날씨! 집 짓기 딱 좋은 날이에요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "집을 더 빨리 지을 수 있어서 좋을 거예요!"
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "집을 더 빨리 지을 수 있어서 좋을 거예요!"
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "집을 더 빨리 지을 수 있어서 좋을 거예요!"
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "",
+    "news": "첫째 돼지가 지푸라기 집을 더 단단하게 지을 비밀 재료를 찾았다는 소문이 돌아요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "재료를 찾으면 집이 튼튼해져 가치 상승! 못 찾으면 실망하고 하락할 수 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "",
+    "news": "둘째 돼지의 나무집에 작은 벌레들이 나타날 수 있다는 소문이 돌아요. 나무를 갉아먹을까 걱정이에요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "벌레가 나타나면 집 짓기가 느려져 가치 하락! 안 나타나면 평소처럼 진행될 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "",
+    "news": "숲속 마녀가 잠시 마법으로 모든 동물 친구들의 집 짓기를 도와주기로 했대요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "마녀의 도움으로 집 짓는 속도가 빨라질 거예요!"
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "마녀의 도움으로 집 짓는 속도가 빨라질 거예요!"
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "마녀의 도움으로 집 짓는 속도가 빨라질 거예요!"
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "",
+    "news": "첫째 돼지가 '번개 망치'를 빌릴 수도 있다는 소문이 돌아요! 집 짓는 속도가 훨씬 빨라질 수 있대요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "망치를 빌리면 집 짓는 속도가 빨라져 가치 상승! 못 빌리면 실망하고 하락할 수 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "",
+    "news": "둘째 돼지가 나무 재료를 쌓아둔 곳에 도깨비가 나타나 나무를 엉망으로 만들 수 있다는 소문이 퍼졌어요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "도깨비가 나타나면 집 짓기가 느려져 가치 하락! 안 나타나면 평소처럼 진행될 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": ""
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": ""
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": ""
+      }
+    ]
+  }
+]
