@@ -1,2 +1,7 @@
 .env
-logs/
+
+# logs 폴더 전체 무시
+logs/*
+
+# 단, .gitkeep 파일은 포함 (구조 유지)
+!logs/.gitkeep
