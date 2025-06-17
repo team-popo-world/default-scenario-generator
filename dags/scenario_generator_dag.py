@@ -103,7 +103,6 @@ send_task = PythonOperator(
 )
 
 # Task 의존성 설정
-# 1. 먼저 파일 정리
-# 2. 모든 테마의 시나리오를 병렬로 생성
-# 3. 모든 생성이 완료되면 전송
-clean_task >> generation_tasks >> send_task
+# clean_task → pig → food → magic → moon → send_task
+
+clean_task >> generation_tasks[0] >> generation_tasks[1] >> generation_tasks[2] >> generation_tasks[3] >> send_task

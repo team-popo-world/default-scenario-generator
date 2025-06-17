@@ -102,3 +102,4 @@ if __name__ == "__main__":
     theme = input("테마를 입력하세요(pig, food, magic, moon): ").strip().lower()
     n = int(input("몇 개의 시나리오를 생성할까요? (숫자): ").strip())
     main(theme, n)
+
