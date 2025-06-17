@@ -16,7 +16,7 @@ services:
     env_file:
       - .env
     environment:
-      - AIRFLOW__WEBSERVER__WEB_SERVER_HOST = 0.0.0.0
+      - AIRFLOW__WEBSERVER__WEB_SERVER_HOST=0.0.0.0
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
