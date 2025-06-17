@@ -17,6 +17,7 @@ services:
       - .env
     environment:
       - AIRFLOW__WEBSERVER__WEB_SERVER_HOST=0.0.0.0
+    user: "${AIRFLOW_UID:-50000}"
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -31,12 +32,12 @@ services:
         sleep 10 &&
         airflow db upgrade &&
         airflow users create \
-          --username admin \
+          --username ${AIRFLOW__WEBSERVER__DEFAULT_USER} \
           --firstname Admin \
           --lastname User \
           --role Admin \
           --email admin@example.com \
-          --password admin123 &&
+          --password ${AIRFLOW__WEBSERVER__DEFAULT_PASSWORD} &&
         exec airflow webserver
       "
 
@@ -46,6 +47,7 @@ services:
       - postgres
     env_file:
       - .env
+    user: "${AIRFLOW_UID:-50000}" 
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
