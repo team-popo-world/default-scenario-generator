@@ -1,0 +1,184 @@
+[
+  {
+    "turn_number": 1,
+    "result": "게임 시작! 푸드트럭 마을의 하루가 시작되었어요.",
+    "news": "오늘 푸드트럭 마을에 유명한 먹방 유튜버 '냠냠키드'가 나타났다는 소문이 돌아요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "유명 유튜버 덕분에 손님이 많아져 모두에게 좋은 날이 될 거예요!",
+        "before_value": 100,
+        "current_value": 100
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "유명 유튜버 덕분에 손님이 많아져 모두에게 좋은 날이 될 거예요!",
+        "before_value": 100,
+        "current_value": 100
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "유명 유튜버 덕분에 손님이 많아져 모두에게 좋은 날이 될 거예요!",
+        "before_value": 100,
+        "current_value": 100
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "유명 먹방 유튜버 '냠냠키드'가 푸드트럭 마을을 방문해 모든 트럭이 큰 인기를 얻었어요!",
+    "news": "퓨전 타코 트럭이 세상에 없던 '무지개빛 타코'를 만들 거라는 소문이 돌고 있어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "무지개 타코가 성공하면 인기가 하늘을 찌르고, 실패하면 실망한 손님이 줄어들 수 있어요.",
+        "before_value": 100,
+        "current_value": 110
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 100,
+        "current_value": 105
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 100,
+        "current_value": 102
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "퓨전 타코 트럭의 '무지개빛 타코'가 큰 성공을 거두어 손님들이 줄을 섰어요!",
+    "news": "갑자기 날씨가 더워져서 아이스크림 트럭이 '시원한 얼음 맛' 신메뉴를 준비한다는 소문이 있어요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 110,
+        "current_value": 125
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "새로운 맛이 아주 시원하면 인기가 오르고, 평범하면 기대만큼 손님이 오지 않을 수도 있어요.",
+        "before_value": 105,
+        "current_value": 106
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 102,
+        "current_value": 103
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "아이스크림 트럭의 '시원한 얼음 맛' 신메뉴가 더운 날씨에 큰 인기를 끌었어요!",
+    "news": "푸드트럭 마을의 수도관이 고장나서 깨끗한 물 사용이 어려워졌어요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "깨끗한 물 사용이 어려워져서 모든 트럭의 장사가 조금 힘들어질 수 있어요.",
+        "before_value": 125,
+        "current_value": 126
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "깨끗한 물 사용이 어려워져서 모든 트럭의 장사가 조금 힘들어질 수 있어요.",
+        "before_value": 106,
+        "current_value": 114
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "깨끗한 물 사용이 어려워져서 모든 트럭의 장사가 조금 힘들어질 수 있어요.",
+        "before_value": 103,
+        "current_value": 104
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "수도관 고장으로 깨끗한 물 사용이 어려워지면서 모든 트럭의 장사가 어려움을 겪었어요.",
+    "news": "퓨전 타코 트럭이 세계 최고 희귀 재료인 '황금 아보카도'를 어렵게 구했다는 소문이 들려요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "황금 아보카도 타코가 대박 나면 엄청난 인기를 얻고, 맛이 별로면 비싼 재료만 낭비할 수 있어요.",
+        "before_value": 126,
+        "current_value": 116
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 114,
+        "current_value": 109
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 104,
+        "current_value": 102
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "황금 아보카도 타코는 기대와 달리 손님들의 반응이 미지근해서 재료 낭비가 컸어요.",
+    "news": "아이스크림 트럭 근처에 새로 생긴 놀이터에서 어린이 축제가 열릴 예정이래요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 116,
+        "current_value": 101
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "어린이 축제 덕분에 아이스크림 판매가 늘면 좋지만, 축제가 취소되면 기대했던 손님이 줄 거예요.",
+        "before_value": 109,
+        "current_value": 110
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "큰 영향이 없을 거예요.",
+        "before_value": 102,
+        "current_value": 103
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "아이스크림 트럭 근처 어린이 축제가 성황리에 열려 아이스크림 판매가 크게 늘었어요!",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "expectation": "",
+        "before_value": 101,
+        "current_value": 102
+      },
+      {
+        "name": "아이스크림 트럭",
+        "expectation": "",
+        "before_value": 110,
+        "current_value": 118
+      },
+      {
+        "name": "샌드위치 트럭",
+        "expectation": "",
+        "before_value": 103,
+        "current_value": 104
+      }
+    ]
+  }
+]

@@ -1,0 +1,226 @@
+[
+  {
+    "turn_number": 1,
+    "result": "게임 시작! 푸드트럭들이 문을 활짝 열었어요.",
+    "news": "아이스크림 트럭에 아주 특별하고 반짝이는 새 맛 아이스크림이 나올 거라는 소문이 돌아요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "risk_level": "고위험 고수익",
+        "description": "독특한 레시피와 화려한 토핑으로 손님들의 눈길을 사로잡아요!",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "아이스크림 트럭",
+        "risk_level": "중위험 균형형",
+        "description": "계절, 날씨, 트렌드에 따라 인기도가 오르내리지만, 너무 크게 요동치진 않아요.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "새 맛이 나오면 인기가 아주 많아질 수 있지만, 안 나오면 실망할 수 있어요."
+      },
+      {
+        "name": "샌드위치 트럭",
+        "risk_level": "저위험 저수익",
+        "description": "언제 먹어도 맛있는 메뉴로, 꾸준히 손님이 찾아와요.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "아이스크림 트럭에서 소문대로 새 맛 아이스크림이 나와서 손님들이 줄을 섰어요!",
+    "news": "푸드트럭 마을에 어린이날 특별 축제가 열린대요! 모든 푸드트럭에 손님들이 몰려올 것 같아요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "risk_level": "고위험 고수익",
+        "description": "독특한 레시피와 화려한 토핑으로 손님들의 눈길을 사로잡아요!",
+        "before_value": 100,
+        "current_value": 101,
+        "expectation": "모든 트럭에 손님이 많아져 인기가 오를 거예요."
+      },
+      {
+        "name": "아이스크림 트럭",
+        "risk_level": "중위험 균형형",
+        "description": "계절, 날씨, 트렌드에 따라 인기도가 오르내리지만, 너무 크게 요동치진 않아요.",
+        "before_value": 100,
+        "current_value": 108,
+        "expectation": "모든 트럭에 손님이 많아져 인기가 오를 거예요."
+      },
+      {
+        "name": "샌드위치 트럭",
+        "risk_level": "저위험 저수익",
+        "description": "언제 먹어도 맛있는 메뉴로, 꾸준히 손님이 찾아와요.",
+        "before_value": 100,
+        "current_value": 101,
+        "expectation": "모든 트럭에 손님이 많아져 인기가 오를 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "어린이날 특별 축제 덕분에 푸드트럭 마을에 손님들이 가득 몰려와 모두 즐거운 시간을 보냈어요!",
+    "news": "유명한 맛집 유튜버 '맛탐정 푸딩'님이 퓨전 타코 트럭을 방문할 수도 있다는 소문이 돌아요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "risk_level": "고위험 고수익",
+        "description": "독특한 레시피와 화려한 토핑으로 손님들의 눈길을 사로잡아요!",
+        "before_value": 101,
+        "current_value": 110,
+        "expectation": "유튜버가 오면 인기가 엄청 오르겠지만, 안 오면 기대가 실망으로 바뀔 수 있어요."
+      },
+      {
+        "name": "아이스크림 트럭",
+        "risk_level": "중위험 균형형",
+        "description": "계절, 날씨, 트렌드에 따라 인기도가 오르내리지만, 너무 크게 요동치진 않아요.",
+        "before_value": 108,
+        "current_value": 112,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "샌드위치 트럭",
+        "risk_level": "저위험 저수익",
+        "description": "언제 먹어도 맛있는 메뉴로, 꾸준히 손님이 찾아와요.",
+        "before_value": 101,
+        "current_value": 103,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "유명한 맛집 유튜버 '맛탐정 푸딩'님은 결국 퓨전 타코 트럭에 오지 않아 손님들이 조금 실망했어요.",
+    "news": "아이스크림 트럭 옆에 큰 놀이터 공사가 시작될 수도 있다는 소식이 들려요. 시끄러워질 수도 있어요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "risk_level": "고위험 고수익",
+        "description": "독특한 레시피와 화려한 토핑으로 손님들의 눈길을 사로잡아요!",
+        "before_value": 110,
+        "current_value": 95,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "아이스크림 트럭",
+        "risk_level": "중위험 균형형",
+        "description": "계절, 날씨, 트렌드에 따라 인기도가 오르내리지만, 너무 크게 요동치진 않아요.",
+        "before_value": 112,
+        "current_value": 113,
+        "expectation": "공사가 시작되면 시끄러워서 손님이 줄 수 있어요. 안 하면 괜찮을 거예요."
+      },
+      {
+        "name": "샌드위치 트럭",
+        "risk_level": "저위험 저수익",
+        "description": "언제 먹어도 맛있는 메뉴로, 꾸준히 손님이 찾아와요.",
+        "before_value": 103,
+        "current_value": 104,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "다행히 아이스크림 트럭 옆 놀이터 공사는 시작되지 않아 평화로운 하루였어요.",
+    "news": "갑자기 푸드트럭 마을에 강한 바람과 함께 소나기가 쏟아지기 시작했어요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "risk_level": "고위험 고수익",
+        "description": "독특한 레시피와 화려한 토핑으로 손님들의 눈길을 사로잡아요!",
+        "before_value": 95,
+        "current_value": 96,
+        "expectation": "비가 와서 손님이 줄어들고 인기가 떨어질 수 있어요."
+      },
+      {
+        "name": "아이스크림 트럭",
+        "risk_level": "중위험 균형형",
+        "description": "계절, 날씨, 트렌드에 따라 인기도가 오르내리지만, 너무 크게 요동치진 않아요.",
+        "before_value": 113,
+        "current_value": 118,
+        "expectation": "비가 와서 손님이 줄어들고 인기가 떨어질 수 있어요."
+      },
+      {
+        "name": "샌드위치 트럭",
+        "risk_level": "저위험 저수익",
+        "description": "언제 먹어도 맛있는 메뉴로, 꾸ud히 손님이 찾아와요.",
+        "before_value": 104,
+        "current_value": 105,
+        "expectation": "비가 와서 손님이 줄어들고 인기가 떨어질 수 있어요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "갑작스러운 소나기 때문에 손님들이 모두 집으로 돌아가 푸드트럭 마을이 한산했어요.",
+    "news": "퓨전 타코 트럭이 아주 희귀한 '무지개 고추'를 공수할지도 모른다는 이야기가 들려요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "risk_level": "고위험 고수익",
+        "description": "독특한 레시피와 화려한 토핑으로 손님들의 눈길을 사로잡아요!",
+        "before_value": 96,
+        "current_value": 88,
+        "expectation": "무지개 고추가 들어오면 인기가 급상승! 안 오면 실망해서 인기가 떨어질 수도 있어요."
+      },
+      {
+        "name": "아이스크림 트럭",
+        "risk_level": "중위험 균형형",
+        "description": "계절, 날씨, 트렌드에 따라 인기도가 오르내리지만, 너무 크게 요동치진 않아요.",
+        "before_value": 118,
+        "current_value": 114,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "샌드위치 트럭",
+        "risk_level": "저위험 저수익",
+        "description": "언제 먹어도 맛있는 메뉴로, 꾸준히 손님이 찾아와요.",
+        "before_value": 105,
+        "current_value": 103,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "퓨전 타코 트럭이 정말로 희귀한 '무지개 고추'로 만든 특별 메뉴를 선보여 큰 화제를 모았어요!",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "퓨전 타코 트럭",
+        "risk_level": "고위험 고수익",
+        "description": "독특한 레시피와 화려한 토핑으로 손님들의 눈길을 사로잡아요!",
+        "before_value": 88,
+        "current_value": 106,
+        "expectation": ""
+      },
+      {
+        "name": "아이스크림 트럭",
+        "risk_level": "중위험 균형형",
+        "description": "계절, 날씨, 트렌드에 따라 인기도가 오르내리지만, 너무 크게 요동치진 않아요.",
+        "before_value": 114,
+        "current_value": 115,
+        "expectation": ""
+      },
+      {
+        "name": "샌드위치 트럭",
+        "risk_level": "저위험 저수익",
+        "description": "언제 먹어도 맛있는 메뉴로, 꾸준히 손님이 찾아와요.",
+        "before_value": 103,
+        "current_value": 104,
+        "expectation": ""
+      }
+    ]
+  }
+]

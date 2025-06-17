@@ -1,4 +1,2 @@
 python-dotenv
-tqdm
-pydantic>=2.0
 google.generativeai

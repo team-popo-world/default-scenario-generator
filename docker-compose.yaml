@@ -26,7 +26,19 @@ services:
       - ./result_json_files:/opt/airflow/result_json_files
     ports:
       - "8080:8080"
-    command: webserver
+    command: >
+      bash -c "
+        sleep 10 &&
+        airflow db upgrade &&
+        airflow users create \
+          --username admin \
+          --firstname Admin \
+          --lastname User \
+          --role Admin \
+          --email admin@example.com \
+          --password admin123 &&
+        exec airflow webserver
+      "
 
   airflow-scheduler:
     build: .

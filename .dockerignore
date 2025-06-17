@@ -7,9 +7,6 @@ __pycache__/
 *.log
 logs/
 
-# 환경/설정 파일 (로컬 전용)
-.env
-
 # Git 관련
 .git
 .gitignore
