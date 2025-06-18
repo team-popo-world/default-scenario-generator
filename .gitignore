@@ -5,3 +5,7 @@ logs/*
 
 # 단, .gitkeep 파일은 포함 (구조 유지)
 !logs/.gitkeep
+
+# pycache는 무시
+__pycache__/
+*.pyc
