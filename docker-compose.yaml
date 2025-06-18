@@ -31,13 +31,7 @@ services:
       bash -c "
         sleep 10 &&
         airflow db upgrade &&
-        airflow users create \
-          --username ${AIRFLOW__WEBSERVER__DEFAULT_USER} \
-          --firstname Admin \
-          --lastname User \
-          --role Admin \
-          --email admin@example.com \
-          --password ${AIRFLOW__WEBSERVER__DEFAULT_PASSWORD} &&
+        airflow users create --username ${AIRFLOW__WEBSERVER__DEFAULT_USER} --firstname Admin --lastname User --role Admin --email admin@example.com --password ${AIRFLOW__WEBSERVER__DEFAULT_PASSWORD} &&
         exec airflow webserver
       "
 
