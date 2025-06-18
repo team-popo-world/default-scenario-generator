@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": "",
+    "news": "서커스단에 아주 특별한 마법 동물들이 찾아올 거라는 소문이 퍼졌어요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "동물이 오면 인기가 오르고, 안 오면 실망할 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "",
+    "news": "마을 전체에 달콤한 솜사탕 구름이 가득 퍼졌어요! 모두가 기분 좋은 하루를 보낼 것 같아요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "달콤한 구름 덕분에 손님들이 더 많아질 거예요!"
+      },
+      {
+        "name": "서커스단",
+        "expectation": "달콤한 구름 덕분에 손님들이 더 많아질 거예요!"
+      },
+      {
+        "name": "빵집",
+        "expectation": "달콤한 구름 덕분에 손님들이 더 많아질 거예요!"
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "",
+    "news": "마법연구소에서 전설의 '무지개 마법'을 완성할 거라는 소문이 돌고 있어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "성공하면 인기가 크게 오르고, 실패하면 실망할 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "",
+    "news": "서커스단 무대에 갑자기 말썽꾸러기 요정들이 나타났다는 소문이 들려요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "요정이 방해하면 인기가 떨어지고, 도움이 되면 오를 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "",
+    "news": "갑자기 모든 마을 주민들에게 마법 재료 가격이 올랐다는 뉴스가 퍼졌어요. 물건 값이 조금씩 오를 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "재료값 때문에 물건을 비싸게 팔아야 할 수도 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "재료값 때문에 물건을 비싸게 팔아야 할 수도 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "재료값 때문에 물건을 비싸게 팔아야 할 수도 있어요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "",
+    "news": "마법연구소에서 새로운 '투명 물약'을 만들 예정이라고 발표했어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "물약 개발에 성공하면 인기가 오르고, 실패하면 실망할 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": ""
+      },
+      {
+        "name": "서커스단",
+        "expectation": ""
+      },
+      {
+        "name": "빵집",
+        "expectation": ""
+      }
+    ]
+  }
+]

@@ -116,3 +116,7 @@
 2025-06-13 17:51:14,874 [ERROR] [39] 업로드 실패: 400 | ❌ 저장 실패: 시나리오 저장 실패: class org.springframework.security.web.authentication.WebAuthenticationDetails cannot be cast to class java.lang.String (org.springframework.security.web.authentication.WebAuthenticationDetails is in unnamed module of loader org.springframework.boot.loader.launch.LaunchedClassLoader @2f92e0f4; java.lang.String is in module java.base of loader 'bootstrap')
 2025-06-13 17:51:14,906 [ERROR] [40] 업로드 실패: 400 | ❌ 저장 실패: 시나리오 저장 실패: class org.springframework.security.web.authentication.WebAuthenticationDetails cannot be cast to class java.lang.String (org.springframework.security.web.authentication.WebAuthenticationDetails is in unnamed module of loader org.springframework.boot.loader.launch.LaunchedClassLoader @2f92e0f4; java.lang.String is in module java.base of loader 'bootstrap')
 2025-06-13 17:51:14,906 [INFO] 업로드 완료! 성공: 0개, 실패: 40개
+2025-06-18 10:10:07,568 [INFO] [파일로드 성공] C:\Users\user\Desktop\final_project\scenario\scenario_app\result_json_files\pig\pig_result_json_1_20250618_010952.json
+2025-06-18 10:10:07,568 [INFO] 총 1개 시나리오 준비 완료!
+2025-06-18 10:10:07,837 [INFO] [1] 업로드 성공: 200
+2025-06-18 10:10:07,837 [INFO] 업로드 완료! 성공: 1개, 실패: 0개

@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": "",
+    "news": "서커스단에 아주 특별한 손님이 온다는 소문이 돌고 있어요! 전설의 용 마법사가 올까요?",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "손님이 오면 인기가 오르고, 안 오면 실망할 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "",
+    "news": "마을에 예쁜 무지개가 떴어요! 무지개 기운이 마법 코인을 반짝이게 할 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "마을 전체에 좋은 기운이 퍼져 모든 가게에 손님이 늘 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "마을 전체에 좋은 기운이 퍼져 모든 가게에 손님이 늘 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "마을 전체에 좋은 기운이 퍼져 모든 가게에 손님이 늘 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "",
+    "news": "마법연구소에서 새로운 마법 약을 만들고 있대요. 성공하면 모든 병이 낫는다고 소문났어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "성공하면 인기가 크게 오르고, 실패하면 실망할 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "",
+    "news": "서커스단에 새로운 마법 동물이 찾아올 거라는 소문이 돌아요! 공연이 더 화려해질까요?",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "동물이 오면 인기가 오르고, 안 오면 실망할 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "",
+    "news": "오늘은 마을 친구들이 서로에게 선물을 주는 '나눔의 날'이에요! 모두가 행복할 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "마을 전체에 좋은 기운이 퍼져 모든 가게에 손님이 늘 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "마을 전체에 좋은 기운이 퍼져 모든 가게에 손님이 늘 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "마을 전체에 좋은 기운이 퍼져 모든 가게에 손님이 늘 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "",
+    "news": "마법연구소에서 아주 오래된 마법 지도를 찾았대요. 전설의 보물을 찾을 수 있을까요?",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "보물을 찾으면 아주 인기가 오르지만, 실패하면 실망할 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": ""
+      },
+      {
+        "name": "서커스단",
+        "expectation": ""
+      },
+      {
+        "name": "빵집",
+        "expectation": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": "",
+    "news": "서커스단에 전설 속 유니콘이 손님으로 올지도 모른다는 소문이 돌고 있어요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "유니콘이 오면 인기가 크게 오르고, 안 오면 실망할 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "",
+    "news": "마법 마을에 황금 별똥별이 쏟아져 내렸어요! 모든 가게에 행운을 가져다줄 거랍니다!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "모든 가게에 행운이 찾아와 가치가 오를 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "모든 가게에 행운이 찾아와 가치가 오를 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "모든 가게에 행운이 찾아와 가치가 오를 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "",
+    "news": "마법연구소에서 하늘을 나는 빵을 만들 마법을 연구 중이래요! 성공할까요?",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "성공하면 인기가 쑥쑥, 실패하면 가치가 떨어질 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "",
+    "news": "서커스단 마법사 옷이 사라졌다는 소문이 있어요! 공연에 문제가 생길까요?",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "옷을 찾으면 무사히 공연하고, 못 찾으면 공연이 어려워져요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "",
+    "news": "마법 마을에 안개 마법이 너무 짙게 끼어서 손님들이 길을 헤매고 있어요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "손님들이 오기 어려워 모든 가게의 인기가 줄어들 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "손님들이 오기 어려워 모든 가게의 인기가 줄어들 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "손님들이 오기 어려워 모든 가게의 인기가 줄어들 수 있어요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "",
+    "news": "마법연구소에서 새로운 '투명해지는 물약'을 만들었대요! 잘 팔릴까요?",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "물약이 인기가 많으면 오르고, 아니면 기대보다 낮을 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": ""
+      },
+      {
+        "name": "서커스단",
+        "expectation": ""
+      },
+      {
+        "name": "빵집",
+        "expectation": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": "",
+    "news": "화창한 햇살이 쨍쨍! 집 짓기 딱 좋은 포근한 봄 날씨가 될 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "빠르게 지을 수 있어 주가가 크게 오를 것으로 기대돼요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "안정적으로 집을 지으며 꾸준히 주가를 올릴 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "천천히 튼튼하게 지을 준비를 잘 할 수 있을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "",
+    "news": "첫째 돼지가 아주 특별한 지푸라기 엮는 비법을 찾았다는 소문이 돌아요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "성공하면 집 짓는 속도가 확 빨라져 주가가 오르지만, 아니면 실망할 수 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "",
+    "news": "둘째 돼지에게 나무를 잘 다루는 똑똑한 부엉이 아저씨가 도와주러 올 수도 있다는 소문이 들려요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "부엉이가 오면 나무집이 더 튼튼해져 주가가 오르고, 안 오면 기대에 못 미칠 수 있어요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "",
+    "news": "갑자기 거센 소나기가 쏟아지고 땅이 질퍽해질 예정이에요. 집 짓기가 어려울 수 있어요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "지푸라기 집이 비에 약해 주가가 크게 떨어질 수 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "나무집도 비에 영향을 받아 주가가 조금 내려갈 수 있어요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "튼튼한 벽돌집은 비에도 끄떡없이 주가를 지킬 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "",
+    "news": "첫째 돼지의 지푸라기를 자꾸 갉아먹는 배고픈 토끼 떼를 보았다는 소문이 있어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "토끼 때문에 재료가 부족해지면 주가가 떨어지고, 아니면 다행일 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "",
+    "news": "둘째 돼지가 더 튼튼한 나무를 구할 수 있는 비밀 지도 조각을 발견했다는 소문이 돌아요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": "지도를 따라가면 더 좋은 나무를 구해 주가가 오르고, 아니면 헛수고에 그칠 수 있어요."
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "expectation": ""
+      },
+      {
+        "name": "둘째 돼지",
+        "expectation": ""
+      },
+      {
+        "name": "셋째 돼지",
+        "expectation": ""
+      }
+    ]
+  }
+]

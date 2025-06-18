@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": "",
+    "news": "서커스단에 아주 특별한 마법 동물 손님이 올 거라는 소문이 돌아요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "손님이 오면 인기가 많아질 거예요. 안 오면 조금 실망할 수도 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "",
+    "news": "반짝이는 별똥별이 하늘에서 쏟아져, 마을 전체에 행운을 가져다줄 거라는 예보예요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "모든 가게에 좋은 행운이 찾아올 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "모든 가게에 좋은 행운이 찾아올 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "모든 가게에 좋은 행운이 찾아올 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "",
+    "news": "마법연구소에서 아주 오래된 마법서를 해독해 새 마법을 만들 거라는 소문이 퍼졌어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "성공하면 대단한 마법이 생길 거예요. 실패하면 걱정될 수도 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "",
+    "news": "서커스단 공연에 갑자기 장난꾸러기 고블린들이 방해할 수도 있다는 이야기가 들려요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "잘 막으면 괜찮아요. 방해하면 공연이 어려워질 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "",
+    "news": "마을 전체에 '반짝이 먼지' 마법이 뿌려져, 모든 것이 조금 더 빛나고 예뻐질 거예요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "모든 가게가 더 예뻐지고 기분 좋은 하루가 될 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "모든 가게가 더 예뻐지고 기분 좋은 하루가 될 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "모든 가게가 더 예뻐지고 기분 좋은 하루가 될 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "",
+    "news": "마법연구소에서 잃어버린 마법 지팡이를 찾아, 엄청난 힘을 얻을 거라는 기대가 커요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "찾으면 정말 유명해질 거예요. 못 찾으면 조금 아쉬울 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": ""
+      },
+      {
+        "name": "서커스단",
+        "expectation": ""
+      },
+      {
+        "name": "빵집",
+        "expectation": ""
+      }
+    ]
+  }
+]

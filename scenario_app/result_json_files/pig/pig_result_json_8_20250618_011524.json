@@ -1,0 +1,226 @@
+[
+  {
+    "turn_number": 1,
+    "result": "게임 시작! 삼형제가 모두 집 짓기를 시작했어요.",
+    "news": "둘째 돼지가 통나무를 묶는 새롭고 튼튼한 밧줄을 발견했다는 소문이 돌아요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "risk_level": "고위험 고수익",
+        "description": "지푸라기로 빠르게 집을 짓지만 사고도 잘 나요.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "risk_level": "중위험 균형형",
+        "description": "나무로 적당히 빠르고 튼튼하게 집을 지어요.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "새 밧줄이 진짜면 집 가치가 오르고, 아니면 실망해 조금 내려갈 수 있어요."
+      },
+      {
+        "name": "셋째 돼지",
+        "risk_level": "저위험 저수익",
+        "description": "벽돌로 가장 느리지만 완벽하게 집을 지어요.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "둘째 돼지가 정말 튼튼한 밧줄을 찾아내 집을 더 튼튼하게 지었어요!",
+    "news": "오늘은 따뜻하고 햇살 좋은 날이에요! 집 짓기 딱 좋은 날씨네요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "risk_level": "고위험 고수익",
+        "description": "지푸라기로 빠르게 집을 짓지만 사고도 잘 나요.",
+        "before_value": 100,
+        "current_value": 101,
+        "expectation": "날씨가 좋으니 모든 돼지들이 집을 더 빨리, 신나게 지을 수 있을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "risk_level": "중위험 균형형",
+        "description": "나무로 적당히 빠르고 튼튼하게 집을 지어요.",
+        "before_value": 100,
+        "current_value": 108,
+        "expectation": "날씨가 좋으니 모든 돼지들이 집을 더 빨리, 신나게 지을 수 있을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "risk_level": "저위험 저수익",
+        "description": "벽돌로 가장 느리지만 완벽하게 집을 지어요.",
+        "before_value": 100,
+        "current_value": 101,
+        "expectation": "날씨가 좋으니 모든 돼지들이 집을 더 빨리, 신나게 지을 수 있을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "따뜻한 햇살 덕분에 삼형제 모두 힘을 내 집을 더 빠르게 지었어요!",
+    "news": "첫째 돼지가 지푸라기를 너무 빨리 쌓다가 지붕이 살짝 기울어졌다는 소문이 있어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "risk_level": "고위험 고수익",
+        "description": "지푸라기로 빠르게 집을 짓지만 사고도 잘 나요.",
+        "before_value": 101,
+        "current_value": 108,
+        "expectation": "지붕 소문이 사실이면 가치가 떨어지고, 아니라면 안심해서 오를 수도 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "risk_level": "중위험 균형형",
+        "description": "나무로 적당히 빠르고 튼튼하게 집을 지어요.",
+        "before_value": 108,
+        "current_value": 112,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "risk_level": "저위험 저수익",
+        "description": "벽돌로 가장 느리지만 완벽하게 집을 지어요.",
+        "before_value": 101,
+        "current_value": 103,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "다행히 첫째 돼지의 지붕은 튼튼했어요! 소문은 사실이 아니었어요.",
+    "news": "똑똑한 부엉이 박사님이 모든 돼지들에게 '안전하게 집 짓는 법'을 알려주셨어요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "risk_level": "고위험 고수익",
+        "description": "지푸라기로 빠르게 집을 짓지만 사고도 잘 나요.",
+        "before_value": 108,
+        "current_value": 123,
+        "expectation": "부엉이 박사님 덕분에 모두 더 꼼꼼히 지어 가치가 오를 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "risk_level": "중위험 균형형",
+        "description": "나무로 적당히 빠르고 튼튼하게 집을 지어요.",
+        "before_value": 112,
+        "current_value": 113,
+        "expectation": "부엉이 박사님 덕분에 모두 더 꼼꼼히 지어 가치가 오를 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "risk_level": "저위험 저수익",
+        "description": "벽돌로 가장 느리지만 완벽하게 집을 지어요.",
+        "before_value": 103,
+        "current_value": 104,
+        "expectation": "부엉이 박사님 덕분에 모두 더 꼼꼼히 지어 가치가 오를 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "부엉이 박사님의 가르침 덕분에 삼형제 모두 집을 더 안전하게 지었어요!",
+    "news": "둘째 돼지가 나무를 더 단단하게 만드는 신기한 마법 물약을 구했다는 이야기가 있어요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "risk_level": "고위험 고수익",
+        "description": "지푸라기로 빠르게 집을 짓지만 사고도 잘 나요.",
+        "before_value": 123,
+        "current_value": 129,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "둘째 돼지",
+        "risk_level": "중위험 균형형",
+        "description": "나무로 적당히 빠르고 튼튼하게 집을 지어요.",
+        "before_value": 113,
+        "current_value": 116,
+        "expectation": "마법 물약이 진짜면 집이 튼튼해져 오르고, 가짜면 기대가 사라져 내려갈 수도 있어요."
+      },
+      {
+        "name": "셋째 돼지",
+        "risk_level": "저위험 저수익",
+        "description": "벽돌로 가장 느리지만 완벽하게 집을 지어요.",
+        "before_value": 104,
+        "current_value": 106,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "아쉽게도 둘째 돼지가 구한 마법 물약은 가짜였어요. 기대가 실망으로 바뀌었어요.",
+    "news": "첫째 돼지의 지푸라기 집에 배고픈 아기 쥐들이 몰려들고 있다는 소문이 돌아요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "risk_level": "고위험 고수익",
+        "description": "지푸라기로 빠르게 집을 짓지만 사고도 잘 나요.",
+        "before_value": 129,
+        "current_value": 130,
+        "expectation": "쥐떼 소문이 사실이면 가치가 크게 떨어지고, 소문일 뿐이면 오히려 오를 수도 있어요."
+      },
+      {
+        "name": "둘째 돼지",
+        "risk_level": "중위험 균형형",
+        "description": "나무로 적당히 빠르고 튼튼하게 집을 지어요.",
+        "before_value": 116,
+        "current_value": 109,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "셋째 돼지",
+        "risk_level": "저위험 저수익",
+        "description": "벽돌로 가장 느리지만 완벽하게 집을 지어요.",
+        "before_value": 106,
+        "current_value": 107,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "첫째 돼지의 지푸라기 집에 아기 쥐들이 몰려들어 집을 조금씩 갉아먹었어요!",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "첫째 돼지",
+        "risk_level": "고위험 고수익",
+        "description": "지푸라기로 빠르게 집을 짓지만 사고도 잘 나요.",
+        "before_value": 130,
+        "current_value": 112,
+        "expectation": ""
+      },
+      {
+        "name": "둘째 돼지",
+        "risk_level": "중위험 균형형",
+        "description": "나무로 적당히 빠르고 튼튼하게 집을 지어요.",
+        "before_value": 109,
+        "current_value": 109,
+        "expectation": ""
+      },
+      {
+        "name": "셋째 돼지",
+        "risk_level": "저위험 저수익",
+        "description": "벽돌로 가장 느리지만 완벽하게 집을 지어요.",
+        "before_value": 107,
+        "current_value": 108,
+        "expectation": ""
+      }
+    ]
+  }
+]

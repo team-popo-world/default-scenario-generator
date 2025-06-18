@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": "",
+    "news": "서커스단에 아주 특별한 손님이 올 거라는 소문이 돌아요! 멋진 마법사라고 해요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "손님이 오면 인기가 오르지만, 안 오면 실망할 수도 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "",
+    "news": "마법 왕국에 커다란 무지개가 활짝 피어났어요! 모두에게 행운이 찾아올 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "무지개가 행운을 가져와 모든 가게가 잘될 거예요!"
+      },
+      {
+        "name": "서커스단",
+        "expectation": "무지개가 행운을 가져와 모든 가게가 잘될 거예요!"
+      },
+      {
+        "name": "빵집",
+        "expectation": "무지개가 행운을 가져와 모든 가게가 잘될 거예요!"
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "",
+    "news": "마법연구소에서 전설의 마법을 다시 시험한다고 해요. 마을 마법사들이 정말 기대하고 있어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "성공하면 최고지만, 실패하면 인기가 떨어질 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "",
+    "news": "오늘은 반짝이는 별똥별이 쏟아지는 밤이에요! 마법 에너지가 하늘 가득 넘칠 것 같아요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "별똥별의 마법 에너지로 모든 가게가 특별한 하루를 보낼 거예요!"
+      },
+      {
+        "name": "서커스단",
+        "expectation": "별똥별의 마법 에너지로 모든 가게가 특별한 하루를 보낼 거예요!"
+      },
+      {
+        "name": "빵집",
+        "expectation": "별똥별의 마법 에너지로 모든 가게가 특별한 하루를 보낼 거예요!"
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "",
+    "news": "서커스단이 하늘을 나는 새로운 묘기를 준비한다는 소식이 들려요! 비밀 연습 중이라고 해요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "묘기가 성공하면 인기가 오르지만, 실패하면 걱정될 수도 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "",
+    "news": "마법연구소에서 아주 중요한 마법 재료가 사라졌다는 소문이 돌아요. 큰일은 아니겠죠?",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "재료를 찾으면 좋겠지만, 못 찾으면 연구에 문제가 생길 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": ""
+      },
+      {
+        "name": "서커스단",
+        "expectation": ""
+      },
+      {
+        "name": "빵집",
+        "expectation": ""
+      }
+    ]
+  }
+]

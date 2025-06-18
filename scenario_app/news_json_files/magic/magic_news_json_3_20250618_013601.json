@@ -1,0 +1,142 @@
+[
+  {
+    "turn_number": 1,
+    "result": null,
+    "news": "서커스단에 아주 특별한 손님, 별빛 요정이 올 거라는 소문이 돌고 있어요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "별빛 요정이 오면 인기가 크게 오르고, 안 오면 실망할 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": null,
+    "news": "마법 왕국 전체에 '무지개 축제'가 열린대요! 모두가 신나는 하루가 될 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "축제 덕분에 마을 사람들이 많이 방문해서 가게에 좋은 일이 생길 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "축제 덕분에 마을 사람들이 많이 방문해서 가게에 좋은 일이 생길 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "축제 덕분에 마을 사람들이 많이 방문해서 가게에 좋은 일이 생길 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": null,
+    "news": "마법연구소에서 하늘을 나는 마법 빗자루를 만들고 있대요! 성공하면 대박일 거예요.",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "성공하면 큰 인기를 얻고, 실패하면 실망하는 손님이 생길 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": null,
+    "news": "서커스단 동물들이 평소보다 신이 나서 특별한 재롱을 부릴 것 같다는 소문이 있어요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "동물들의 재롱이 성공하면 인기가 오르고, 실패하면 손님이 줄 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": null,
+    "news": "오늘 밤, 마법 왕국 하늘에 '황금 별똥별 쇼'가 펼쳐진대요! 모두가 기대하고 있어요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "황금 별똥별 쇼가 열려 마을 분위기가 좋아지고 가게에도 좋은 일이 생길 거예요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "황금 별똥별 쇼가 열려 마을 분위기가 좋아지고 가게에도 좋은 일이 생길 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "황금 별똥별 쇼가 열려 마을 분위기가 좋아지고 가게에도 좋은 일이 생길 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": null,
+    "news": "마법연구소에서 아주 오래된 마법 두루마리를 발견했어요! 아직 쓸 수 있을지는 몰라요.",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": "두루마리가 진짜 마법이라면 큰 인기를 얻고, 쓸모없으면 인기가 떨어질 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": null,
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "expectation": ""
+      },
+      {
+        "name": "서커스단",
+        "expectation": ""
+      },
+      {
+        "name": "빵집",
+        "expectation": ""
+      }
+    ]
+  }
+]
