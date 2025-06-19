@@ -1,0 +1,3 @@
+[submodule "invest"]
+	path = invest
+	url = https://github.com/team-popo-world/ml-history-analysis.git
