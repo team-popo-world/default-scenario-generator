@@ -1,13 +1,13 @@
 FROM apache/airflow:2.8.0-python3.10
 
 USER root
-# RUN apt-get update && apt-get install -y build-essential curl
+RUN apt-get update && apt-get install -y build-essential curl
 # APT 미러 서버 교체 (예: 한국 카카오 미러)
-RUN sed -i 's|http://deb.debian.org|http://mirror.kakao.com|g' /etc/apt/sources.list \
- && apt-get update \
- && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential curl \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+# RUN sed -i 's|http://deb.debian.org|http://mirror.kakao.com|g' /etc/apt/sources.list \
+#  && apt-get update \
+#  && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential curl \
+#  && apt-get clean \
+#  && rm -rf /var/lib/apt/lists/*
 
 ENV AIRFLOW__CORE__DAGS_FOLDER=/opt/airflow/dags
 ENV AIRFLOW__CORE__PLUGINS_FOLDER=/opt/airflow/plugins
