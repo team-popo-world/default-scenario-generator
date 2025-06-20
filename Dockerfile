@@ -15,10 +15,11 @@ RUN pip install --no-cache-dir -r /requirements.txt
 COPY scenario_app /opt/airflow/scenario_app
 COPY invest /opt/airflow/invest
 COPY dags /opt/airflow/dags
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+# COPY entrypoint.sh /entrypoint.sh
+# RUN chmod +x /entrypoint.sh
 
 # 포트 열기 (FastAPI)
+EXPOSE 8001
 EXPOSE 8080
 ENTRYPOINT []
 
