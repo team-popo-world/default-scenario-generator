@@ -19,7 +19,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 # 포트 열기 (FastAPI)
-EXPOSE 8001
+EXPOSE 8080
 ENTRYPOINT []
 
 # uvicorn FastAPI 실행 (백그라운드) + airflow 웹서버 실행
