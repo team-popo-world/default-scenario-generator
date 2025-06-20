@@ -1,7 +1,11 @@
 FROM apache/airflow:2.8.0-python3.10
 
 USER root
-RUN apt-get update && apt-get install -y build-essential curl
+# RUN apt-get update && apt-get install -y build-essential curl
+RUN apt-get update \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential curl \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt /
 
 ENV AIRFLOW__CORE__DAGS_FOLDER=/opt/airflow/dags
