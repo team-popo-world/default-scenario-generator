@@ -16,8 +16,7 @@ df = model_preprocess()
 
 
 # 모델 생성
-#clf = DecisionTreeClassifier(random_state=42)
-
+# clf = DecisionTreeClassifier(random_state=42)
 
 # 모델 훈련
 
