@@ -15,13 +15,13 @@ services:
       - postgres
     env_file:
       - .env
+    entrypoint: ["/entrypoint.sh"]
     environment:
       - AIRFLOW__WEBSERVER__WEB_SERVER_HOST=0.0.0.0
     user: "${AIRFLOW_UID:-50000}"
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
-      - ./plugins:/opt/airflow/plugins
       - ./scenario_app:/opt/airflow/scenario_app
       - ./news_json_files:/opt/airflow/news_json_files
       - ./result_json_files:/opt/airflow/result_json_files
@@ -45,6 +45,20 @@ services:
       - ./news_json_files:/opt/airflow/news_json_files
       - ./result_json_files:/opt/airflow/result_json_files
     command: scheduler
+  
+  fastapi:
+    build: .
+    depends_on:
+      - postgres  # 필요한 경우만
+    env_file:
+      - .env
+    user: "${AIRFLOW_UID:-50000}"
+    volumes:
+      - ./invest:/opt/airflow/invest
+    ports:
+      - "8001:8001"
+    command: >
+      uvicorn invest.main_api:app --host 0.0.0.0 --port 8001 --reload
 
 volumes:
   pg_data:

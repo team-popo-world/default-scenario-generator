@@ -2,17 +2,18 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 import os
-import logging
+from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
 
 from scenario_app.main import main as generate_scenarios
 from scenario_app.send_data import send_data
 
-from invest.main_preprocess import cluster_preprocess # 전처리 모델링
+from invest.main_preprocess import model_preprocess # 전처리 모델링
 # from invest # 모델링.py import 하기
 
 # 기본 DAG 설정
 default_args = {
-    'owner': 'scenario-team',
+    'owner': 'invest-team',
     'depends_on_past': False,
     'start_date': datetime(2025, 6, 13),
     'email_on_failure': False,
@@ -22,22 +23,48 @@ default_args = {
 }
 
 dag = DAG(
-    'scenario_generation_pipeline',
+    'invest_cluster_pipeline',
     default_args=default_args,
-    description='시나리오 생성 및 전송 파이프라인',
+    description='전처리 및 모델링, 전송 파이프라인',
     schedule_interval='0 9 * * *',  # 매일 오전 9시 실행
     catchup=False,
-    tags=['scenario', 'generation', 'json'],
+    tags=['preprocessing', 'modeling', 'mlflow'],
 )
 
-def preprocess_data(d):
-    return d
+def preprocess_data():
+    df = model_preprocess()
+    return df
 
-def modeling_data(theme):
-    return theme
+def modeling_data(df):
 
-def update_data(x):
-    return x
+    return df
+
+def update_data(df):
+    load_dotenv(override=True)
+
+    user = os.getenv("DB_USER")
+    password = os.getenv("DB_PASSWORD")
+    host = os.getenv("DB_HOST")
+    port = os.getenv("DB_PORT")
+    dbname = os.getenv("DB_NAME")
+    
+    engine = create_engine('postgresql+psycopg2://user:password@host:port/dbname')
+
+    with engine.connect() as conn:
+        for _, row in df.iterrows():
+            update_query = text("""
+                UPDATE your_table
+                SET col1 = :col1,
+                    col2 = :col2
+                WHERE id = :id
+            """)
+            conn.execute(update_query, {
+                "col1": row["col1"],
+                "col2": row["col2"],
+                "id": row["id"]
+            })
+
+    return "Update completed"
 
 # Task 정의
 # preprocess_task
