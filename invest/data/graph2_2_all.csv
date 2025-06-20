@@ -1,0 +1,5 @@
+userId,highSellRatio,lowSellRatio,midSellRatio,startedAt,highSellRatioMean,midSellRatioMean,lowSellRatioMean
+956f51a8-d6a0-4a12-a22b-9da3cdffc879,0.25,0.0,0.75,2025-06-18 14:54:34,0.1625,0.8375,0.0
+956f51a8-d6a0-4a12-a22b-9da3cdffc879,0.4,0.0,0.6,2025-06-18 14:51:52,0.1625,0.8375,0.0
+956f51a8-d6a0-4a12-a22b-9da3cdffc879,0.0,0.0,1.0,2025-06-18 14:44:09,0.1625,0.8375,0.0
+956f51a8-d6a0-4a12-a22b-9da3cdffc879,0.0,0.0,1.0,2025-06-18 13:09:44,0.1625,0.8375,0.0

@@ -1,2 +1,10 @@
-python-dotenv
 google.generativeai
+dotenv
+python-dotenv
+langchain_openai
+pymongo
+sqlalchemy
+pandas
+numpy
+psycopg2-binary
+apache-airflow
