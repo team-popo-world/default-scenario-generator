@@ -15,7 +15,6 @@ services:
       - postgres
     env_file:
       - .env
-    entrypoint: ["/entrypoint.sh"]
     environment:
       - AIRFLOW__WEBSERVER__WEB_SERVER_HOST=0.0.0.0
     user: "${AIRFLOW_UID:-50000}"
