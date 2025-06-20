@@ -9,3 +9,5 @@ logs/*
 # pycache는 무시
 __pycache__/
 *.pyc
+
+.pem

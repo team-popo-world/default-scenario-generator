@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-
+from sklearn.preprocessing import OneHotEncoder
 
 # 입력한 컬럼에 대해 레이블 인코딩
 
@@ -45,4 +45,23 @@ def label_encoder(df, cols):
                                for original_label, encoded_value in zip(encoder.classes_, encoder.transform(encoder.classes_))}
     
     return df_encoded, encoders_dict, label_mappings
+
+
+
+def one_hot_encoder(df, cols):
+    
+    df_encoded = pd.get_dummies(
+        df, 
+        columns=cols,
+        drop_first=True,
+        dtype=int
+    )
+
+    print(f"원본 컬럼 수: {df.shape[1]}")
+    print(f"인코딩 후 컬럼 수: {df_encoded.shape[1]}")
+    print(f"추가된 컬럼 수: {df_encoded.shape[1] - df.shape[1]}")
+    
+    return df_encoded
+
+
 
