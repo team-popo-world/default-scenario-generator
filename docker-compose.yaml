@@ -44,7 +44,7 @@ services:
       - ./scenario_app:/opt/airflow/scenario_app
       - ./news_json_files:/opt/airflow/news_json_files
       - ./result_json_files:/opt/airflow/result_json_files
-    command: scheduler
+    command: airflow scheduler
   
   fastapi:
     build: .
