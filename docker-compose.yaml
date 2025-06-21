@@ -34,7 +34,7 @@ services:
     depends_on:
       - postgres
     env_file:
-      - .env
+      - .env  
     user: "${AIRFLOW_UID:-50000}" 
     volumes:
       - ./dags:/opt/airflow/dags
