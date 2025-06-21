@@ -25,4 +25,4 @@ EXPOSE 8080
 
 # uvicorn FastAPI 실행 (백그라운드) + airflow 웹서버 실행
 # => docker-compose로 airflow scheduler/webserver 따로 실행 가능
-CMD sh -c "uvicorn invest.main_api:app --host 0.0.0.0 --port 8001 & exec airflow webserver"
+# CMD sh -c "uvicorn invest.main_api:app --host 0.0.0.0 --port 8001 & exec airflow webserver"
