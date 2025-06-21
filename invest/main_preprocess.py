@@ -94,7 +94,3 @@ def model_preprocess():
 
     return df
 
-
-
-df = model_preprocess()
-print(df.head())
