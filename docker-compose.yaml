@@ -46,18 +46,20 @@ services:
     command: airflow scheduler
   
   fastapi:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile.fastapi
     depends_on:
       - postgres  # 필요한 경우만
     env_file:
       - .env
-    user: "${AIRFLOW_UID:-50000}"
+    # user: "${AIRFLOW_UID:-50000}"
     volumes:
-      - ./invest:/opt/airflow/invest
+      - ./invest:/opt/fastapi/invest
     ports:
       - "8001:8001"
-    command: >
-      uvicorn invest.main_api:app --host 0.0.0.0 --port 8001 --reload
+    # command: >
+    #   uvicorn invest.main_api:app --host 0.0.0.0 --port 8001 --reload
 
 volumes:
   pg_data:
