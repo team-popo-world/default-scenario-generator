@@ -7,8 +7,8 @@ WORKDIR /opt/fastapi
 RUN apt-get update && apt-get install -y build-essential curl
 
 # requirements 설치
-COPY requirements.txt /opt/fastapi/
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.fastapi.txt /opt/fastapi/
+RUN pip install --no-cache-dir -r requirements.fastapi.txt
 
 # FastAPI 소스 복사
 COPY invest /opt/fastapi/invest

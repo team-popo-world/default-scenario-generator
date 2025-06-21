@@ -1,12 +1,12 @@
-google.generativeai
-dotenv
-python-dotenv
-langchain_openai
-pymongo
-sqlalchemy
-pandas
-numpy
-psycopg2-binary
-apache-airflow
-uvicorn
-fastapi
+google.generativeai .
+dotenv 
+python-dotenv .
+langchain_openai .
+pymongo . .
+sqlalchemy . . 
+pandas . .
+numpy . . 
+psycopg2-binary . .
+apache-airflow .
+uvicorn . 
+fastapi . 

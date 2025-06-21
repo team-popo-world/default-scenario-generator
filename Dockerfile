@@ -8,8 +8,8 @@ ENV AIRFLOW__CORE__PLUGINS_FOLDER=/opt/airflow/plugins
 
 # airflow 유저로 pip install!
 USER airflow
-COPY requirements.txt /opt/airflow/
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.airflow.txt /opt/airflow/
+RUN pip install --no-cache-dir -r requirements.airflow.txt
 
 # 나머지 COPY 등은 계속 airflow 유저 상태로
 COPY scenario_app /opt/airflow/scenario_app

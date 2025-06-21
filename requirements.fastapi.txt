@@ -1,0 +1,18 @@
+# FastAPI 앱 관련 필수
+fastapi
+uvicorn
+
+# 데이터 처리 및 DB 연동
+pandas
+numpy
+pymongo
+sqlalchemy
+psycopg2-binary
+
+# 환경 변수 로딩
+python-dotenv
+dotenv
+
+# LLM 관련 (FastAPI에서 사용하는 경우만 포함)
+langchain_openai
+google.generativeai

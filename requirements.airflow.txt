@@ -1,0 +1,9 @@
+# Airflow core
+apache-airflow
+
+# Optional: DAG에서 사용하는 경우만 추가
+pymongo
+sqlalchemy
+psycopg2-binary
+pandas
+numpy
