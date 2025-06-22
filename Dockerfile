@@ -18,9 +18,6 @@ COPY --chown=airflow:root scenario_app /opt/airflow/scenario_app
 COPY --chown=airflow:root dags /opt/airflow/dags
 COPY --chown=airflow:root invest /opt/airflow/invest
 
-# 환경설정 파일 복사 (필요시)
-COPY --chown=airflow:root .env /opt/airflow/.env
-
 # 디렉토리 생성
 RUN mkdir -p /opt/airflow/logs /opt/airflow/news_json_files /opt/airflow/result_json_files
 # 포트 열기 (Airflow 웹서버)
