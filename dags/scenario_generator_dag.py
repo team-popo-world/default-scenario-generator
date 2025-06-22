@@ -1,6 +1,11 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+try:
+    # 새로운 Airflow 버전용
+    from airflow.providers.standard.operators.python import PythonOperator
+except ImportError:
+    # 기존 버전 호환
+    from airflow.operators.python import PythonOperator
 import os
 import logging
 

@@ -1,16 +1,21 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+try:
+    # 새로운 Airflow 버전용
+    from airflow.providers.standard.operators.python import PythonOperator
+except ImportError:
+    # 기존 버전 호환
+    from airflow.operators.python import PythonOperator
 import os
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
-from pandas import read_json
+import pandas as pd
 
 from scenario_app.main import main as generate_scenarios
 from scenario_app.send_data import send_data
 
 from invest.main_preprocess import model_preprocess # 전처리 모델링
-from invest.main_train # import  # 모델링.py import 하기
+# from invest.main_train import model_train  # 모델링.py import 하기
 
 # 기본 DAG 설정
 default_args = {
@@ -38,13 +43,26 @@ def preprocess_data(**context):
 
 def modeling_data(**context):
     preprocessed_json = context['ti'].xcom_pull(key='preprocessed_df', task_ids='preprocess_data')
-    df = read_json(preprocessed_json)  # JSON 문자열 → DataFrame
-    return df
+    df = pd.read_json(preprocessed_json)  # JSON 문자열 → DataFrame
+    
+    # 실제 모델링 로직이 구현되면 여기서 호출
+    # result_df = model_train(df)  # 모델링 함수 호출
+    
+    # 임시로 원본 DataFrame 반환 (모델링 로직 구현 전까지)
+    result_df = df
+    
+    # 결과를 XCom에 푸시
+    context['ti'].xcom_push(key='modeling_result', value=result_df.to_json())
+    return result_df.to_json()
 
 def update_data(**context):
-    from pandas import read_json
-    df_json = context['ti'].xcom_pull(key='modeling_data_return_value', task_ids='modeling_data')
-    df = read_json(df_json)
+    # modeling_data 태스크의 결과를 가져옴
+    df_json = context['ti'].xcom_pull(key='modeling_result', task_ids='modeling_data')
+    if not df_json:
+        # 백업으로 return_value도 체크
+        df_json = context['ti'].xcom_pull(task_ids='modeling_data')
+    
+    df = pd.read_json(df_json)
 
     load_dotenv(override=True)
 
@@ -56,19 +74,27 @@ def update_data(**context):
     
     engine = create_engine(f'postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}')
 
-    with engine.connect() as conn:
-        for _, row in df.iterrows():
-            update_query = text("""
-                UPDATE invest_session
-                SET invest_type = :invest_type
-                WHERE invest_session_id = :invest_session_id
-            """)
-            conn.execute(update_query, {
-                "invest_type": row["invest_type"],
-                "invest_session_id": row["invest_session_id"]
-            })
-
-    return "Update completed"
+    try:
+        with engine.begin() as conn:  # 트랜잭션 사용
+            update_count = 0
+            for _, row in df.iterrows():
+                update_query = text("""
+                    UPDATE invest_session
+                    SET invest_type = :invest_type
+                    WHERE invest_session_id = :invest_session_id
+                """)
+                result = conn.execute(update_query, {
+                    "invest_type": row["invest_type"],
+                    "invest_session_id": row["invest_session_id"]
+                })
+                update_count += result.rowcount
+        
+        print(f"Successfully updated {update_count} rows")
+        return f"Update completed: {update_count} rows updated"
+    
+    except Exception as e:
+        print(f"Error during update: {str(e)}")
+        raise
 
 
 # Task 정의
