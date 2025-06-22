@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import graph, cluster
+from invest.routers import graph, cluster
 
 app = FastAPI(
     title="Graph API",
