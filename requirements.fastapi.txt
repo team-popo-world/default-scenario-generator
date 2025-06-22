@@ -8,6 +8,8 @@ numpy
 pymongo
 sqlalchemy
 psycopg2-binary
+datetime
+typing
 
 # 환경 변수 로딩
 python-dotenv

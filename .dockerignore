@@ -2,10 +2,14 @@
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 
 # 로그 파일
 *.log
 logs/
+
+# db 관련
+*.db
 
 # Git 관련
 .git
