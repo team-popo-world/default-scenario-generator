@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from utils.make_graph import make_df_graph1, make_df_graph2_1, make_df_graph2_2, make_df_graph2_3, make_df_graph3, make_df_graph4
+from invest.utils.make_graph import make_df_graph1, make_df_graph2_1, make_df_graph2_2, make_df_graph2_3, make_df_graph3, make_df_graph4
 
 router = APIRouter(prefix="/api/graph")
 
