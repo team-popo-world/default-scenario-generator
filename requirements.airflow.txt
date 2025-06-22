@@ -1,9 +1,12 @@
 # Airflow core
 apache-airflow
 
-# Optional: DAG에서 사용하는 경우만 추가
+# DAG에서 사용하는 의존성
 pymongo
 sqlalchemy
 psycopg2-binary
 pandas
 numpy
+requests
+google-generativeai
+python-dotenv

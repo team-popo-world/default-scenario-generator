@@ -1,12 +1,24 @@
-google.generativeai .
-dotenv 
-python-dotenv .
-langchain_openai .
-pymongo . .
-sqlalchemy . . 
-pandas . .
-numpy . . 
-psycopg2-binary . .
-apache-airflow .
-uvicorn . 
-fastapi . 
+# AI/LLM Libraries
+google-generativeai
+langchain-openai
+
+# Environment & Configuration
+python-dotenv
+
+# Database & Data Processing
+pymongo
+sqlalchemy
+psycopg2-binary
+pandas
+numpy
+
+# Machine Learning & Data Science  
+scikit-learn
+
+# Web Framework & API
+fastapi
+uvicorn
+requests
+
+# Workflow Management
+apache-airflow
