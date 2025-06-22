@@ -1,15 +1,21 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-try:
-    # 새로운 Airflow 버전용
-    from airflow.providers.standard.operators.python import PythonOperator
-except ImportError:
-    # 기존 버전 호환
-    from airflow.operators.python import PythonOperator
 import os
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 import pandas as pd
+
+# Airflow 버전 호환성을 위한 PythonOperator import
+try:
+    # Airflow 3.0+ 버전용 (표준 프로바이더)
+    from airflow.providers.standard.operators.python import PythonOperator
+except ImportError:
+    try:
+        # Airflow 2.8+ 버전용 (기존 경로)
+        from airflow.operators.python import PythonOperator
+    except ImportError:
+        # Airflow 2.7 이하 버전용
+        from airflow.operators.python_operator import PythonOperator
 
 from scenario_app.main import main as generate_scenarios
 from scenario_app.send_data import send_data
