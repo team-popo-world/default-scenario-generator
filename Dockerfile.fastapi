@@ -14,9 +14,12 @@ RUN pip install --no-cache-dir -r requirements.fastapi.txt
 # FastAPI 소스 복사
 COPY invest /opt/fastapi/invest
 
+# .env 파일 복사 (필요한 경우)
+COPY .env /opt/fastapi/.env
+
 # 환경변수 설정
 ENV PYTHONPATH=/opt/fastapi:$PYTHONPATH
 
-EXPOSE 8001
+EXPOSE 8002
 
-CMD ["uvicorn", "invest.main_api:app", "--host", "0.0.0.0", "--port", "8001", "--reload"]
+CMD ["uvicorn", "invest.main_api:app", "--host", "0.0.0.0", "--port", "8002", "--reload"]

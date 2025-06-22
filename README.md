@@ -122,7 +122,7 @@ docker-compose up -d --build
 - **Airflow Web UI**: http://localhost:8080
   - 사용자명: `admin`
   - 비밀번호: `admin`
-- **FastAPI 문서**: http://localhost:8001/docs
+- **FastAPI 문서**: http://localhost:8002/docs
 - **PostgreSQL**: localhost:5432
 
 ## 📊 주요 기능
@@ -187,7 +187,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 # 개발용 서버 실행 (FastAPI)
-uvicorn invest.main_api:app --host 0.0.0.0 --port 8001 --reload
+uvicorn invest.main_api:app --host 0.0.0.0 --port 8002 --reload
 ```
 
 ### 새로운 시나리오 테마 추가
@@ -217,7 +217,7 @@ GET /cluster/results
 GET /user/{user_id}/investment-type
 ```
 
-자세한 API 문서는 http://localhost:8001/docs 에서 확인할 수 있습니다.
+자세한 API 문서는 http://localhost:8002/docs 에서 확인할 수 있습니다.
 
 ## 🔒 환경변수
 
