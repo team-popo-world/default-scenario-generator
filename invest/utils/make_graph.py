@@ -12,7 +12,7 @@ from invest.utils.avg_trade_ratio import avg_trade_ratio, avg_buy_ratio, avg_sel
 from invest.utils.date_filter import filter_date
 from datetime import datetime, timedelta
 
-def make_df_graph1(userId, filter: bool = False):
+def make_avg_stay_time(userId, filter: bool = False):
     # 평균 턴 체류시간, tag 발생 턴 평균 체류시간 + 우리아이 나이대 평균 값
     cols = ["investSessionId", 
             "userId",
@@ -36,7 +36,7 @@ def make_df_graph1(userId, filter: bool = False):
 
     return fin_df
 
-def make_df_graph2_1(userId, filter: bool = False):
+def make_buy_ratio(userId, filter: bool = False):
     # 종목별 구매 비율 영역 그래프
     cols = ["investSessionId", 
             "userId",
@@ -57,7 +57,7 @@ def make_df_graph2_1(userId, filter: bool = False):
 
     return df
 
-def make_df_graph2_2(userId, filter: bool = False):
+def make_sell_ratio(userId, filter: bool = False):
     # 종목별 판매 비율 영역 그래프
     cols = ["investSessionId", 
             "userId", 
@@ -78,7 +78,7 @@ def make_df_graph2_2(userId, filter: bool = False):
 
     return df
 
-def make_df_graph2_3(userId, filter: bool = False):
+def make_buy_sell_ratio(userId, filter: bool = False):
     # 종목별 판매/구매 비율 누적 막대 그래프 vs 우리아이 나이대 평균
     cols = ["investSessionId", 
             "userId", 
@@ -137,7 +137,7 @@ def make_df_graph2_3(userId, filter: bool = False):
     
     return filtered_df
 
-def make_df_graph3(userId, filter: bool = False):
+def make_bet_ratio(userId, filter: bool = False):
     cols = ["investSessionId",
             "userId", 
             "turn",
@@ -164,7 +164,7 @@ def make_df_graph3(userId, filter: bool = False):
 
     return fin_df
 
-def make_df_graph4(userId, filter: bool = False):
+def make_avg_cash_ratio(userId, filter: bool = False):
     cols = ['investSessionId', 
             'userId',
             'seedMoney',
