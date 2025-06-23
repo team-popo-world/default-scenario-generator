@@ -112,7 +112,6 @@ def update_data(**context):
 preprocess_task = PythonOperator(
     task_id='preprocess_data',
     python_callable=preprocess_data,
-    provide_context=True,
     dag=dag
 )
 
@@ -120,7 +119,6 @@ preprocess_task = PythonOperator(
 modeling_task = PythonOperator(
     task_id='modeling_data',
     python_callable=modeling_data,
-    provide_context=True,
     dag=dag
 )
 
@@ -128,7 +126,6 @@ modeling_task = PythonOperator(
 update_task = PythonOperator(
     task_id='update_data',
     python_callable=update_data,
-    provide_context=True,
     dag=dag
 )
 
