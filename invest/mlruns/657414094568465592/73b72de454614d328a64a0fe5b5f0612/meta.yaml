@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/73b72de454614d328a64a0fe5b5f0612/artifacts
+end_time: 1750570352317
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 73b72de454614d328a64a0fe5b5f0612
+run_name: fortunate-zebra-603
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750570345907
+status: 3
+tags: []
+user_id: garch

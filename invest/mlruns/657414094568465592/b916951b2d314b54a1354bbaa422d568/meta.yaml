@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/b916951b2d314b54a1354bbaa422d568/artifacts
+end_time: 1750532296264
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: b916951b2d314b54a1354bbaa422d568
+run_name: efficient-shrike-200
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750532213472
+status: 3
+tags: []
+user_id: garch

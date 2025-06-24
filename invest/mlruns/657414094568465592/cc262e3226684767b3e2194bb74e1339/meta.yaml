@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/cc262e3226684767b3e2194bb74e1339/artifacts
+end_time: 1750630299586
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: cc262e3226684767b3e2194bb74e1339
+run_name: righteous-ape-944
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750630293896
+status: 3
+tags: []
+user_id: garch

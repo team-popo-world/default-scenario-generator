@@ -1,0 +1,10 @@
+artifact_location: mlflow-artifacts:/657414094568465592/models/m-4b55d71a59ad422a944c85f94a823977/artifacts
+creation_timestamp: 1750630549303
+experiment_id: '657414094568465592'
+last_updated_timestamp: 1750630553923
+model_id: m-4b55d71a59ad422a944c85f94a823977
+model_type: ''
+name: clustering_model
+source_run_id: b007d1ad12f24a72918a571032b77891
+status: 2
+status_message: null

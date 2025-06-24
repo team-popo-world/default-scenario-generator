@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/c4275e1417ed4b2f86c5ae00298b40d0/artifacts
+end_time: 1750643984490
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: c4275e1417ed4b2f86c5ae00298b40d0
+run_name: rebellious-bat-761
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750643879863
+status: 3
+tags: []
+user_id: garch

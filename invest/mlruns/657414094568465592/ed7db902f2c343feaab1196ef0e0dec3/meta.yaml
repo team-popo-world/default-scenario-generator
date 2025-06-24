@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/ed7db902f2c343feaab1196ef0e0dec3/artifacts
+end_time: 1750502727167
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: ed7db902f2c343feaab1196ef0e0dec3
+run_name: marvelous-elk-788
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750502727055
+status: 4
+tags: []
+user_id: garch

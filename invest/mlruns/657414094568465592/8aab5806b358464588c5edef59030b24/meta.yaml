@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/8aab5806b358464588c5edef59030b24/artifacts
+end_time: 1750531667202
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 8aab5806b358464588c5edef59030b24
+run_name: nimble-shrimp-802
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750531662191
+status: 4
+tags: []
+user_id: garch

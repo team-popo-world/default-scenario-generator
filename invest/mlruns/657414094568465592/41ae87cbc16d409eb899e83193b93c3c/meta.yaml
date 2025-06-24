@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/41ae87cbc16d409eb899e83193b93c3c/artifacts
+end_time: 1750630003301
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 41ae87cbc16d409eb899e83193b93c3c
+run_name: trusting-ape-285
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750629997561
+status: 3
+tags: []
+user_id: garch

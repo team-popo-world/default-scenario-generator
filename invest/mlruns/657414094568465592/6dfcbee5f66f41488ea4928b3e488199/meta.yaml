@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/6dfcbee5f66f41488ea4928b3e488199/artifacts
+end_time: 1750666123269
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 6dfcbee5f66f41488ea4928b3e488199
+run_name: redolent-deer-672
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750665655755
+status: 3
+tags: []
+user_id: garch

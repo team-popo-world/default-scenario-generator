@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/b007d1ad12f24a72918a571032b77891/artifacts
+end_time: 1750630555036
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: b007d1ad12f24a72918a571032b77891
+run_name: honorable-mouse-891
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750630548769
+status: 3
+tags: []
+user_id: garch

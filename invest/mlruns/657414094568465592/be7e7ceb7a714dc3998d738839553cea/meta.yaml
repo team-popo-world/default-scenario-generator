@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/be7e7ceb7a714dc3998d738839553cea/artifacts
+end_time: 1750668057035
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: be7e7ceb7a714dc3998d738839553cea
+run_name: dazzling-chimp-655
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750667946015
+status: 3
+tags: []
+user_id: garch

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/638bdbeee01a4d5295191c8b6ee661f5/artifacts
+end_time: 1750733855068
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 638bdbeee01a4d5295191c8b6ee661f5
+run_name: youthful-frog-578
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750733848649
+status: 3
+tags: []
+user_id: garch

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/8d0aa8dc2c574e82ad2cf9a7db1932d9/artifacts
+end_time: 1750664941731
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 8d0aa8dc2c574e82ad2cf9a7db1932d9
+run_name: polite-smelt-806
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750664840295
+status: 3
+tags: []
+user_id: garch

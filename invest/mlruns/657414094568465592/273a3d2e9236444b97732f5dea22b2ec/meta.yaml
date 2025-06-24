@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/273a3d2e9236444b97732f5dea22b2ec/artifacts
+end_time: 1750657564362
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 273a3d2e9236444b97732f5dea22b2ec
+run_name: thoughtful-swan-801
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750657424434
+status: 3
+tags: []
+user_id: garch

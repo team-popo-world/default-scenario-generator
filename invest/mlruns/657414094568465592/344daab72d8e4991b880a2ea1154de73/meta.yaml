@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/344daab72d8e4991b880a2ea1154de73/artifacts
+end_time: 1750631400597
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 344daab72d8e4991b880a2ea1154de73
+run_name: polite-koi-743
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750631308173
+status: 3
+tags: []
+user_id: garch

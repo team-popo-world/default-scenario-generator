@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/c32ce703afef4a13982ccdec88cc6a88/artifacts
+end_time: 1750530967703
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: c32ce703afef4a13982ccdec88cc6a88
+run_name: welcoming-tern-203
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750530956629
+status: 4
+tags: []
+user_id: garch

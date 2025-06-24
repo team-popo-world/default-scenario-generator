@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/78667f3926af4886ad6a7e4adf16f60d/artifacts
+end_time: 1750630706148
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 78667f3926af4886ad6a7e4adf16f60d
+run_name: gentle-ape-279
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750630700487
+status: 3
+tags: []
+user_id: garch

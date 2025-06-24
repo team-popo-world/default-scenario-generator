@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/5706588d0a7c42629ad32840ac10d650/artifacts
+end_time: 1750756696991
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 5706588d0a7c42629ad32840ac10d650
+run_name: crawling-rat-580
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750756690805
+status: 3
+tags: []
+user_id: garch

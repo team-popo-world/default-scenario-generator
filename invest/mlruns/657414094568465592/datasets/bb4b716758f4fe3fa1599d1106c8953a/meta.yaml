@@ -1,0 +1,21 @@
+digest: 98b610f6
+name: dataset
+profile: '{"num_rows": 3501, "num_elements": 66519}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "avgNotKeep", "required":
+  true}, {"type": "double", "name": "click", "required": true}, {"type": "double",
+  "name": "avgCashRatio", "required": true}, {"type": "double", "name": "avgStayTime",
+  "required": true}, {"type": "double", "name": "highBuyRatio", "required": true},
+  {"type": "double", "name": "lowBuyRatio", "required": true}, {"type": "double",
+  "name": "midBuyRatio", "required": true}, {"type": "double", "name": "highSellRatio",
+  "required": true}, {"type": "double", "name": "lowSellRatio", "required": true},
+  {"type": "double", "name": "midSellRatio", "required": true}, {"type": "double",
+  "name": "tagAvgStayTime", "required": true}, {"type": "double", "name": "betBuyRatio",
+  "required": true}, {"type": "double", "name": "betSellRatio", "required": true},
+  {"type": "double", "name": "betMidShares", "required": true}, {"type": "double",
+  "name": "betHighShares", "required": true}, {"type": "double", "name": "age", "required":
+  true}, {"type": "double", "name": "chapterId", "required": true}, {"type": "double",
+  "name": "daysSinceStart", "required": true}, {"type": "double", "name": "sex_M",
+  "required": true}]}'
+source: '{"tags": {"mlflow.user": "garch", "mlflow.source.name": "invest/main_updateDB.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "91ff8b8032fbb4d0de5cc74bdc4f0902ef4f4570"}}'
+source_type: code

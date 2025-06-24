@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/3d68354104474270a3108bcbcdb4631e/artifacts
+end_time: 1750747430359
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 3d68354104474270a3108bcbcdb4631e
+run_name: brawny-eel-221
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750747423702
+status: 3
+tags: []
+user_id: garch

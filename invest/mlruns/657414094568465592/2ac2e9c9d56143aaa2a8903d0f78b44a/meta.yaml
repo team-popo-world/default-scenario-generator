@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/2ac2e9c9d56143aaa2a8903d0f78b44a/artifacts
+end_time: 1750731846864
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 2ac2e9c9d56143aaa2a8903d0f78b44a
+run_name: nosy-hare-179
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750731706109
+status: 3
+tags: []
+user_id: garch

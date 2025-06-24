@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/657414094568465592
+creation_time: 1750502699041
+experiment_id: '657414094568465592'
+last_update_time: 1750502699041
+lifecycle_stage: active
+name: clustering_experiment

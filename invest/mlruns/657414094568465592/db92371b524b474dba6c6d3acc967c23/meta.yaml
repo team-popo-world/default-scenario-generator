@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/db92371b524b474dba6c6d3acc967c23/artifacts
+end_time: 1750582947186
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: db92371b524b474dba6c6d3acc967c23
+run_name: casual-hog-374
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750582940827
+status: 3
+tags: []
+user_id: garch

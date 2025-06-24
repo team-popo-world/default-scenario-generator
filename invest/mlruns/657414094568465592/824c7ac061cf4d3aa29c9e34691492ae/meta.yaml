@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/657414094568465592/824c7ac061cf4d3aa29c9e34691492ae/artifacts
+end_time: 1750753408786
+entry_point_name: ''
+experiment_id: '657414094568465592'
+lifecycle_stage: active
+run_id: 824c7ac061cf4d3aa29c9e34691492ae
+run_name: mercurial-jay-252
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750753402869
+status: 3
+tags: []
+user_id: garch
