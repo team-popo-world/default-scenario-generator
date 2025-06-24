@@ -4,10 +4,10 @@ from mlflow.models import infer_signature
 
 from pathlib import Path
 
-from main_preprocess import model_preprocess
-from models.kmeans import kmeans
-from models.result import result
-from models.feature_pairs import feature_pairs
+from invest.main_preprocess import model_preprocess
+from invest.models.kmeans import kmeans
+from invest.models.result import result
+from invest.models.feature_pairs import feature_pairs
 
 
 def model_train(with_id_df):
@@ -60,7 +60,7 @@ def model_train(with_id_df):
         print(f"클러스터별 샘플 수: {cluster_sizes}")
 
         # 피쳐 별 군집 시각화
-        #feature_pairs(df, n_clusters, cluster_labels, model, folder_path)
+        feature_pairs(df, n_clusters, cluster_labels, model, folder_path)
         
     # DB 업데이트용 df
     update_df = clustered_df[["cluster_num"]].copy()
