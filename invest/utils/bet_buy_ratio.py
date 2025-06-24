@@ -40,10 +40,9 @@ def bet_buy_ratio(df):
     bet_buy_df.drop(columns=["bet_buy_total","bet_buy_win"], inplace=True)
 
     # ✅ sessionId별 첫 turn 기준 startedAt 추출
-    first_turn_info = df.sort_values(by=["investSessionId", "turn"]).groupby("investSessionId").first().reset_index()
+    first_turn_info = bet_win.sort_values(by=["investSessionId", "turn"]).groupby("investSessionId").first().reset_index()
     user_info = first_turn_info[["investSessionId", "userId", "age", "startedAt"]]
 
-    user_info = df.groupby(["investSessionId", "userId"])[["startedAt", "age"]].first().reset_index()
     bet_buy_df = pd.merge(bet_buy_df, user_info, on="investSessionId", how="left")
     
     return bet_buy_df

@@ -39,7 +39,9 @@ def bet_sell_ratio(df):
     # 필요없는 컬럼 삭제
     bet_sell_df.drop(columns=["bet_sell_total","bet_sell_win"], inplace=True)
 
-    user_info = df.groupby("investSessionId")[["userId", "age"]].first().reset_index()
+    first_turn_info = bet_win.sort_values(by=["investSessionId", "turn"]).groupby("investSessionId").first().reset_index()
+    user_info = first_turn_info[["investSessionId", "userId", "age"]]
+
     bet_sell_df = pd.merge(bet_sell_df, user_info, on="investSessionId", how="left")
     
     return bet_sell_df
