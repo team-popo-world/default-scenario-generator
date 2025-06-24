@@ -48,14 +48,3 @@ def update_mongo_data(df, collection_name: str):
     # 첫 번째 document 확인
     first_doc = collection.find_one()
     print("첫 번째 document:", first_doc)
-        
-
-
-
-from main_preprocess import model_preprocess
-from main_train import model_train
-
-
-df = model_preprocess()
-df1 = model_train(df)
-update_mongo_data(df1, "invest_cluster_result")

@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from invest.utils.make_graph import make_avg_stay_time, make_buy_ratio, make_sell_ratio, make_buy_sell_ratio, make_bet_ratio, make_avg_cash_ratio
+from invest.utils.make_graph import make_avg_stay_time, make_buy_ratio, make_sell_ratio, make_buy_sell_ratio, make_bet_ratio, make_avg_cash_ratio, make_invest_style
 from invest.db.mongo_update import update_mongo_data
 
 router = APIRouter(prefix="/api/invest")
@@ -84,6 +84,20 @@ def avg_cash_ratio_all(userId :str):
 @router.get("/avg_cash_ratio/week")
 def avg_cash_ratio_week(userId :str):
     df = make_avg_cash_ratio(userId, filter=True)
+    json = df.to_dict(orient="records")
+    # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_week_history")
+    return json
+
+@router.get("/invest_style/all")
+def invest_style_all(userId :str):
+    df = make_invest_style(filter=False)
+    json = df.to_dict(orient="records")
+    # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_all_history")
+    return json
+
+@router.get("/invest_style/week")
+def invest_style_week(userId :str):
+    df = make_invest_style(filter=True)
     json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_week_history")
     return json

@@ -94,5 +94,3 @@ def model_preprocess():
 
     return df_scaled
 
-df = model_preprocess()
-print(df.info())

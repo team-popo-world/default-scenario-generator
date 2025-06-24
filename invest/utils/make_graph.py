@@ -182,3 +182,12 @@ def make_avg_cash_ratio(userId, filter: bool = False):
     df.drop(columns="investSessionId", inplace=True)
 
     return df
+
+
+def make_invest_style(filter: bool = False):
+    df = load_mongo_data(None, "invest_cluster_result")
+
+    if filter:
+        filter_date(df)
+
+    return df
