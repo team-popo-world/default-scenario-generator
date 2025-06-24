@@ -22,5 +22,6 @@ jobs:
             cd /home/ubuntu/default-scenario-generator
             rm -rf __pycache__ dags/__pycache__
             git pull origin main
-            docker compose build
-            docker compose up -d
+            docker compose build --no-cache
+            docker compose up -d --remove-orphans
+            docker system prune -af
