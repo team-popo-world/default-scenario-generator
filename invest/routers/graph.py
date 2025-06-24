@@ -7,6 +7,7 @@ router = APIRouter(prefix="/api/invest")
 @router.get("/avg_stay_time/all")
 def avg_stay_time_all(userId :str):
     df = make_avg_stay_time(userId, filter=False)
+    print(df.head())
     json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph1_all_history")
     return json
