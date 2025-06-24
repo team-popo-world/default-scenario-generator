@@ -25,7 +25,7 @@ def model_train(with_id_df):
 
 
     # investSessionId drop : 모델링용 데이터
-    df = with_id_df.drop("investSessionId", axis=1)
+    df = with_id_df.drop(["userId", "investSessionId"], axis=1)
 
     # 현재 스크립트 파일의 디렉토리 가져오기
     current_script_dir = Path(__file__).parent.resolve()
@@ -60,11 +60,12 @@ def model_train(with_id_df):
         print(f"클러스터별 샘플 수: {cluster_sizes}")
 
         # 피쳐 별 군집 시각화
-        feature_pairs(df, n_clusters, cluster_labels, model, folder_path)
+        #feature_pairs(df, n_clusters, cluster_labels, model, folder_path)
         
     # DB 업데이트용 df
     update_df = clustered_df[["cluster_num"]].copy()
     update_df.loc[:,"invest_session_id"] = with_id_df["investSessionId"].values
+    update_df.loc[:,"user_id"] = with_id_df["userId"].values
 
     return update_df
 

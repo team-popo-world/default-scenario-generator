@@ -1,23 +1,23 @@
 import pandas as pd
 
-from invest.db.mongo_handler import load_mongo_data
-from invest.db.postgres_handler import load_postgres_data
+from db.mongo_handler import load_mongo_data
+from db.postgres_handler import load_postgres_data
 
-from invest.utils.trading_turn import trading_turn
-from invest.utils.transaction_num import transaction_num
-from invest.utils.avg_cash_ratio import avg_cash_ratio
-from invest.utils.avg_stay_time import avg_stay_time
-from invest.utils.avg_trade_ratio import avg_trade_ratio, avg_buy_ratio, avg_sell_ratio
-from invest.utils.tag_avg_stay_time import tag_avg_stay_time
-from invest.utils.bet_buy_ratio import bet_buy_ratio
-from invest.utils.bet_sell_ratio import bet_sell_ratio
-from invest.utils.bet_shares import bet_shares
+from utils.trading_turn import trading_turn
+from utils.transaction_num import transaction_num
+from utils.avg_cash_ratio import avg_cash_ratio
+from utils.avg_stay_time import avg_stay_time
+from utils.avg_trade_ratio import avg_trade_ratio, avg_buy_ratio, avg_sell_ratio
+from utils.tag_avg_stay_time import tag_avg_stay_time
+from utils.bet_buy_ratio import bet_buy_ratio
+from utils.bet_sell_ratio import bet_sell_ratio
+from utils.bet_shares import bet_shares
 
 #from invest.models.preprocessing.userId_drop import userId_drop
-from invest.models.preprocessing.delete_cols import delete_cols
-from invest.models.preprocessing.time_type import time_type
-from invest.models.preprocessing.encoder import one_hot_encoder
-from invest.models.preprocessing.scaler import standard_scaler
+from models.preprocessing.delete_cols import delete_cols
+from models.preprocessing.time_type import time_type
+from models.preprocessing.encoder import one_hot_encoder
+from models.preprocessing.scaler import standard_scaler
 
 
 
@@ -78,16 +78,21 @@ def model_preprocess():
     # 전처리
 
     # userId, scenarioId drop
-    fin_df.drop(["userId","scenarioId"], axis=1, inplace=True)
+    df = fin_df.drop(["userId","scenarioId"], axis=1)
 
     # 시간 타입 데이터 변환
-    fin_df = time_type(fin_df)
+    df_time = time_type(df)
 
     # 성별 원핫인코딩
-    df = one_hot_encoder(fin_df, ['sex', 'chapterId'])
+    df_encoded = one_hot_encoder(df_time, ['sex', 'chapterId'])
 
     # 데이터 표준화
-    df1 = standard_scaler(df)
+    df_scaled = standard_scaler(df_encoded)
 
-    return df1
+    # userId 다시 붙여넣기
+    df_scaled["userId"] = fin_df["userId"].values
 
+    return df_scaled
+
+df = model_preprocess()
+print(df.info())

@@ -17,11 +17,14 @@ except ImportError:
         # Airflow 2.7 이하 버전용
         from airflow.operators.python_operator import PythonOperator
 
-from scenario_app.main import main as generate_scenarios
-from scenario_app.send_data import send_data
 
 from invest.main_preprocess import model_preprocess # 전처리 모델링
-# from invest.main_train import model_train  # 모델링.py import 하기
+from invest.main_train import model_train  # 모델링.py import 하기
+from invest.main_updateDB import update_mongo_data # 분류 결과 몽고db에 update
+
+
+load_dotenv(override=True)
+
 
 # 기본 DAG 설정
 default_args = {
@@ -38,69 +41,86 @@ dag = DAG(
     'invest_cluster_pipeline',
     default_args=default_args,
     description='전처리 및 모델링, 전송 파이프라인',
-    schedule_interval='0 9 * * *',  # 매일 오전 9시 실행
+    schedule_interval='0 3 * * *',  # 매일 오전 3시 실행
     catchup=False,
-    tags=['preprocessing', 'modeling', 'mlflow'],
+    tags=['preprocessing', 'modeling', 'update'],
 )
 
 def preprocess_data(**context):
-    df = model_preprocess()
-    context['ti'].xcom_push(key='preprocessed_df', value=df.to_json())  # DataFrame을 JSON 문자열로 변환
+    try:
+        print("데이터 전처리 시작...")
+        df = model_preprocess()
+        
+        if df is None or df.empty:
+            raise ValueError("전처리 결과가 비어있습니다")
+        
+        json_data = df.to_json()
+        json_size = len(json_data.encode('utf-8'))
+        print(f"전처리 완료. 데이터 크기: {json_size} bytes")
+        
+        if json_size > 40000:
+            print(f"Warning: 데이터 크기가 큽니다 ({json_size} bytes)")
+        
+        context['ti'].xcom_push(key='preprocessed_df', value=json_data)
+        print("전처리 데이터 XCom 푸시 완료")
+        
+    except Exception as e:
+        print(f"전처리 중 오류 발생: {str(e)}")
+        raise
+
 
 def modeling_data(**context):
-    preprocessed_json = context['ti'].xcom_pull(key='preprocessed_df', task_ids='preprocess_data')
-    df = pd.read_json(preprocessed_json)  # JSON 문자열 → DataFrame
-    
-    # 실제 모델링 로직이 구현되면 여기서 호출
-    # result_df = model_train(df)  # 모델링 함수 호출
-    
-    # 임시로 원본 DataFrame 반환 (모델링 로직 구현 전까지)
-    result_df = df
-    
-    # 결과를 XCom에 푸시
-    context['ti'].xcom_push(key='modeling_result', value=result_df.to_json())
-    return result_df.to_json()
+    try:
+        print("모델링 시작...")
+        preprocessed_json = context['ti'].xcom_pull(key='preprocessed_df', task_ids='preprocess_data')
+        
+        if not preprocessed_json:
+            raise ValueError("전처리 데이터를 가져올 수 없습니다")
+        
+        df = pd.read_json(preprocessed_json)
+        if df.empty:
+            raise ValueError("전처리된 데이터가 비어있습니다")
+        
+        print(f"모델링 입력 데이터 크기: {len(df)} rows")
+        result_df = model_train(df)
+        
+        if result_df is None or result_df.empty:
+            raise ValueError("모델링 결과가 비어있습니다")
+        
+        result_json = result_df.to_json()
+        context['ti'].xcom_push(key='modeling_result', value=result_json)
+        print(f"모델링 완료. 결과 데이터 크기: {len(result_df)} rows")
+        
+        return result_json
+        
+    except Exception as e:
+        print(f"모델링 중 오류 발생: {str(e)}")
+        raise
+
 
 def update_data(**context):
-    # modeling_data 태스크의 결과를 가져옴
-    df_json = context['ti'].xcom_pull(key='modeling_result', task_ids='modeling_data')
-    if not df_json:
-        # 백업으로 return_value도 체크
-        df_json = context['ti'].xcom_pull(task_ids='modeling_data')
-    
-    df = pd.read_json(df_json)
-
-    load_dotenv(override=True)
-
-    user = os.getenv("DB_USER")
-    password = os.getenv("DB_PASSWORD")
-    host = os.getenv("DB_HOST")
-    port = os.getenv("DB_PORT")
-    dbname = os.getenv("DB_NAME")
-    
-    engine = create_engine(f'postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}')
-
     try:
-        with engine.begin() as conn:  # 트랜잭션 사용
-            update_count = 0
-            for _, row in df.iterrows():
-                update_query = text("""
-                    UPDATE invest_session
-                    SET invest_type = :invest_type
-                    WHERE invest_session_id = :invest_session_id
-                """)
-                result = conn.execute(update_query, {
-                    "invest_type": row["invest_type"],
-                    "invest_session_id": row["invest_session_id"]
-                })
-                update_count += result.rowcount
+        print("데이터베이스 업데이트 시작...")
+        df_json = context['ti'].xcom_pull(key='modeling_result', task_ids='modeling_data')
         
-        print(f"Successfully updated {update_count} rows")
-        return f"Update completed: {update_count} rows updated"
-    
+        if not df_json:
+            df_json = context['ti'].xcom_pull(task_ids='modeling_data')
+        
+        if not df_json:
+            raise ValueError("모델링 결과를 가져올 수 없습니다")
+        
+        df = pd.read_json(df_json)
+        if df.empty:
+            raise ValueError("업데이트할 데이터가 비어있습니다")
+        
+        print(f"업데이트할 데이터 크기: {len(df)} rows")
+        update_mongo_data(df, "invest_cluster_result")
+        print("데이터베이스 업데이트 완료")
+        
     except Exception as e:
-        print(f"Error during update: {str(e)}")
+        print(f"데이터베이스 업데이트 중 오류 발생: {str(e)}")
         raise
+
 
 
 # Task 정의
@@ -135,3 +155,7 @@ update_task = PythonOperator(
 # 모델링한 결과를 api로 불러올거라면 여기에 그 부분에 대한 post도 필요하지만 db에 바로 업데이트할 예정이라면 필요 없음
 
 preprocess_task >> modeling_task >> update_task
+
+
+if __name__ == "__main__":
+    dag.test()
