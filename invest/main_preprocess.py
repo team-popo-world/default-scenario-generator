@@ -41,11 +41,11 @@ def model_preprocess():
     merged = mongo_df.merge(seed_df, on="chapterId", how="inner")
     df = merged.merge(user_df, on="userId", how="inner")
 
-
-    # 집계
+    # 사용자 정보, 시나리오 정보
     userInfo = df[['userId', 'sex', 'age', 'createdAt']].drop_duplicates()
     scenarioInfo = df[["scenarioId", "chapterId","investSessionId"]].drop_duplicates()
 
+    # 집계
     tradingTurn = trading_turn(df)
     transactionNum = transaction_num(df)
     avgCashRatio = avg_cash_ratio(df)
@@ -77,20 +77,17 @@ def model_preprocess():
 
     # 전처리
 
-    # investSessionId를 index로
-    fin_df = fin_df.set_index("investSessionId")
-
     # userId, scenarioId drop
     fin_df.drop(["userId","scenarioId"], axis=1, inplace=True)
 
     # 시간 타입 데이터 변환
-    df = time_type(fin_df)
+    fin_df = time_type(fin_df)
 
     # 성별 원핫인코딩
-    df = one_hot_encoder(df, ['sex'])
+    df = one_hot_encoder(fin_df, ['sex', 'chapterId'])
 
     # 데이터 표준화
-    df = standard_scaler(df)
+    df1 = standard_scaler(df)
 
-    return df
+    return df1
 

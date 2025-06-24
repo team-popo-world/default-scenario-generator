@@ -48,20 +48,12 @@ def label_encoder(df, cols):
 
 
 
-def one_hot_encoder(df, cols):
-    
-    df_encoded = pd.get_dummies(
-        df, 
-        columns=cols,
-        drop_first=True,
-        dtype=int
-    )
+def one_hot_encoder(df, columns):
+    # 인덱스 보존
+    result = pd.get_dummies(df, columns=columns, drop_first=True, dtype=int)
 
     print(f"원본 컬럼 수: {df.shape[1]}")
-    print(f"인코딩 후 컬럼 수: {df_encoded.shape[1]}")
-    print(f"추가된 컬럼 수: {df_encoded.shape[1] - df.shape[1]}")
+    print(f"인코딩 후 컬럼 수: {result.shape[1]}")
+    print(f"추가된 컬럼 수: {result.shape[1] - df.shape[1]}")
     
-    return df_encoded
-
-
-
+    return result

@@ -10,7 +10,7 @@ from models.result import result
 from models.feature_pairs import feature_pairs
 
 
-def model_train():
+def model_train(with_id_df):
     # 모델 성능 추적: mlflow
     mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
@@ -24,8 +24,8 @@ def model_train():
     mlflow.set_experiment(experiment_name)
 
 
-    # 데이터 불러오기 + 전처리
-    df = model_preprocess()
+    # investSessionId drop : 모델링용 데이터
+    df = with_id_df.drop("investSessionId", axis=1)
 
     # 현재 스크립트 파일의 디렉토리 가져오기
     current_script_dir = Path(__file__).parent.resolve()
@@ -45,7 +45,8 @@ def model_train():
         
         # 모델 학습 및 예측
         model, cluster_labels, clustered_df = kmeans(df, n_clusters, init_method, max_iter, n_init, random_state)
-        
+        print("clustered_df", clustered_df.head())
+
         # 모델 평가
         silhouette_avg, inertia, cluster_sizes = result(df, model, cluster_labels, folder_path)
         
@@ -59,11 +60,11 @@ def model_train():
         print(f"클러스터별 샘플 수: {cluster_sizes}")
 
         # 피쳐 별 군집 시각화
-        #feature_pairs(df, n_clusters, cluster_labels, model, folder_path)
+        feature_pairs(df, n_clusters, cluster_labels, model, folder_path)
         
     # DB 업데이트용 df
-    #clustered_df = clustered_df[["investSeessionId","cluster_num"]]
+    update_df = clustered_df[["cluster_num"]].copy()
+    update_df.loc[:,"invest_session_id"] = with_id_df["investSessionId"].values
 
-    return clustered_df
+    return update_df
 
-    

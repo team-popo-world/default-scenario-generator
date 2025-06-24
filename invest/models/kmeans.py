@@ -31,15 +31,14 @@ def kmeans(df, n_clusters, init_method, max_iter, n_init, random_state):
     signature = infer_signature(X_features, cluster_labels)
 
     # 원본 데이터프레임에 클러스터 라벨 추가
-    df = X_features.copy()
-    df['cluster_num'] = cluster_labels
+    X_features['cluster_num'] = cluster_labels
 
     # 모델 로깅
     mlflow.sklearn.log_model(
         kmeans, 
-        "clustering_model",
+        name="clustering_model",
         signature=signature,
         input_example=X_features[:5]
     )
 
-    return kmeans, cluster_labels, df
+    return kmeans, cluster_labels, X_features
