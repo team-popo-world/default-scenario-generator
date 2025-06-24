@@ -17,7 +17,7 @@ def bet_sell_ratio(df):
 
     # 다음 턴의 value 컬럼 구하기
     bet_win.sort_values(by=["investSessionId","riskLevel","turn"], inplace=True)
-    bet_win["nextValue"] = bet_win["currentValue"].shift(-1)
+    bet_win["nextValue"] = bet_win.groupby(["investSessionId", "riskLevel"])["currentValue"].shift(-1)
 
     # tag 뉴스 턴에서 해당 종목을 판매한 횟수
     bet_sell = bet_win.loc[(bet_win["newsTag"]==bet_win["riskLevel"]) & (bet_win["transactionType"]=="SELL")].copy()
