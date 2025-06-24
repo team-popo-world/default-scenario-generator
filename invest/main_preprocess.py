@@ -23,7 +23,7 @@ from invest.models.preprocessing.scaler import standard_scaler
 
 def model_preprocess():
     # 데이터 불러오기
-    mongo_df = load_mongo_data(None, "invest_dummy")
+    mongo_df = load_mongo_data(None, "invest_history")
 
     seed_query = "SELECT chapter_id, seed_money FROM invest_chapter ;"
     user_query = "SELECT user_id, sex, age, created_at FROM users;"
@@ -43,7 +43,7 @@ def model_preprocess():
 
     # 사용자 정보, 시나리오 정보
     userInfo = df[['userId', 'sex', 'age', 'createdAt']].drop_duplicates()
-    scenarioInfo = df[["scenarioId", "chapterId","investSessionId"]].drop_duplicates()
+    scenarioInfo = df[["chapterId","investSessionId"]].drop_duplicates()
 
     # 집계
     tradingTurn = trading_turn(df)
@@ -78,7 +78,7 @@ def model_preprocess():
     # 전처리
 
     # userId, scenarioId drop
-    df = fin_df.drop(["userId","scenarioId"], axis=1)
+    df = fin_df.drop("userId", axis=1)
 
     # 시간 타입 데이터 변환
     df_time = time_type(df)
