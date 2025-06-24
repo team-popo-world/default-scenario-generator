@@ -1,5 +1,5 @@
-from db.mongo_handler import load_mongo_data
-from db.postgres_handler import load_postgres_data
+from invest.db.mongo_handler import load_mongo_data
+from invest.db.postgres_handler import load_postgres_data
 
 def load_invest_df(col: list = None, collection: str = "invest",  use_seed: bool = False):
     # MongoDB
