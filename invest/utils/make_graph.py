@@ -218,43 +218,39 @@ def make_buy_sell_ratio(userId, filter: bool = False):
 
 def make_bet_ratio(userId, filter: bool = False):
     try:
-        cols = ["investSessionId",
-                "userId", 
-                "turn",
-                "newsTag",
-                "riskLevel",
-                "beforeValue",
-                "currentValue",
-                "numberOfShares",
-                "startedAt", 
-                "transactionType"]
+        cols = [
+            "investSessionId", "userId", "turn", "newsTag", "riskLevel",
+            "beforeValue", "currentValue", "numberOfShares", "startedAt", "transactionType"
+        ]
         
         df = load_invest_df(cols, "invest", False)
         if df.empty:
-            return pd.DataFrame()
+            return pd.DataFrame(columns=["userId", "betBuyRatio", "betSellRatio", "turn", "startedAt"])
 
         if filter:
             df = filter_date(df)
         if df.empty:
-            return pd.DataFrame()
+            return pd.DataFrame(columns=["userId", "betBuyRatio", "betSellRatio", "turn", "startedAt"])
 
         df1 = bet_buy_ratio(df)
         if df1.empty:
-            return pd.DataFrame()
+            df1 = pd.DataFrame(columns=["investSessionId", "userId", "betBuyRatio"])
+
         df1 = filtered_mean(df1, "betBuyRatio", userId)
         if df1.empty:
-            return pd.DataFrame()
+            df1 = pd.DataFrame(columns=["investSessionId", "userId", "betBuyRatio"])
 
         df2 = bet_sell_ratio(df)
         if df2.empty:
-            return pd.DataFrame()
+            df2 = pd.DataFrame(columns=["investSessionId", "userId", "betSellRatio"])
+
         df2 = filtered_mean(df2, "betSellRatio", userId)
         if df2.empty:
-            return pd.DataFrame()
+            df2 = pd.DataFrame(columns=["investSessionId", "userId", "betSellRatio"])
 
         fin_df = pd.merge(df1, df2, on=["investSessionId", "userId"], how="outer")
         if fin_df.empty:
-            return pd.DataFrame()
+            return pd.DataFrame(columns=["userId", "betBuyRatio", "betSellRatio"])
 
         fin_df.drop(columns="investSessionId", inplace=True, errors="ignore")
 
@@ -262,7 +258,55 @@ def make_bet_ratio(userId, filter: bool = False):
 
     except Exception as e:
         print(f"[ERROR] make_bet_ratio failed for userId {userId}: {e}")
-        return pd.DataFrame()
+        return pd.DataFrame(columns=["userId", "betBuyRatio", "betSellRatio"])
+
+# def make_bet_ratio(userId, filter: bool = False):
+#     try:
+#         cols = ["investSessionId",
+#                 "userId", 
+#                 "turn",
+#                 "newsTag",
+#                 "riskLevel",
+#                 "beforeValue",
+#                 "currentValue",
+#                 "numberOfShares",
+#                 "startedAt", 
+#                 "transactionType"]
+        
+#         df = load_invest_df(cols, "invest", False)
+#         if df.empty:
+#             return pd.DataFrame()
+
+#         if filter:
+#             df = filter_date(df)
+#         if df.empty:
+#             return pd.DataFrame()
+
+#         df1 = bet_buy_ratio(df)
+#         if df1.empty:
+#             return pd.DataFrame()
+#         df1 = filtered_mean(df1, "betBuyRatio", userId)
+#         if df1.empty:
+#             return pd.DataFrame()
+
+#         df2 = bet_sell_ratio(df)
+#         if df2.empty:
+#             return pd.DataFrame()
+#         df2 = filtered_mean(df2, "betSellRatio", userId)
+#         if df2.empty:
+#             return pd.DataFrame()
+
+#         fin_df = pd.merge(df1, df2, on=["investSessionId", "userId"], how="outer")
+#         if fin_df.empty:
+#             return pd.DataFrame()
+
+#         fin_df.drop(columns="investSessionId", inplace=True, errors="ignore")
+
+#         return fin_df
+
+#     except Exception as e:
+#         print(f"[ERROR] make_bet_ratio failed for userId {userId}: {e}")
+#         return pd.DataFrame()
 
 def make_avg_cash_ratio(userId, filter: bool = False):
     try:
