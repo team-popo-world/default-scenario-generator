@@ -63,26 +63,26 @@ def start_mlflow_server():
     except (subprocess.CalledProcessError, FileNotFoundError):
         print("MLflow 서버를 시작합니다...")
         
-        artifact_path = os.path.join(os.getcwd(), 'invest', 'mlruns')
+    try:
+        # 가상환경의 mlflow 경로 사용
+        mlflow_path = "/home/ubuntu/mlflow_env/bin/mlflow"
 
-        # 폴더가 없으면 생성
-        if not os.path.exists(artifact_path):
-            os.makedirs(artifact_path)
-        
-        try:
-            subprocess.Popen([
-                'mlflow', 'server', 
-                '--host', '0.0.0.0', 
+        subprocess.Popen([
+            mlflow_path, 'server',
+                '--host', '0.0.0.0',
                 '--port', '5000',
-                '--backend-store-uri', 'sqlite:///mlflow.db',
-                '--default-artifact-root', artifact_path
-            ])
-            time.sleep(10)  # 서버 시작 대기
-            print("MLflow 서버가 시작되었습니다.")
-        except FileNotFoundError:
-            print("MLflow가 설치되지 않았습니다. 'pip install mlflow'로 설치해주세요.")
-        except Exception as e:
-            print(f"MLflow 서버 시작 중 오류 발생: {e}")
+                '--backend-store-uri', 
+                'postgresql://postgres:team2%21123@mlflowdb-1.c3gseooicuve.ap-northeast-2.rds.amazonaws.com:5432/mlflowsercer_db',
+                '--default-artifact-root', 's3://team2-mlflow-bucket'
+        ])
+
+        time.sleep(15)  # 서버 시작 대기 시간 증가
+        print("MLflow 서버가 시작되었습니다.")
+    except FileNotFoundError:
+        print("MLflow가 설치되지 않았습니다.")
+    except Exception as e:
+        print(f"MLflow 서버 시작 중 오류 발생: {e}")
+        
 
 
 def preprocess_data(**context):
