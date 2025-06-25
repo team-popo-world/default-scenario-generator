@@ -13,9 +13,12 @@ def avg_stay_time_all(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph1_all_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/avg_stay_time/week")
 def avg_stay_time_week(userId :str):
@@ -25,9 +28,12 @@ def avg_stay_time_week(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph1_week_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/buy_ratio/all")
 def buy_ratio_all(userId :str):
@@ -37,9 +43,12 @@ def buy_ratio_all(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_1_all_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/buy_ratio/week")
 def buy_ratio_week(userId :str):
@@ -49,9 +58,12 @@ def buy_ratio_week(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_1_week_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/sell_ratio/all")
 def sell_ratio_all(userId :str):
@@ -61,9 +73,12 @@ def sell_ratio_all(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_2_all_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/sell_ratio/week")
 def sell_ratio_week(userId :str):
@@ -73,9 +88,12 @@ def sell_ratio_week(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_2_week_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/buy_sell_ratio/all")
 def buy_sell_ratio_all(userId :str):
@@ -85,9 +103,12 @@ def buy_sell_ratio_all(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_3_all_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/buy_sell_ratio/week")
 def buy_sell_ratio_week(userId :str):
@@ -97,9 +118,12 @@ def buy_sell_ratio_week(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_3_week_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/bet_ratio/all")
 def bet_ratio_all(userId :str):
@@ -109,9 +133,12 @@ def bet_ratio_all(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph3_all_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/bet_ratio/week")
 def bet_ratio_week(userId :str):
@@ -121,9 +148,12 @@ def bet_ratio_week(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph3_week_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/avg_cash_ratio/all")
 def avg_cash_ratio_all(userId :str):
@@ -133,9 +163,12 @@ def avg_cash_ratio_all(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_all_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/avg_cash_ratio/week")
 def avg_cash_ratio_week(userId :str):
@@ -145,9 +178,12 @@ def avg_cash_ratio_week(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_week_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/invest_style/all")
 def invest_style_all(userId :str):
@@ -157,9 +193,12 @@ def invest_style_all(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_all_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
 
 @router.get("/invest_style/week")
 def invest_style_week(userId :str):
@@ -169,6 +208,9 @@ def invest_style_week(userId :str):
             content={"message": "데이터가 없습니다.", "userId": userId},
             status_code=200  # 👈 여기 중요!
         )
-    json = df.to_dict(orient="records")
+    # json = df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_week_history")
-    return json
+    return JSONResponse(
+        content=df.to_dict(orient="records"),
+        status_code=200
+    )
