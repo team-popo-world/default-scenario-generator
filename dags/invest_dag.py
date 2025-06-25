@@ -58,11 +58,19 @@ def start_mlflow_server():
         print("MLflow 서버가 이미 실행 중입니다.")
     except:
         print("MLflow 서버를 시작합니다...")
+
+        artifact_path = os.path.join(os.getcwd(), 'invest', 'mlruns')
+
+        # 폴더가 없으면 생성
+        if not os.path.exists(artifact_path):
+            os.makedirs(artifact_path)
+        
         subprocess.Popen([
             'mlflow', 'server', 
             '--host', '0.0.0.0', 
             '--port', '5000',
-            '--backend-store-uri', 'sqlite:///mlflow.db'
+            '--backend-store-uri', 'sqlite:///mlflow.db',
+            '--default-artifact-root', artifact_path
         ])
         time.sleep(10)  # 서버 시작 대기
 

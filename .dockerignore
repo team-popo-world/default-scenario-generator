@@ -21,3 +21,14 @@ result_json_files/*
 
 # 환경변수
 .env
+
+# MLflow 로컬 데이터
+mlruns/
+mlartifacts/
+mlflow.db
+mlflow.db-*
+*.db-journal
+
+
+# 더미 데이터 제외
+invest/data/investment_game_dummy_data.json

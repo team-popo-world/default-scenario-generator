@@ -16,3 +16,6 @@ __pycache__/
 mlruns/
 mlartifacts/
 mlflow.db
+
+# 더미 데이터 제외
+invest/data/investment_game_dummy_data.json
