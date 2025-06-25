@@ -22,7 +22,6 @@ from invest.main_preprocess import model_preprocess # 전처리 모델링
 from invest.main_train import model_train  # 모델링.py import 하기
 from invest.main_updateDB import update_mongo_data # 분류 결과 몽고db에 update
 
-from airflow.operators.bash import BashOperator
 import subprocess
 import time
 
@@ -52,19 +51,38 @@ dag = DAG(
 
 def start_mlflow_server():
     """MLflow 서버를 백그라운드에서 시작"""
+    # 환경변수가 없으면 기본값 설정
+    mlflow_uri = os.getenv("MLFLOW_URL", "http://localhost:5000")
+    
     try:
         # MLflow 서버가 이미 실행 중인지 확인
-        subprocess.check_output(['curl', '-s', 'http://localhost:5000'])
+        subprocess.check_output(['curl', '-s', mlflow_uri], 
+                              stderr=subprocess.DEVNULL)
         print("MLflow 서버가 이미 실행 중입니다.")
-    except:
+        return
+    except (subprocess.CalledProcessError, FileNotFoundError):
         print("MLflow 서버를 시작합니다...")
-        subprocess.Popen([
-            'mlflow', 'server', 
-            '--host', '0.0.0.0', 
-            '--port', '5000',
-            '--backend-store-uri', 'sqlite:///mlflow.db'
-        ])
-        time.sleep(10)  # 서버 시작 대기
+        
+        artifact_path = os.path.join(os.getcwd(), 'invest', 'mlruns')
+
+        # 폴더가 없으면 생성
+        if not os.path.exists(artifact_path):
+            os.makedirs(artifact_path)
+        
+        try:
+            subprocess.Popen([
+                'mlflow', 'server', 
+                '--host', '0.0.0.0', 
+                '--port', '5000',
+                '--backend-store-uri', 'sqlite:///mlflow.db',
+                '--default-artifact-root', artifact_path
+            ])
+            time.sleep(10)  # 서버 시작 대기
+            print("MLflow 서버가 시작되었습니다.")
+        except FileNotFoundError:
+            print("MLflow가 설치되지 않았습니다. 'pip install mlflow'로 설치해주세요.")
+        except Exception as e:
+            print(f"MLflow 서버 시작 중 오류 발생: {e}")
 
 
 def preprocess_data(**context):
