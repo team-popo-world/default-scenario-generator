@@ -1,6 +1,6 @@
 import mlflow
 import mlflow.sklearn
-from mlflow_config import get_mlflow_client
+from invest.mlflow_config import get_mlflow_client
 import numpy as np
 from pathlib import Path
 import pandas as pd
