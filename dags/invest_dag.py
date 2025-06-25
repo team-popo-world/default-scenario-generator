@@ -17,7 +17,6 @@ except ImportError:
         # Airflow 2.7 이하 버전용
         from airflow.operators.python_operator import PythonOperator
 
-
 from invest.main_preprocess import model_preprocess # 전처리 모델링
 from invest.main_train import model_train  # 모델링.py import 하기
 from invest.main_updateDB import update_mongo_data # 분류 결과 몽고db에 update
@@ -25,9 +24,7 @@ from invest.main_updateDB import update_mongo_data # 분류 결과 몽고db에 u
 import subprocess
 import time
 
-
 load_dotenv(override=True)
-
 
 # 기본 DAG 설정
 default_args = {
@@ -82,41 +79,92 @@ def start_mlflow_server():
         print("MLflow가 설치되지 않았습니다.")
     except Exception as e:
         print(f"MLflow 서버 시작 중 오류 발생: {e}")
-        
-
 
 def preprocess_data(**context):
     try:
         print("데이터 전처리 시작...")
         df = model_preprocess()
         
-        if df is None or df.empty:
-            raise ValueError("전처리 결과가 비어있습니다")
+        if df is None:
+            raise ValueError("전처리 함수가 None을 반환했습니다")
         
-        json_data = df.to_json()
-        json_size = len(json_data.encode('utf-8'))
-        print(f"전처리 완료. 데이터 크기: {json_size} bytes")
-        
-        if json_size > 40000:
-            print(f"Warning: 데이터 크기가 큽니다 ({json_size} bytes)")
-        
-        context['ti'].xcom_push(key='preprocessed_df', value=json_data)
-        print("전처리 데이터 XCom 푸시 완료")
+        if df.empty:
+            raise ValueError("전처리 결과 DataFrame이 비어있습니다")
+            
+        # 데이터 품질 검증
+        if df.isnull().all().all():
+            raise ValueError("전처리 결과가 모두 null 값입니다")
+            
+        print(f"전처리 완료 - 행 수: {len(df)}, 열 수: {len(df.columns)}")
+        print(f"DataFrame 메모리 사용량: {df.memory_usage(deep=True).sum()} bytes")
+
+        # 데이터 크기 확인
+        if len(df) > 10000:  # 임계값 설정
+            # 디렉토리 생성
+            temp_dir = "/opt/airflow/temp_data"
+            os.makedirs(temp_dir, exist_ok=True)
+            
+            # 대용량 데이터는 파일로 저장
+            file_path = f"{temp_dir}/preprocessed_{context['ds']}.parquet"
+            df.to_parquet(file_path)
+            context['ti'].xcom_push(key='data_path', value=file_path)
+            print(f"대용량 데이터를 파일로 저장: {file_path}")
+        else:
+            # 소용량 데이터는 XCom 사용
+            chunk_size = 1000
+            json_chunks = []
+
+            for i in range(0, len(df), chunk_size):
+                chunk = df.iloc[i:i+chunk_size]
+                try:
+                    chunk_json = chunk.to_json(orient='records')
+                    json_chunks.append(chunk_json)
+                except Exception as e:
+                    print(f"청크 {i//chunk_size + 1} 처리 실패: {e}")
+                    # 문제가 있는 청크는 문자열로 변환
+                    chunk_clean = chunk.astype(str)
+                    chunk_json = chunk_clean.to_json(orient='records')
+                    json_chunks.append(chunk_json)
+
+            # 최종 결합
+            if json_chunks:
+                json_data = '[' + ','.join([chunk[1:-1] for chunk in json_chunks if chunk != '[]']) + ']'
+            else:
+                json_data = '[]'
+
+            json_size = len(json_data.encode('utf-8'))
+            print(f"전처리 완료. 데이터 크기: {json_size} bytes")
+            
+            # XCom 크기 제한 확인 (1MB = 1,048,576 bytes)
+            if json_size > 1048576:
+                raise ValueError(f"데이터 크기가 XCom 제한을 초과합니다: {json_size} bytes")
+            
+            context['ti'].xcom_push(key='preprocessed_df', value=json_data)
+            print("전처리 데이터 XCom 푸시 완료")
         
     except Exception as e:
-        print(f"전처리 중 오류 발생: {str(e)}")
+        print(f"전처리 실패: {str(e)}")
         raise
-
 
 def modeling_data(**context):
     try:
         print("모델링 시작...")
-        preprocessed_json = context['ti'].xcom_pull(key='preprocessed_df', task_ids='preprocess_data')
         
-        if not preprocessed_json:
-            raise ValueError("전처리 데이터를 가져올 수 없습니다")
+        # 파일 경로 확인
+        data_path = context['ti'].xcom_pull(key='data_path', task_ids='preprocess_data')
         
-        df = pd.read_json(preprocessed_json)
+        if data_path:
+            # 파일에서 데이터 로드
+            df = pd.read_parquet(data_path)
+            print(f"파일에서 데이터 로드: {data_path}")
+        else:
+            # XCom에서 데이터 로드
+            json_data = context['ti'].xcom_pull(key='preprocessed_df', task_ids='preprocess_data')
+            if not json_data:
+                raise ValueError("전처리된 데이터를 가져올 수 없습니다")
+            df = pd.read_json(json_data)
+            print("XCom에서 데이터 로드")
+
         if df.empty:
             raise ValueError("전처리된 데이터가 비어있습니다")
         
@@ -126,52 +174,110 @@ def modeling_data(**context):
         if result_df is None or result_df.empty:
             raise ValueError("모델링 결과가 비어있습니다")
         
-        result_json = result_df.to_json()
-        context['ti'].xcom_push(key='modeling_result', value=result_json)
         print(f"모델링 완료. 결과 데이터 크기: {len(result_df)} rows")
         
-        return result_json
+        # 결과 데이터 저장
+        if len(result_df) > 10000:
+            # 대용량 데이터는 파일로 저장
+            temp_dir = "/opt/airflow/temp_data"
+            os.makedirs(temp_dir, exist_ok=True)
+            file_path = f"{temp_dir}/modeling_result_{context['ds']}.parquet"
+            result_df.to_parquet(file_path)
+            context['ti'].xcom_push(key='result_path', value=file_path)
+            print(f"대용량 모델링 결과를 파일로 저장: {file_path}")
+        else:
+            # 청크 단위로 처리
+            chunk_size = 1000
+            json_chunks = []
+
+            for i in range(0, len(result_df), chunk_size):
+                chunk = result_df.iloc[i:i+chunk_size]
+                try:
+                    chunk_json = chunk.to_json(orient='records')
+                    json_chunks.append(chunk_json)
+                except Exception as e:
+                    print(f"결과 청크 {i//chunk_size + 1} 처리 실패: {e}")
+                    chunk_clean = chunk.astype(str)
+                    chunk_json = chunk_clean.to_json(orient='records')
+                    json_chunks.append(chunk_json)
+
+            # 최종 결합
+            if json_chunks:
+                result_json = '[' + ','.join([chunk[1:-1] for chunk in json_chunks if chunk != '[]']) + ']'
+            else:
+                result_json = '[]'
+
+            context['ti'].xcom_push(key='modeling_result', value=result_json)
+            print("모델링 결과 XCom 푸시 완료")
+        
+        return "modeling_completed"
         
     except Exception as e:
-        print(f"모델링 중 오류 발생: {str(e)}")
+        print(f"모델링 실패: {str(e)}")
         raise
-
 
 def update_data(**context):
     try:
         print("데이터베이스 업데이트 시작...")
-        df_json = context['ti'].xcom_pull(key='modeling_result', task_ids='modeling_data')
         
-        if not df_json:
-            df_json = context['ti'].xcom_pull(task_ids='modeling_data')
+        # 파일 경로 확인
+        result_path = context['ti'].xcom_pull(key='result_path', task_ids='modeling_data')
         
-        if not df_json:
-            raise ValueError("모델링 결과를 가져올 수 없습니다")
-        
-        df = pd.read_json(df_json)
-        if df.empty:
-            raise ValueError("업데이트할 데이터가 비어있습니다")
-        
+        if result_path:
+            # 파일에서 데이터 로드
+            df = pd.read_parquet(result_path)
+            print(f"파일에서 데이터 로드: {result_path}")
+        else:
+            # XCom에서 데이터 로드
+            json_data = context['ti'].xcom_pull(key='modeling_result', task_ids='modeling_data')
+            if not json_data:
+                raise ValueError("모델링 결과를 가져올 수 없습니다")
+            df = pd.read_json(json_data)
+            print("XCom에서 데이터 로드")
+
+        if df is None or df.empty:
+            raise ValueError("업데이트할 데이터가 없습니다")
+ 
         print(f"업데이트할 데이터 크기: {len(df)} rows")
         update_mongo_data(df, "invest_cluster_result")
         print("데이터베이스 업데이트 완료")
         
     except Exception as e:
-        print(f"데이터베이스 업데이트 중 오류 발생: {str(e)}")
+        print(f"데이터베이스 업데이트 실패: {str(e)}")
         raise
 
-
+def cleanup_temp_files(**context):
+    """임시 파일 정리"""
+    try:
+        temp_dir = "/opt/airflow/temp_data"
+        if os.path.exists(temp_dir):
+            files_deleted = 0
+            for file in os.listdir(temp_dir):
+                if context['ds'] in file:  # 해당 날짜의 파일만 삭제
+                    file_path = os.path.join(temp_dir, file)
+                    os.remove(file_path)
+                    print(f"임시 파일 삭제: {file}")
+                    files_deleted += 1
+            
+            if files_deleted == 0:
+                print("삭제할 임시 파일이 없습니다.")
+            else:
+                print(f"총 {files_deleted}개의 임시 파일을 삭제했습니다.")
+        else:
+            print("임시 디렉토리가 존재하지 않습니다.")
+            
+    except Exception as e:
+        print(f"임시 파일 정리 중 오류 발생: {str(e)}")
+        # 정리 작업 실패는 전체 파이프라인을 중단시키지 않음
 
 # Task 정의
-# preprocess_task
-# modeling_task
-# update_task
 
-# mlflow 서버 연결
+# MLflow 서버 시작
 start_mlflow_task = PythonOperator(
-        task_id='start_mlflow_server',
-        python_callable=start_mlflow_server
-    )
+    task_id='start_mlflow_server',
+    python_callable=start_mlflow_server,
+    dag=dag
+)
 
 # 데이터 전처리 Task
 preprocess_task = PythonOperator(
@@ -194,11 +300,13 @@ update_task = PythonOperator(
     dag=dag
 )
 
+# 임시 파일 정리 Task
+cleanup_task = PythonOperator(
+    task_id='cleanup_temp_files',
+    python_callable=cleanup_temp_files,
+    dag=dag,
+    trigger_rule='all_done'  # 성공/실패 관계없이 실행
+)
+
 # Task 의존성 설정
-# 데이터 불러오기 >> 데이터 전처리 >> 모델링
-# api는 별로도 분리되어있기 때문에 airflow에 작성할 필요없음
-# 모델링한 결과를 api로 불러올거라면 여기에 그 부분에 대한 post도 필요하지만 db에 바로 업데이트할 예정이라면 필요 없음
-
-start_mlflow_task >> preprocess_task >> modeling_task >> update_task
-
-
+start_mlflow_task >> preprocess_task >> modeling_task >> update_task >> cleanup_task
