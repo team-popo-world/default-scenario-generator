@@ -1,4 +1,5 @@
 import pandas as pd
+
 from invest.db.mongo_handler import load_mongo_data
 from invest.db.postgres_handler import load_postgres_data
 from invest.db.merge_df import load_invest_df
@@ -184,10 +185,13 @@ def make_avg_cash_ratio(userId, filter: bool = False):
     return df
 
 
-def make_invest_style(filter: bool = False):
+def make_invest_style(userId, filter: bool = False):
     df = load_mongo_data(None, "invest_cluster_result")
 
     if filter:
         filter_date(df)
+
+    filtered_df = df[df["user_id"]==userId]
+    df = filtered_df["cluster_num"].value_counts().reset_index()
 
     return df
