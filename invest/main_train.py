@@ -4,7 +4,11 @@ from mlflow.models import infer_signature
 
 from pathlib import Path
 
-from invest.main_preprocess import model_preprocess
+# from models.kmeans import kmeans
+# from models.result import result
+# from models.feature_pairs import feature_pairs
+
+# airflow 용 import
 from invest.models.kmeans import kmeans
 from invest.models.result import result
 from invest.models.feature_pairs import feature_pairs

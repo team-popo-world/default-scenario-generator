@@ -8,14 +8,14 @@ from datetime import datetime
 
 load_dotenv(override=True)
 
-def update_mongo_data(df, collection_name: str):
+def update_mongo_data(df):
     # MongoDB 연결 정보
     uri = os.getenv("MONGO_URI")
     db_name = os.getenv("MONGO_DB_NAME")
     
     client = MongoClient(uri)
     db = client[db_name]
-    collection = db[collection_name]
+    collection = db["invest_cluster_result"]
 
     # json 데이터
     records = df.to_dict('records')
@@ -48,3 +48,12 @@ def update_mongo_data(df, collection_name: str):
     # 첫 번째 document 확인
     first_doc = collection.find_one()
     print("첫 번째 document:", first_doc)
+
+
+# from main_preprocess import model_preprocess
+# from main_train import model_train
+
+# df = model_preprocess()
+# df1 = model_train(df)
+# update_mongo_data(df1)
+# print(df1.info())

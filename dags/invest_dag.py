@@ -22,6 +22,10 @@ from invest.main_preprocess import model_preprocess # 전처리 모델링
 from invest.main_train import model_train  # 모델링.py import 하기
 from invest.main_updateDB import update_mongo_data # 분류 결과 몽고db에 update
 
+from airflow.operators.bash import BashOperator
+import subprocess
+import time
+
 
 load_dotenv(override=True)
 
@@ -45,6 +49,23 @@ dag = DAG(
     catchup=False,
     tags=['preprocessing', 'modeling', 'update'],
 )
+
+def start_mlflow_server():
+    """MLflow 서버를 백그라운드에서 시작"""
+    try:
+        # MLflow 서버가 이미 실행 중인지 확인
+        subprocess.check_output(['curl', '-s', 'http://localhost:5000'])
+        print("MLflow 서버가 이미 실행 중입니다.")
+    except:
+        print("MLflow 서버를 시작합니다...")
+        subprocess.Popen([
+            'mlflow', 'server', 
+            '--host', '0.0.0.0', 
+            '--port', '5000',
+            '--backend-store-uri', 'sqlite:///mlflow.db'
+        ])
+        time.sleep(10)  # 서버 시작 대기
+
 
 def preprocess_data(**context):
     try:
@@ -128,6 +149,12 @@ def update_data(**context):
 # modeling_task
 # update_task
 
+# mlflow 서버 연결
+start_mlflow_task = PythonOperator(
+        task_id='start_mlflow_server',
+        python_callable=start_mlflow_server
+    )
+
 # 데이터 전처리 Task
 preprocess_task = PythonOperator(
     task_id='preprocess_data',
@@ -154,6 +181,6 @@ update_task = PythonOperator(
 # api는 별로도 분리되어있기 때문에 airflow에 작성할 필요없음
 # 모델링한 결과를 api로 불러올거라면 여기에 그 부분에 대한 post도 필요하지만 db에 바로 업데이트할 예정이라면 필요 없음
 
-preprocess_task >> modeling_task >> update_task
+start_mlflow_task >> preprocess_task >> modeling_task >> update_task
 
 
