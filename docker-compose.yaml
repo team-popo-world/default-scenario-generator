@@ -120,5 +120,6 @@ services:
 volumes:
   pg_data:
   qdrant_storage:
+  mlflow_pg_data:
 
   ## 확인용 올려보기!! commit
