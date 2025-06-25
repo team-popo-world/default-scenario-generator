@@ -115,15 +115,28 @@ def bet_ratio_all(userId :str):
 
 @router.get("/bet_ratio/week")
 def bet_ratio_week(userId :str):
-    df = make_bet_ratio(userId, filter=True)
-    # if df.empty:
-    #     return JSONResponse(
-    #         content={"message": "데이터가 없습니다.", "userId": userId},
-    #         status_code=200  # 👈 여기 중요!
-    #     )
-    json = df.to_dict(orient="records")
-    # update_mongo_data(user_id=userId, json_data=json, collection_name="graph3_week_history")
-    return json
+    try:
+        df = make_bet_ratio(userId)
+        return {
+            "userId": userId,
+            "data": df.to_dict(orient="records"),
+            "message": "Success" if not df.empty else "No data"
+        }
+    except Exception as e:
+        print(f"[API ERROR] /bet_ratio/week failed for userId {userId}: {e}")
+        return JSONResponse(
+            status_code=200,
+            content={"userId": userId, "data": [], "error": str(e)}
+        )
+    # df = make_bet_ratio(userId, filter=True)
+    # # if df.empty:
+    # #     return JSONResponse(
+    # #         content={"message": "데이터가 없습니다.", "userId": userId},
+    # #         status_code=200  # 👈 여기 중요!
+    # #     )
+    # json = df.to_dict(orient="records")
+    # # update_mongo_data(user_id=userId, json_data=json, collection_name="graph3_week_history")
+    # return json
 
 @router.get("/avg_cash_ratio/all")
 def avg_cash_ratio_all(userId :str):
