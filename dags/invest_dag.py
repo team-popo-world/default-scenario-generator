@@ -20,6 +20,7 @@ except ImportError:
 from invest.main_preprocess import model_preprocess # 전처리 모델링
 from invest.main_train import model_train  # 모델링.py import 하기
 from invest.main_updateDB import update_mongo_data # 분류 결과 몽고db에 update
+from invest.utils.data_utils import sanitize_dataframe_for_json, safe_dataframe_to_json
 
 import subprocess
 import time
@@ -45,6 +46,7 @@ dag = DAG(
     catchup=False,
     tags=['preprocessing', 'modeling', 'update'],
 )
+
 
 def start_mlflow_server():
     """MLflow 서버를 백그라운드에서 시작"""
@@ -96,6 +98,10 @@ def preprocess_data(**context):
             raise ValueError("전처리 결과가 모두 null 값입니다")
             
         print(f"전처리 완료 - 행 수: {len(df)}, 열 수: {len(df.columns)}")
+        
+        # **핵심: DataFrame 정리 및 안전한 변환**
+        df = sanitize_dataframe_for_json(df)
+
         print(f"DataFrame 메모리 사용량: {df.memory_usage(deep=True).sum()} bytes")
 
         # 데이터 크기 확인
@@ -111,37 +117,24 @@ def preprocess_data(**context):
             print(f"대용량 데이터를 파일로 저장: {file_path}")
         else:
             # 소용량 데이터는 XCom 사용
-            chunk_size = 1000
-            json_chunks = []
-
-            for i in range(0, len(df), chunk_size):
-                chunk = df.iloc[i:i+chunk_size]
-                try:
-                    chunk_json = chunk.to_json(orient='records')
-                    json_chunks.append(chunk_json)
-                except Exception as e:
-                    print(f"청크 {i//chunk_size + 1} 처리 실패: {e}")
-                    # 문제가 있는 청크는 문자열로 변환
-                    chunk_clean = chunk.astype(str)
-                    chunk_json = chunk_clean.to_json(orient='records')
-                    json_chunks.append(chunk_json)
-
-            # 최종 결합
-            if json_chunks:
-                json_data = '[' + ','.join([chunk[1:-1] for chunk in json_chunks if chunk != '[]']) + ']'
-            else:
-                json_data = '[]'
+            # 안전한 JSON 변환
+            json_data = safe_dataframe_to_json(df)
 
             json_size = len(json_data.encode('utf-8'))
             print(f"전처리 완료. 데이터 크기: {json_size} bytes")
             
-            # XCom 크기 제한 확인 (1MB = 1,048,576 bytes)
+            # XCom 크기 제한 확인
             if json_size > 1048576:
-                raise ValueError(f"데이터 크기가 XCom 제한을 초과합니다: {json_size} bytes")
-            
-            context['ti'].xcom_push(key='preprocessed_df', value=json_data)
-            print("전처리 데이터 XCom 푸시 완료")
-        
+                temp_dir = "/opt/airflow/temp_data"
+                os.makedirs(temp_dir, exist_ok=True)
+                file_path = f"{temp_dir}/preprocessed_{context['ds']}.parquet"
+                df.to_parquet(file_path)
+                context['ti'].xcom_push(key='data_path', value=file_path)
+                print(f"XCom 크기 초과로 파일 저장: {file_path}")
+            else:
+                context['ti'].xcom_push(key='preprocessed_df', value=json_data)
+                print("전처리 데이터 XCom 푸시 완료")
+
     except Exception as e:
         print(f"전처리 실패: {str(e)}")
         raise
@@ -176,6 +169,9 @@ def modeling_data(**context):
         
         print(f"모델링 완료. 결과 데이터 크기: {len(result_df)} rows")
         
+        # **결과 데이터도 인코딩 정리**
+        result_df = sanitize_dataframe_for_json(result_df)
+        
         # 결과 데이터 저장
         if len(result_df) > 10000:
             # 대용량 데이터는 파일로 저장
@@ -186,27 +182,8 @@ def modeling_data(**context):
             context['ti'].xcom_push(key='result_path', value=file_path)
             print(f"대용량 모델링 결과를 파일로 저장: {file_path}")
         else:
-            # 청크 단위로 처리
-            chunk_size = 1000
-            json_chunks = []
-
-            for i in range(0, len(result_df), chunk_size):
-                chunk = result_df.iloc[i:i+chunk_size]
-                try:
-                    chunk_json = chunk.to_json(orient='records')
-                    json_chunks.append(chunk_json)
-                except Exception as e:
-                    print(f"결과 청크 {i//chunk_size + 1} 처리 실패: {e}")
-                    chunk_clean = chunk.astype(str)
-                    chunk_json = chunk_clean.to_json(orient='records')
-                    json_chunks.append(chunk_json)
-
-            # 최종 결합
-            if json_chunks:
-                result_json = '[' + ','.join([chunk[1:-1] for chunk in json_chunks if chunk != '[]']) + ']'
-            else:
-                result_json = '[]'
-
+            # **안전한 JSON 변환 사용**
+            result_json = safe_dataframe_to_json(result_df)
             context['ti'].xcom_push(key='modeling_result', value=result_json)
             print("모델링 결과 XCom 푸시 완료")
         
@@ -215,6 +192,7 @@ def modeling_data(**context):
     except Exception as e:
         print(f"모델링 실패: {str(e)}")
         raise
+
 
 def update_data(**context):
     try:
