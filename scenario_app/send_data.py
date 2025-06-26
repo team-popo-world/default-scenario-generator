@@ -2,9 +2,14 @@ import os
 import json
 import requests
 import logging
+import asyncio
 from .config import API_URL
+from .summary_generator import generate_story_summary_with_llm, generate_story_summary, initialize_llm
 
-def send_data():
+async def send_data():
+    # LLM 초기화
+    initialize_llm()
+    
     # logging 설정
     logging.basicConfig(
         filename=os.path.join(os.path.dirname(__file__),'scenario_send_log.log'),
@@ -35,9 +40,22 @@ def send_data():
                 try:
                     with open(file_path, "r", encoding="utf-8") as f:
                         scenario_json = json.load(f)
+                    
+                    # JSON을 문자열로 변환
+                    story_str = json.dumps(scenario_json, ensure_ascii=False)
+                    
+                    # LLM을 통한 요약 생성
+                    try:
+                        summary = await generate_story_summary_with_llm(story_str)
+                        logging.info(f"[요약생성 성공] {filename}: {summary[:50]}...")
+                    except Exception as summary_error:
+                        summary = generate_story_summary(story_str)
+                        logging.warning(f"[요약생성 실패, 기본요약 사용] {filename}: {summary_error}")
+                    
                     scenario_data = {
                         "chapterId": chapter_id,
-                        "story": json.dumps(scenario_json, ensure_ascii=False),  # 문자열 변환
+                        "story": story_str,  # 문자열 변환
+                        "summary": summary,  # 요약 추가
                         "isCustom": False
                     }
                     scenario_list.append(scenario_data)
@@ -76,4 +94,4 @@ def send_data():
     logging.info(result_msg)
 
 if __name__ == "__main__":
-    send_data()
+    asyncio.run(send_data())
