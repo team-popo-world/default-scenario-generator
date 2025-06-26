@@ -1,0 +1,226 @@
+[
+  {
+    "turn_number": 1,
+    "result": "게임 시작! 마법 마을 가게들이 문을 열었어요.",
+    "news": "서커스단에 아주 특별한 마법 손님이 올 거라는 소문이 돌고 있어요! 공연이 더 멋있어질까요?",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "손님이 오면 인기가 많아지지만, 안 오면 실망할 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 빵 냄새 가득한 곳.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "서커스단에 정말 특별한 마법 손님이 찾아와 공연이 크게 성공했어요!",
+    "news": "마법 왕국에 반짝이는 별똥별 소나기가 내릴 예정이래요! 모두에게 행운을 가져다줄까요?",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳.",
+        "before_value": 100,
+        "current_value": 101,
+        "expectation": "모든 가게에 좋은 기운이 퍼져 인기가 올라갈 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳.",
+        "before_value": 100,
+        "current_value": 108,
+        "expectation": "모든 가게에 좋은 기운이 퍼져 인기가 올라갈 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 빵 냄새 가득한 곳.",
+        "before_value": 100,
+        "current_value": 102,
+        "expectation": "모든 가게에 좋은 기운이 퍼져 인기가 올라갈 수 있어요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "마법 왕국에 별똥별 소나기가 쏟아져 내리며 마을 전체에 신비로운 행운이 가득했어요!",
+    "news": "마법연구소에서 엄청난 힘을 가진 마법 재료를 구했다는 소문이 있어요! 놀라운 마법이 나올까요?",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳.",
+        "before_value": 101,
+        "current_value": 108,
+        "expectation": "새 마법이 성공하면 대박이지만, 실패하면 실망할 수도 있어요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳.",
+        "before_value": 108,
+        "current_value": 112,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 빵 냄새 가득한 곳.",
+        "before_value": 102,
+        "current_value": 104,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "마법연구소의 새로운 마법 재료 실험이 예상치 못하게 실패하여 작은 소동이 일어났어요.",
+    "news": "서커스단의 귀여운 마법 동물들이 갑자기 시무룩해졌다는 이야기가 있어요. 공연에 지장이 없을까요?",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳.",
+        "before_value": 108,
+        "current_value": 93,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳.",
+        "before_value": 112,
+        "current_value": 113,
+        "expectation": "동물들이 기운을 차리면 괜찮지만, 계속 시무룩하면 인기가 떨어질 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 빵 냄새 가득한 곳.",
+        "before_value": 104,
+        "current_value": 105,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "시무룩했던 서커스단의 마법 동물들이 특별한 간식 덕분에 다시 활기를 되찾고 멋진 공연을 펼쳤어요!",
+    "news": "오늘 밤, 마법 왕국에 아주 특별한 '무지개 마법 비'가 내릴 예정이에요! 모두가 행복해질 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳.",
+        "before_value": 93,
+        "current_value": 94,
+        "expectation": "모든 가게에 좋은 기운이 퍼져 인기가 올라갈 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳.",
+        "before_value": 113,
+        "current_value": 120,
+        "expectation": "모든 가게에 좋은 기운이 퍼져 인기가 올라갈 수 있어요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 빵 냄새 가득한 곳.",
+        "before_value": 105,
+        "current_value": 106,
+        "expectation": "모든 가게에 좋은 기운이 퍼져 인기가 올라갈 수 있어요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "마법 왕국에 무지개 마법 비가 내리며 마을 전체에 생기와 행복이 넘쳐났어요!",
+    "news": "마법연구소에서 새로운 마법 도구를 시험 중이라는 소문이 퍼졌어요! 과연 완벽하게 작동할까요?",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳.",
+        "before_value": 94,
+        "current_value": 102,
+        "expectation": "도구가 성공하면 인기가 오르지만, 고장 나면 실망할 수도 있어요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳.",
+        "before_value": 120,
+        "current_value": 124,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 빵 냄새 가득한 곳.",
+        "before_value": 106,
+        "current_value": 108,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "마법연구소의 새 마법 도구가 시험에 성공하여 놀라운 마법의 힘을 보여주었어요!",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳.",
+        "before_value": 102,
+        "current_value": 120,
+        "expectation": ""
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳.",
+        "before_value": 124,
+        "current_value": 125,
+        "expectation": ""
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 빵 냄새 가득한 곳.",
+        "before_value": 108,
+        "current_value": 109,
+        "expectation": ""
+      }
+    ]
+  }
+]

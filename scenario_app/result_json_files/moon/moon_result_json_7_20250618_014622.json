@@ -1,0 +1,226 @@
+[
+  {
+    "turn_number": 1,
+    "result": "작전 시작! 모든 도둑들이 달빛 왕국 곳곳에서 은밀히 움직이기 시작했어요.",
+    "news": "오늘 밤, 달빛 왕국에 짙은 안개가 자욱하게 깔렸어요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "달빛 방패 훔치기 작전",
+        "risk_level": "고위험 고수익",
+        "description": "왕실 보물창고 깊숙이 숨겨진 전설의 방패를 노리는 대담한 작전!",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "안개 덕분에 숨기 좋을 수도, 앞이 안 보여 위험할 수도 있어요."
+      },
+      {
+        "name": "달조각 목걸이 훔치기 작전",
+        "risk_level": "중위험 균형형",
+        "description": "작은 보석이지만 반짝임이 강한 목걸이를 노리는 작전!",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "안개 덕분에 숨기 좋을 수도, 앞이 안 보여 위험할 수도 있어요."
+      },
+      {
+        "name": "달빛 가루 훔치기 작전",
+        "risk_level": "저위험 저수익",
+        "description": "달빛 창고 한쪽에서 몰래 가루를 모으는 가장 안전한 작전!",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "안개 덕분에 숨기 좋을 수도, 앞이 안 보여 위험할 수도 있어요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "짙은 안개 덕분에 모든 작전이 들키지 않고 더 은밀하게 움직일 수 있었어요!",
+    "news": "왕실 보물창고에 달빛 방패를 위한 새로운 '마법 거울 감시 장치'가 생길 거라는 소문이 돌아요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "달빛 방패 훔치기 작전",
+        "risk_level": "고위험 고수익",
+        "description": "왕실 보물창고 깊숙이 숨겨진 전설의 방패를 노리는 대담한 작전!",
+        "before_value": 100,
+        "current_value": 105,
+        "expectation": "장치가 생기면 위험하지만, 소문이면 오히려 작전이 쉬울 수 있어요."
+      },
+      {
+        "name": "달조각 목걸이 훔치기 작전",
+        "risk_level": "중위험 균형형",
+        "description": "작은 보석이지만 반짝임이 강한 목걸이를 노리는 작전!",
+        "before_value": 100,
+        "current_value": 103,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "달빛 가루 훔치기 작전",
+        "risk_level": "저위험 저수익",
+        "description": "달빛 창고 한쪽에서 몰래 가루를 모으는 가장 안전한 작전!",
+        "before_value": 100,
+        "current_value": 102,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "마법 거울 감시 장치 소문은 거짓으로 밝혀져, 달빛 방패 작전이 더욱 수월해졌어요!",
+    "news": "달조각 목걸이가 있는 박물관 지하에 '비밀 통로'가 숨겨져 있다는 이야기가 들려요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "달빛 방패 훔치기 작전",
+        "risk_level": "고위험 고수익",
+        "description": "왕실 보물창고 깊숙이 숨겨진 전설의 방패를 노리는 대담한 작전!",
+        "before_value": 105,
+        "current_value": 120,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "달조각 목걸이 훔치기 작전",
+        "risk_level": "중위험 균형형",
+        "description": "작은 보석이지만 반짝임이 강한 목걸이를 노리는 작전!",
+        "before_value": 103,
+        "current_value": 104,
+        "expectation": "통로가 진짜라면 작전이 쉬워지지만, 소문이라면 실망할 수도 있어요."
+      },
+      {
+        "name": "달빛 가루 훔치기 작전",
+        "risk_level": "저위험 저수익",
+        "description": "달빛 창고 한쪽에서 몰래 가루를 모으는 가장 안전한 작전!",
+        "before_value": 102,
+        "current_value": 103,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "달조각 목걸이가 있는 곳에 숨겨진 비밀 통로가 정말로 존재해서 작전이 성공적이었어요!",
+    "news": "달빛 왕국에서 '별똥별 축제'가 시작되었어요! 밤새도록 환하고 시끌벅적할 거예요!",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "달빛 방패 훔치기 작전",
+        "risk_level": "고위험 고수익",
+        "description": "왕실 보물창고 깊숙이 숨겨진 전설의 방패를 노리는 대담한 작전!",
+        "before_value": 120,
+        "current_value": 122,
+        "expectation": "축제 때문에 숨기 좋을 수도, 사람들 때문에 들킬 수도 있어요."
+      },
+      {
+        "name": "달조각 목걸이 훔치기 작전",
+        "risk_level": "중위험 균형형",
+        "description": "작은 보석이지만 반짝임이 강한 목걸이를 노리는 작전!",
+        "before_value": 104,
+        "current_value": 112,
+        "expectation": "축제 때문에 숨기 좋을 수도, 사람들 때문에 들킬 수도 있어요."
+      },
+      {
+        "name": "달빛 가루 훔치기 작전",
+        "risk_level": "저위험 저수익",
+        "description": "달빛 창고 한쪽에서 몰래 가루를 모으는 가장 안전한 작전!",
+        "before_value": 103,
+        "current_value": 104,
+        "expectation": "축제 때문에 숨기 좋을 수도, 사람들 때문에 들킬 수도 있어요."
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "별똥별 축제 인파가 너무 많아 모든 작전이 들킬까 봐 조심하느라 시간이 지체되었어요!",
+    "news": "달빛 방패를 지키는 '그림자 골렘'들이 요즘 밤마다 두 배로 순찰을 돌고 있다는 소문이에요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "달빛 방패 훔치기 작전",
+        "risk_level": "고위험 고수익",
+        "description": "왕실 보물창고 깊숙이 숨겨진 전설의 방패를 노리는 대담한 작전!",
+        "before_value": 122,
+        "current_value": 114,
+        "expectation": "골렘이 많으면 위험하지만, 소문이라면 더 대담한 기회가 될 수 있어요."
+      },
+      {
+        "name": "달조각 목걸이 훔치기 작전",
+        "risk_level": "중위험 균형형",
+        "description": "작은 보석이지만 반짝임이 강한 목걸이를 노리는 작전!",
+        "before_value": 112,
+        "current_value": 108,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "달빛 가루 훔치기 작전",
+        "risk_level": "저위험 저수익",
+        "description": "달빛 창고 한쪽에서 몰래 가루를 모으는 가장 안전한 작전!",
+        "before_value": 104,
+        "current_value": 102,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "그림자 골렘들이 정말로 두 배로 순찰을 돌아서 달빛 방패 작전이 큰 어려움에 부딪혔어요!",
+    "news": "달조각 목걸이를 항상 지키던 '잠꾸러기 경비대장'이 오늘 밤 휴가를 간다는 소식이 들려요!",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "달빛 방패 훔치기 작전",
+        "risk_level": "고위험 고수익",
+        "description": "왕실 보물창고 깊숙이 숨겨진 전설의 방패를 노리는 대담한 작전!",
+        "before_value": 114,
+        "current_value": 96,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "달조각 목걸이 훔치기 작전",
+        "risk_level": "중위험 균형형",
+        "description": "작은 보석이지만 반짝임이 강한 목걸이를 노리는 작전!",
+        "before_value": 108,
+        "current_value": 109,
+        "expectation": "대장이 없으면 기회지만, 만약 온다면 작전이 아주 어려워질 수 있어요."
+      },
+      {
+        "name": "달빛 가루 훔치기 작전",
+        "risk_level": "저위험 저수익",
+        "description": "달빛 창고 한쪽에서 몰래 가루를 모으는 가장 안전한 작전!",
+        "before_value": 102,
+        "current_value": 103,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "잠꾸러기 경비대장이 휴가를 가지 않고 오히려 더 철저히 경비해서 달조각 목걸이 작전이 큰 위험에 빠졌어요!",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "달빛 방패 훔치기 작전",
+        "risk_level": "고위험 고수익",
+        "description": "왕실 보물창고 깊숙이 숨겨진 전설의 방패를 노리는 대담한 작전!",
+        "before_value": 96,
+        "current_value": 97,
+        "expectation": ""
+      },
+      {
+        "name": "달조각 목걸이 훔치기 작전",
+        "risk_level": "중위험 균형형",
+        "description": "작은 보석이지만 반짝임이 강한 목걸이를 노리는 작전!",
+        "before_value": 109,
+        "current_value": 100,
+        "expectation": ""
+      },
+      {
+        "name": "달빛 가루 훔치기 작전",
+        "risk_level": "저위험 저수익",
+        "description": "달빛 창고 한쪽에서 몰래 가루를 모으는 가장 안전한 작전!",
+        "before_value": 103,
+        "current_value": 104,
+        "expectation": ""
+      }
+    ]
+  }
+]

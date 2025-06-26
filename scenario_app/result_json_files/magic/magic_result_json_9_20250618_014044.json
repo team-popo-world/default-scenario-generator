@@ -1,0 +1,226 @@
+[
+  {
+    "turn_number": 1,
+    "result": "게임 시작! 마법 마을의 모든 가게가 문을 활짝 열었어요.",
+    "news": "서커스단에 아주 특별한 손님이 올 거라는 소문이 돌아요! 멋진 마법사라고 해요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳으로, 대성공이면 인기가 크게 오르지만, 실패하면 위험해질 수 있습니다.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳. 날씨, 재미있는 이벤트, 특별한 손님 등에 따라 인기가 오르내립니다.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "손님이 오면 인기가 오르지만, 안 오면 실망할 수도 있어요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳. 언제나 손님이 꾸준하지만 큰 변화는 적습니다.",
+        "before_value": 100,
+        "current_value": 100,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 2,
+    "result": "서커스단에 특별한 손님이 찾아와 멋진 마법 공연을 선보였어요! 관객이 가득 찼어요.",
+    "news": "마법 왕국에 커다란 무지개가 활짝 피어났어요! 모두에게 행운이 찾아올 거예요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳으로, 대성공이면 인기가 크게 오르지만, 실패하면 위험해질 수 있습니다.",
+        "before_value": 100,
+        "current_value": 101,
+        "expectation": "무지개가 행운을 가져와 모든 가게가 잘될 거예요!"
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳. 날씨, 재미있는 이벤트, 특별한 손님 등에 따라 인기가 오르내립니다.",
+        "before_value": 100,
+        "current_value": 107,
+        "expectation": "무지개가 행운을 가져와 모든 가게가 잘될 거예요!"
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳. 언제나 손님이 꾸준하지만 큰 변화는 적습니다.",
+        "before_value": 100,
+        "current_value": 101,
+        "expectation": "무지개가 행운을 가져와 모든 가게가 잘될 거예요!"
+      }
+    ]
+  },
+  {
+    "turn_number": 3,
+    "result": "마법 마을에 무지개가 나타나 모든 가게에 행운의 기운을 불어넣어 주었어요!",
+    "news": "마법연구소에서 전설의 마법을 다시 시험한다고 해요. 마을 마법사들이 정말 기대하고 있어요!",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳으로, 대성공이면 인기가 크게 오르지만, 실패하면 위험해질 수 있습니다.",
+        "before_value": 101,
+        "current_value": 110,
+        "expectation": "성공하면 최고지만, 실패하면 인기가 떨어질 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳. 날씨, 재미있는 이벤트, 특별한 손님 등에 따라 인기가 오르내립니다.",
+        "before_value": 107,
+        "current_value": 111,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳. 언제나 손님이 꾸준하지만 큰 변화는 적습니다.",
+        "before_value": 101,
+        "current_value": 103,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 4,
+    "result": "마법연구소의 전설 마법 실험이 예상치 못하게 실패했어요. 잠시 연구소를 닫아야 할지도 몰라요.",
+    "news": "오늘은 반짝이는 별똥별이 쏟아지는 밤이에요! 마법 에너지가 하늘 가득 넘칠 것 같아요.",
+    "news_tag": "all",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳으로, 대성공이면 인기가 크게 오르지만, 실패하면 위험해질 수 있습니다.",
+        "before_value": 110,
+        "current_value": 95,
+        "expectation": "별똥별의 마법 에너지로 모든 가게가 특별한 하루를 보낼 거예요!"
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳. 날씨, 재미있는 이벤트, 특별한 손님 등에 따라 인기가 오르내립니다.",
+        "before_value": 111,
+        "current_value": 112,
+        "expectation": "별똥별의 마법 에너지로 모든 가게가 특별한 하루를 보낼 거예요!"
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳. 언제나 손님이 꾸준하지만 큰 변화는 적습니다.",
+        "before_value": 103,
+        "current_value": 104,
+        "expectation": "별똥별의 마법 에너지로 모든 가게가 특별한 하루를 보낼 거예요!"
+      }
+    ]
+  },
+  {
+    "turn_number": 5,
+    "result": "별똥별이 쏟아지는 밤, 마법 에너지가 마을을 감싸며 모든 가게에 좋은 기운을 주었어요!",
+    "news": "서커스단이 하늘을 나는 새로운 묘기를 준비한다는 소식이 들려요! 비밀 연습 중이라고 해요.",
+    "news_tag": "mid",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳으로, 대성공이면 인기가 크게 오르지만, 실패하면 위험해질 수 있습니다.",
+        "before_value": 95,
+        "current_value": 103,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳. 날씨, 재미있는 이벤트, 특별한 손님 등에 따라 인기가 오르내립니다.",
+        "before_value": 112,
+        "current_value": 116,
+        "expectation": "묘기가 성공하면 인기가 오르지만, 실패하면 걱정될 수도 있어요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳. 언제나 손님이 꾸준하지만 큰 변화는 적습니다.",
+        "before_value": 104,
+        "current_value": 106,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 6,
+    "result": "서커스단이 연습 중이던 하늘 나는 묘기를 완벽하게 성공시켰어요! 마을 사람들이 깜짝 놀랐어요.",
+    "news": "마법연구소에서 아주 중요한 마법 재료가 사라졌다는 소문이 돌아요. 큰일은 아니겠죠?",
+    "news_tag": "high",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳으로, 대성공이면 인기가 크게 오르지만, 실패하면 위험해질 수 있습니다.",
+        "before_value": 103,
+        "current_value": 104,
+        "expectation": "재료를 찾으면 좋겠지만, 못 찾으면 연구에 문제가 생길 수 있어요."
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳. 날씨, 재미있는 이벤트, 특별한 손님 등에 따라 인기가 오르내립니다.",
+        "before_value": 116,
+        "current_value": 124,
+        "expectation": "큰 영향이 없을 거예요."
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳. 언제나 손님이 꾸준하지만 큰 변화는 적습니다.",
+        "before_value": 106,
+        "current_value": 107,
+        "expectation": "큰 영향이 없을 거예요."
+      }
+    ]
+  },
+  {
+    "turn_number": 7,
+    "result": "마법연구소에서 사라졌던 중요한 마법 재료가 결국 발견되지 않아 연구에 차질이 생겼어요.",
+    "news": "",
+    "news_tag": "",
+    "stocks": [
+      {
+        "name": "마법연구소",
+        "risk_level": "고위험 고수익",
+        "description": "신기한 마법을 연구하는 곳으로, 대성공이면 인기가 크게 오르지만, 실패하면 위험해질 수 있습니다.",
+        "before_value": 104,
+        "current_value": 86,
+        "expectation": ""
+      },
+      {
+        "name": "서커스단",
+        "risk_level": "중위험 균형형",
+        "description": "멋진 공연이 펼쳐지는 곳. 날씨, 재미있는 이벤트, 특별한 손님 등에 따라 인기가 오르내립니다.",
+        "before_value": 124,
+        "current_value": 125,
+        "expectation": ""
+      },
+      {
+        "name": "빵집",
+        "risk_level": "저위험 저수익",
+        "description": "고소한 냄새 가득, 따뜻한 빵을 만드는 곳. 언제나 손님이 꾸준하지만 큰 변화는 적습니다.",
+        "before_value": 107,
+        "current_value": 108,
+        "expectation": ""
+      }
+    ]
+  }
+]
