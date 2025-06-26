@@ -24,6 +24,10 @@ from invest.utils.data_utils import sanitize_dataframe_for_json, safe_dataframe_
 
 import subprocess
 import time
+import shutil 
+import requests
+import psutil
+
 
 load_dotenv(override=True)
 
@@ -49,38 +53,59 @@ dag = DAG(
 
 
 def start_mlflow_server():
-    """MLflow 서버를 백그라운드에서 시작"""
-    # 환경변수가 없으면 기본값 설정
-    mlflow_uri = os.getenv("MLFLOW_URL", "http://localhost:5001")
-    
-    try:
-        # MLflow 서버가 이미 실행 중인지 확인
-        subprocess.check_output(['curl', '-s', mlflow_uri], 
-                              stderr=subprocess.DEVNULL)
-        print("MLflow 서버가 이미 실행 중입니다.")
-        return
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        print("MLflow 서버를 시작합니다...")
-        
-    try:
-        # 가상환경의 mlflow 경로 사용
-        mlflow_path = "/home/ubuntu/mlflow_env/bin/mlflow"
+    """MLflow 서버를 간단하게 시작"""
 
+    # 1. 서버가 이미 실행 중인지 확인
+    try:
+        response = requests.get("http://43.203.175.69:5001/health", timeout=5)
+        if response.status_code == 200:
+            print("✅ MLflow 서버가 이미 실행 중입니다.")
+            return
+    except:
+        print("MLflow 서버를 시작합니다...")
+    
+    # 2. MLflow 경로 찾기 (개선된 로직)
+    mlflow_path = shutil.which("mlflow")
+    if not mlflow_path:
+        mlflow_path = "/home/ubuntu/mlflow_env/bin/mlflow"
+        if not os.path.exists(mlflow_path):
+            print(f"❌ MLflow를 찾을 수 없습니다. 경로를 확인하세요.")
+            return
+    
+    print(f"MLflow 경로: {mlflow_path}")
+    
+    # 3. 기존 프로세스 정리
+    os.system("sudo pkill -f 'mlflow server' 2>/dev/null")
+    time.sleep(2)
+    
+    # 4. MLflow 서버 시작
+    try:
         subprocess.Popen([
             mlflow_path, 'server',
-                '--host', '0.0.0.0',
-                '--port', '5001',
-                '--backend-store-uri', 
-                'postgresql://postgres:team2%21123@mlflowdb-1.c3gseooicuve.ap-northeast-2.rds.amazonaws.com:5432/mlflowsercer_db',
-                '--default-artifact-root', 's3://team2-mlflow-bucket'
-        ])
-
-        time.sleep(15)  # 서버 시작 대기 시간 증가
-        print("MLflow 서버가 시작되었습니다.")
-    except FileNotFoundError:
-        print("MLflow가 설치되지 않았습니다.")
+            '--host', '0.0.0.0',
+            '--port', '5001',
+            '--backend-store-uri', 
+            'postgresql://postgres:team2%21123@mlflowdb-1.c3gseooicuve.ap-northeast-2.rds.amazonaws.com:5432/mlflowsercer_db',
+            '--default-artifact-root', 's3://team2-mlflow-bucket'
+        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        
+        # 5. 서버 시작 대기
+        time.sleep(20)
+        
+        # 6. 서버 확인
+        try:
+            response = requests.get("http://localhost:5001/health", timeout=5)
+            if response.status_code == 200:
+                print("✅ MLflow 서버가 시작되었습니다: http://43.203.175.69:5001")
+            else:
+                print("⚠️ MLflow 서버 상태 확인 실패")
+        except:
+            print("⚠️ MLflow 서버 접근 실패")
+            
     except Exception as e:
-        print(f"MLflow 서버 시작 중 오류 발생: {e}")
+        print(f"❌ MLflow 서버 시작 실패: {e}")
+
+
 
 def preprocess_data(**context):
     try:
