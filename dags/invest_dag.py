@@ -53,8 +53,10 @@ dag = DAG(
 
 
 def start_mlflow_server():
-    """MLflow 서버를 간단하게 시작"""
-
+    """MLflow 서버를 S3 + RDS와 함께 시작"""
+    import requests
+    import shutil
+    
     # 1. 서버가 이미 실행 중인지 확인
     try:
         response = requests.get("http://43.203.175.69:5001/health", timeout=5)
@@ -63,47 +65,66 @@ def start_mlflow_server():
             return
     except:
         print("MLflow 서버를 시작합니다...")
-    
-    # 2. MLflow 경로 찾기 (개선된 로직)
+
+    # 2. MLflow 경로 찾기
     mlflow_path = shutil.which("mlflow")
     if not mlflow_path:
         mlflow_path = "/home/ubuntu/mlflow_env/bin/mlflow"
         if not os.path.exists(mlflow_path):
-            print(f"❌ MLflow를 찾을 수 없습니다. 경로를 확인하세요.")
+            print(f"❌ MLflow를 찾을 수 없습니다.")
             return
-    
+
     print(f"MLflow 경로: {mlflow_path}")
-    
+
     # 3. 기존 프로세스 정리
     os.system("sudo pkill -f 'mlflow server' 2>/dev/null")
     time.sleep(2)
+
+    # 4. 환경변수 설정 (AWS 자격 증명 포함)
+    env = os.environ.copy()
+    env['AWS_ACCESS_KEY_ID'] = os.getenv('AWS_ACCESS_KEY_ID', '')
+    env['AWS_SECRET_ACCESS_KEY'] = os.getenv('AWS_SECRET_ACCESS_KEY', '')
+    env['AWS_DEFAULT_REGION'] = os.getenv('AWS_DEFAULT_REGION', 'ap-northeast-2')
+    env['GIT_PYTHON_REFRESH'] = 'quiet'
     
-    # 4. MLflow 서버 시작
+    # AWS 자격 증명 확인
+    if not env['AWS_ACCESS_KEY_ID'] or not env['AWS_SECRET_ACCESS_KEY']:
+        print("⚠️ AWS 자격 증명이 설정되지 않았습니다.")
+        print("환경변수를 확인하세요: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY")
+
+    # 5. MLflow 서버 시작 (S3 + RDS 완전 활용)
     try:
         subprocess.Popen([
             mlflow_path, 'server',
             '--host', '0.0.0.0',
             '--port', '5001',
+            # RDS PostgreSQL: 메타데이터 저장 (실험, 실행, 파라미터, 메트릭)
             '--backend-store-uri', 
             'postgresql://postgres:team2%21123@mlflowdb-1.c3gseooicuve.ap-northeast-2.rds.amazonaws.com:5432/mlflowsercer_db',
-            '--default-artifact-root', 's3://team2-mlflow-bucket'
-        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        
-        # 5. 서버 시작 대기
-        time.sleep(20)
-        
-        # 6. 서버 확인
+            # S3 버킷: 아티팩트 저장 (모델, 시각화, 파일)
+            '--default-artifact-root', 's3://team2-mlflow-bucket',
+            '--serve-artifacts'  # 아티팩트 프록시 활성화
+        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=env)
+
+        # 6. 서버 시작 대기 (S3 연결을 위해 더 긴 대기)
+        time.sleep(25)
+
+        # 7. 서버 확인
         try:
-            response = requests.get("http://localhost:5001/health", timeout=5)
+            response = requests.get("http://localhost:5001/health", timeout=10)
             if response.status_code == 200:
-                print("✅ MLflow 서버가 시작되었습니다: http://43.203.175.69:5001")
+                print("✅ MLflow 서버가 S3 + RDS와 함께 시작되었습니다!")
+                print("🗄️  메타데이터 저장소: PostgreSQL RDS (mlflowsercer_db)")
+                print("📦 아티팩트 저장소: S3 (team2-mlflow-bucket)")
+                print("🌐 MLflow UI: http://43.203.175.69:5001")
             else:
                 print("⚠️ MLflow 서버 상태 확인 실패")
-        except:
-            print("⚠️ MLflow 서버 접근 실패")
-            
+        except Exception as e:
+            print(f"⚠️ MLflow 서버 접근 실패: {e}")
+
     except Exception as e:
         print(f"❌ MLflow 서버 시작 실패: {e}")
+
 
 
 
