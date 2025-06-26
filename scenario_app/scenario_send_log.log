@@ -120,3 +120,441 @@
 2025-06-18 10:10:07,568 [INFO] 총 1개 시나리오 준비 완료!
 2025-06-18 10:10:07,837 [INFO] [1] 업로드 성공: 200
 2025-06-18 10:10:07,837 [INFO] 업로드 완료! 성공: 1개, 실패: 0개
+2025-06-26 20:52:54,696 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,696 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,696 [INFO] [요약생성 성공] pig_result_json_10_20250618_011652.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,696 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_10_20250618_011652.json
+2025-06-26 20:52:54,708 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,708 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,708 [INFO] [요약생성 성공] pig_result_json_1_20250618_010952.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,708 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_1_20250618_010952.json
+2025-06-26 20:52:54,718 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,718 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,718 [INFO] [요약생성 성공] pig_result_json_2_20250618_011030.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,718 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_2_20250618_011030.json
+2025-06-26 20:52:54,723 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,723 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,723 [INFO] [요약생성 성공] pig_result_json_3_20250618_011112.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,723 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_3_20250618_011112.json
+2025-06-26 20:52:54,728 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,728 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,728 [INFO] [요약생성 성공] pig_result_json_4_20250618_011158.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,728 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_4_20250618_011158.json
+2025-06-26 20:52:54,733 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,733 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,733 [INFO] [요약생성 성공] pig_result_json_5_20250618_011243.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,733 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_5_20250618_011243.json
+2025-06-26 20:52:54,744 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,744 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,744 [INFO] [요약생성 성공] pig_result_json_6_20250618_011329.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,744 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_6_20250618_011329.json
+2025-06-26 20:52:54,748 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,748 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,748 [INFO] [요약생성 성공] pig_result_json_7_20250618_011426.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,748 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_7_20250618_011426.json
+2025-06-26 20:52:54,753 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,753 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,753 [INFO] [요약생성 성공] pig_result_json_8_20250618_011524.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,753 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_8_20250618_011524.json
+2025-06-26 20:52:54,763 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,763 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,763 [INFO] [요약생성 성공] pig_result_json_9_20250618_011605.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,763 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_9_20250618_011605.json
+2025-06-26 20:52:54,774 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,774 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,774 [INFO] [요약생성 성공] food_result_json_10_20250618_012426.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,774 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_10_20250618_012426.json
+2025-06-26 20:52:54,785 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,785 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,785 [INFO] [요약생성 성공] food_result_json_1_20250618_011734.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,785 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_1_20250618_011734.json
+2025-06-26 20:52:54,795 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,795 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,795 [INFO] [요약생성 성공] food_result_json_2_20250618_011817.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,795 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_2_20250618_011817.json
+2025-06-26 20:52:54,800 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,800 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,800 [INFO] [요약생성 성공] food_result_json_3_20250618_011856.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,800 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_3_20250618_011856.json
+2025-06-26 20:52:54,813 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,813 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,814 [INFO] [요약생성 성공] food_result_json_4_20250618_011937.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,814 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_4_20250618_011937.json
+2025-06-26 20:52:54,826 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,826 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,826 [INFO] [요약생성 성공] food_result_json_5_20250618_012023.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,826 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_5_20250618_012023.json
+2025-06-26 20:52:54,830 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,830 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,830 [INFO] [요약생성 성공] food_result_json_6_20250618_012110.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,830 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_6_20250618_012110.json
+2025-06-26 20:52:54,834 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,834 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,835 [INFO] [요약생성 성공] food_result_json_7_20250618_012152.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:0, 중위험:0, 저위험:0...
+2025-06-26 20:52:54,835 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_7_20250618_012152.json
+2025-06-26 20:52:54,839 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,839 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,839 [INFO] [요약생성 성공] food_result_json_8_20250618_012247.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,839 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_8_20250618_012247.json
+2025-06-26 20:52:54,844 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,844 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,844 [INFO] [요약생성 성공] food_result_json_9_20250618_012333.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,844 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_9_20250618_012333.json
+2025-06-26 20:52:54,848 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,848 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,848 [INFO] [요약생성 성공] magic_result_json_10_20250618_014120.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,848 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_10_20250618_014120.json
+2025-06-26 20:52:54,860 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,861 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,861 [INFO] [요약생성 성공] magic_result_json_1_20250618_012517.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,861 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_1_20250618_012517.json
+2025-06-26 20:52:54,870 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,870 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,870 [INFO] [요약생성 성공] magic_result_json_2_20250618_013544.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,870 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_2_20250618_013544.json
+2025-06-26 20:52:54,875 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,875 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,875 [INFO] [요약생성 성공] magic_result_json_3_20250618_013625.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,875 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_3_20250618_013625.json
+2025-06-26 20:52:54,887 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,887 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,887 [INFO] [요약생성 성공] magic_result_json_4_20250618_013721.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,887 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_4_20250618_013721.json
+2025-06-26 20:52:54,892 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,892 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,892 [INFO] [요약생성 성공] magic_result_json_5_20250618_013802.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,892 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_5_20250618_013802.json
+2025-06-26 20:52:54,900 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,900 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,900 [INFO] [요약생성 성공] magic_result_json_6_20250618_013844.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,900 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_6_20250618_013844.json
+2025-06-26 20:52:54,904 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,904 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,904 [INFO] [요약생성 성공] magic_result_json_7_20250618_013919.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,904 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_7_20250618_013919.json
+2025-06-26 20:52:54,909 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,909 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,909 [INFO] [요약생성 성공] magic_result_json_8_20250618_014000.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,909 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_8_20250618_014000.json
+2025-06-26 20:52:54,921 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,921 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,921 [INFO] [요약생성 성공] magic_result_json_9_20250618_014044.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,921 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_9_20250618_014044.json
+2025-06-26 20:52:54,929 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,929 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,929 [INFO] [요약생성 성공] moon_result_json_10_20250618_014838.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,929 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_10_20250618_014838.json
+2025-06-26 20:52:54,941 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,941 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,942 [INFO] [요약생성 성공] moon_result_json_1_20250618_014202.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,942 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_1_20250618_014202.json
+2025-06-26 20:52:54,952 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,952 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,953 [INFO] [요약생성 성공] moon_result_json_2_20250618_014244.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,953 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_2_20250618_014244.json
+2025-06-26 20:52:54,963 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,963 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,963 [INFO] [요약생성 성공] moon_result_json_3_20250618_014329.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,964 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_3_20250618_014329.json
+2025-06-26 20:52:54,977 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,977 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,977 [INFO] [요약생성 성공] moon_result_json_4_20250618_014413.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,977 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_4_20250618_014413.json
+2025-06-26 20:52:54,995 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:54,995 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:54,995 [INFO] [요약생성 성공] moon_result_json_5_20250618_014454.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:54,995 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_5_20250618_014454.json
+2025-06-26 20:52:55,007 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:55,007 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:55,007 [INFO] [요약생성 성공] moon_result_json_6_20250618_014541.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:55,007 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_6_20250618_014541.json
+2025-06-26 20:52:55,015 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:55,015 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:55,015 [INFO] [요약생성 성공] moon_result_json_7_20250618_014622.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:55,015 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_7_20250618_014622.json
+2025-06-26 20:52:55,026 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:55,026 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:55,027 [INFO] [요약생성 성공] moon_result_json_8_20250618_014711.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:55,027 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_8_20250618_014711.json
+2025-06-26 20:52:55,032 [WARNING] LangChain 패키지가 설치되지 않았습니다.
+2025-06-26 20:52:55,032 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:52:55,032 [INFO] [요약생성 성공] moon_result_json_9_20250618_014754.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:52:55,032 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_9_20250618_014754.json
+2025-06-26 20:52:55,033 [INFO] 총 40개 시나리오 준비 완료!
+2025-06-26 20:52:55,038 [ERROR] [1] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,038 [ERROR] [2] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,039 [ERROR] [3] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,039 [ERROR] [4] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,039 [ERROR] [5] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,040 [ERROR] [6] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,040 [ERROR] [7] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,041 [ERROR] [8] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,041 [ERROR] [9] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,042 [ERROR] [10] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,042 [ERROR] [11] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,042 [ERROR] [12] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,042 [ERROR] [13] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,043 [ERROR] [14] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,043 [ERROR] [15] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,043 [ERROR] [16] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,043 [ERROR] [17] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,044 [ERROR] [18] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,044 [ERROR] [19] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,045 [ERROR] [20] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,045 [ERROR] [21] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,046 [ERROR] [22] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,046 [ERROR] [23] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,046 [ERROR] [24] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,047 [ERROR] [25] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,047 [ERROR] [26] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,047 [ERROR] [27] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,048 [ERROR] [28] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,048 [ERROR] [29] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,048 [ERROR] [30] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,049 [ERROR] [31] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,049 [ERROR] [32] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,049 [ERROR] [33] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,049 [ERROR] [34] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,050 [ERROR] [35] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,050 [ERROR] [36] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,051 [ERROR] [37] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,051 [ERROR] [38] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,051 [ERROR] [39] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,052 [ERROR] [40] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:52:55,052 [INFO] 업로드 완료! 성공: 0개, 실패: 40개
+2025-06-26 20:58:45,264 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,264 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,264 [INFO] [요약생성 성공] pig_result_json_10_20250618_011652.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,264 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_10_20250618_011652.json
+2025-06-26 20:58:45,265 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,265 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,265 [INFO] [요약생성 성공] pig_result_json_1_20250618_010952.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,265 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_1_20250618_010952.json
+2025-06-26 20:58:45,265 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,265 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,265 [INFO] [요약생성 성공] pig_result_json_2_20250618_011030.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,265 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_2_20250618_011030.json
+2025-06-26 20:58:45,265 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,265 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,266 [INFO] [요약생성 성공] pig_result_json_3_20250618_011112.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,266 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_3_20250618_011112.json
+2025-06-26 20:58:45,266 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,266 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,266 [INFO] [요약생성 성공] pig_result_json_4_20250618_011158.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,266 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_4_20250618_011158.json
+2025-06-26 20:58:45,266 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,266 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,266 [INFO] [요약생성 성공] pig_result_json_5_20250618_011243.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,266 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_5_20250618_011243.json
+2025-06-26 20:58:45,267 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,267 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,267 [INFO] [요약생성 성공] pig_result_json_6_20250618_011329.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,267 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_6_20250618_011329.json
+2025-06-26 20:58:45,267 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,267 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,267 [INFO] [요약생성 성공] pig_result_json_7_20250618_011426.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,267 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_7_20250618_011426.json
+2025-06-26 20:58:45,268 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,268 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,268 [INFO] [요약생성 성공] pig_result_json_8_20250618_011524.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,268 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_8_20250618_011524.json
+2025-06-26 20:58:45,268 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,268 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,268 [INFO] [요약생성 성공] pig_result_json_9_20250618_011605.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,268 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_9_20250618_011605.json
+2025-06-26 20:58:45,269 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,269 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,269 [INFO] [요약생성 성공] food_result_json_10_20250618_012426.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,269 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_10_20250618_012426.json
+2025-06-26 20:58:45,269 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,270 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,270 [INFO] [요약생성 성공] food_result_json_1_20250618_011734.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,270 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_1_20250618_011734.json
+2025-06-26 20:58:45,270 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,270 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,270 [INFO] [요약생성 성공] food_result_json_2_20250618_011817.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,270 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_2_20250618_011817.json
+2025-06-26 20:58:45,270 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,270 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,270 [INFO] [요약생성 성공] food_result_json_3_20250618_011856.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,270 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_3_20250618_011856.json
+2025-06-26 20:58:45,271 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,271 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,271 [INFO] [요약생성 성공] food_result_json_4_20250618_011937.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,271 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_4_20250618_011937.json
+2025-06-26 20:58:45,271 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,271 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,271 [INFO] [요약생성 성공] food_result_json_5_20250618_012023.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,271 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_5_20250618_012023.json
+2025-06-26 20:58:45,272 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,272 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,272 [INFO] [요약생성 성공] food_result_json_6_20250618_012110.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,272 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_6_20250618_012110.json
+2025-06-26 20:58:45,272 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,272 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,272 [INFO] [요약생성 성공] food_result_json_7_20250618_012152.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:0, 중위험:0, 저위험:0...
+2025-06-26 20:58:45,272 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_7_20250618_012152.json
+2025-06-26 20:58:45,272 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,272 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,272 [INFO] [요약생성 성공] food_result_json_8_20250618_012247.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,272 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_8_20250618_012247.json
+2025-06-26 20:58:45,273 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,273 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,273 [INFO] [요약생성 성공] food_result_json_9_20250618_012333.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,273 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\food\food_result_json_9_20250618_012333.json
+2025-06-26 20:58:45,273 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,273 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,273 [INFO] [요약생성 성공] magic_result_json_10_20250618_014120.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,273 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_10_20250618_014120.json
+2025-06-26 20:58:45,274 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,274 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,274 [INFO] [요약생성 성공] magic_result_json_1_20250618_012517.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,274 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_1_20250618_012517.json
+2025-06-26 20:58:45,274 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,274 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,274 [INFO] [요약생성 성공] magic_result_json_2_20250618_013544.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,274 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_2_20250618_013544.json
+2025-06-26 20:58:45,274 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,274 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,275 [INFO] [요약생성 성공] magic_result_json_3_20250618_013625.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,275 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_3_20250618_013625.json
+2025-06-26 20:58:45,275 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,275 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,275 [INFO] [요약생성 성공] magic_result_json_4_20250618_013721.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,275 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_4_20250618_013721.json
+2025-06-26 20:58:45,275 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,275 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,275 [INFO] [요약생성 성공] magic_result_json_5_20250618_013802.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,275 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_5_20250618_013802.json
+2025-06-26 20:58:45,276 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,276 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,276 [INFO] [요약생성 성공] magic_result_json_6_20250618_013844.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,276 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_6_20250618_013844.json
+2025-06-26 20:58:45,276 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,276 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,276 [INFO] [요약생성 성공] magic_result_json_7_20250618_013919.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,276 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_7_20250618_013919.json
+2025-06-26 20:58:45,276 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,277 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,277 [INFO] [요약생성 성공] magic_result_json_8_20250618_014000.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,277 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_8_20250618_014000.json
+2025-06-26 20:58:45,277 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,277 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,277 [INFO] [요약생성 성공] magic_result_json_9_20250618_014044.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,277 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_9_20250618_014044.json
+2025-06-26 20:58:45,277 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,277 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,277 [INFO] [요약생성 성공] moon_result_json_10_20250618_014838.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,278 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_10_20250618_014838.json
+2025-06-26 20:58:45,278 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,278 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,278 [INFO] [요약생성 성공] moon_result_json_1_20250618_014202.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,278 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_1_20250618_014202.json
+2025-06-26 20:58:45,278 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,278 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,278 [INFO] [요약생성 성공] moon_result_json_2_20250618_014244.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,278 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_2_20250618_014244.json
+2025-06-26 20:58:45,279 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,279 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,279 [INFO] [요약생성 성공] moon_result_json_3_20250618_014329.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,279 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_3_20250618_014329.json
+2025-06-26 20:58:45,279 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,279 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,279 [INFO] [요약생성 성공] moon_result_json_4_20250618_014413.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,279 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_4_20250618_014413.json
+2025-06-26 20:58:45,279 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,279 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,280 [INFO] [요약생성 성공] moon_result_json_5_20250618_014454.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,280 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_5_20250618_014454.json
+2025-06-26 20:58:45,280 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,280 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,280 [INFO] [요약생성 성공] moon_result_json_6_20250618_014541.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,280 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_6_20250618_014541.json
+2025-06-26 20:58:45,280 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,280 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,280 [INFO] [요약생성 성공] moon_result_json_7_20250618_014622.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,280 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_7_20250618_014622.json
+2025-06-26 20:58:45,281 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,281 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,281 [INFO] [요약생성 성공] moon_result_json_8_20250618_014711.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,281 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_8_20250618_014711.json
+2025-06-26 20:58:45,281 [WARNING] GEMINI_API_KEY가 설정되지 않았습니다.
+2025-06-26 20:58:45,281 [WARNING] LLM 모델이 초기화되지 않았습니다.
+2025-06-26 20:58:45,281 [INFO] [요약생성 성공] moon_result_json_9_20250618_014754.json: 총 7개 턴으로 구성된 투자 시나리오입니다. 3개 종목(고위험:1, 중위험:1, 저위험:1...
+2025-06-26 20:58:45,281 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_9_20250618_014754.json
+2025-06-26 20:58:45,281 [INFO] 총 40개 시나리오 준비 완료!
+2025-06-26 20:58:45,283 [ERROR] [1] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,284 [ERROR] [2] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,284 [ERROR] [3] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,285 [ERROR] [4] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,285 [ERROR] [5] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,286 [ERROR] [6] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,286 [ERROR] [7] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,287 [ERROR] [8] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,287 [ERROR] [9] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,287 [ERROR] [10] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,287 [ERROR] [11] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,288 [ERROR] [12] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,288 [ERROR] [13] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,288 [ERROR] [14] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,289 [ERROR] [15] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,289 [ERROR] [16] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,289 [ERROR] [17] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,290 [ERROR] [18] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,290 [ERROR] [19] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,290 [ERROR] [20] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,291 [ERROR] [21] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,291 [ERROR] [22] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,291 [ERROR] [23] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,292 [ERROR] [24] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,292 [ERROR] [25] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,292 [ERROR] [26] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,293 [ERROR] [27] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,293 [ERROR] [28] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,293 [ERROR] [29] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,294 [ERROR] [30] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,294 [ERROR] [31] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,294 [ERROR] [32] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,295 [ERROR] [33] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,295 [ERROR] [34] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,296 [ERROR] [35] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,296 [ERROR] [36] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,296 [ERROR] [37] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,297 [ERROR] [38] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,297 [ERROR] [39] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,298 [ERROR] [40] 예외 발생: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-06-26 20:58:45,298 [INFO] 업로드 완료! 성공: 0개, 실패: 40개
+2025-06-26 21:02:38,559 [INFO] [요약생성 성공] pig_result_json_10_20250618_011652.json: 고위험 종목은 초반 급락 후 회복하나 변동성이 큽니다. 중위험은 이벤트에 취약, 저위험은 ...
+2025-06-26 21:02:38,559 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_10_20250618_011652.json
+2025-06-26 21:03:11,134 [INFO] [요약생성 성공] pig_result_json_10_20250618_011652.json: 초반 고위험 종목은 루머 실패로 급락 후 회복될 수 있으나, 중위험 종목은 특정 악재에 민...
+2025-06-26 21:03:11,134 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_10_20250618_011652.json
+2025-06-26 21:03:22,698 [INFO] [요약생성 성공] pig_result_json_1_20250618_010952.json: 초반 고위험은 급등 후 급락하며 변동성이 컸고, 중위험은 안정적 성장과 특정 뉴스에 강세를...
+2025-06-26 21:03:22,698 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_1_20250618_010952.json
+2025-06-26 21:03:35,283 [INFO] [요약생성 성공] pig_result_json_2_20250618_011030.json: 중위험 종목은 초반 뉴스 기반 상승 후 안정세를 보일 수 있습니다. 고위험은 개별 악재에 ...
+2025-06-26 21:03:35,284 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_2_20250618_011030.json
+2025-06-26 21:03:46,211 [INFO] [요약생성 성공] pig_result_json_3_20250618_011112.json: 고위험 종목은 초반 급등 후 조정, 중위험은 이벤트에 민감한 변동성을 보일 수 있습니다. ...
+2025-06-26 21:03:46,211 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_3_20250618_011112.json
+2025-06-26 21:04:02,196 [INFO] [요약생성 성공] pig_result_json_4_20250618_011158.json: 초반 고위험 종목은 뉴스 기반 급등 후 후반 하락이 예상되며, 중위험은 투기성 실패로 급락...
+2025-06-26 21:04:02,196 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_4_20250618_011158.json
+2025-06-26 21:04:17,710 [INFO] [요약생성 성공] pig_result_json_5_20250618_011243.json: 중위험 종목은 초반 급등 후 안정적 흐름을 보였고, 고위험 종목은 큰 등락으로 개별 악재에...
+2025-06-26 21:04:17,710 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_5_20250618_011243.json
+2025-06-26 21:08:13,917 [INFO] [요약생성 성공] pig_result_json_1_20250618_010952.json: 초반 고위험 종목은 급등 후 급락하여 큰 변동성을 보였으며, 중위험 종목이 꾸준히 상승하며...
+2025-06-26 21:08:13,917 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_1_20250618_010952.json
+2025-06-26 21:08:31,621 [INFO] [요약생성 성공] pig_result_json_2_20250618_011030.json: 중위험 종목은 초반 호재로 급등 후 안정적이었으나, 고위험 종목은 악재에 크게 하락하며 극...
+2025-06-26 21:08:31,621 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\pig\pig_result_json_2_20250618_011030.json
+2025-06-26 21:08:45,353 [INFO] [요약생성 성공] magic_result_json_1_20250618_012517.json: 중위험주는 초반 급등 후 안정적 성장이 예상됩니다. 고위험주는 뉴스에 큰 변동성을 보이며,...
+2025-06-26 21:08:45,353 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_1_20250618_012517.json
+2025-06-26 21:08:58,562 [INFO] [요약생성 성공] magic_result_json_2_20250618_013544.json: 초반 중위험은 이벤트로 급등, 고위험은 큰 등락을 보일 것입니다. 저위험은 안정적일 수 있...
+2025-06-26 21:08:58,562 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\magic\magic_result_json_2_20250618_013544.json
+2025-06-26 21:09:10,315 [INFO] [요약생성 성공] moon_result_json_1_20250618_014202.json: 고위험 종목은 초반 루머 해소 후 급등하나 후반 정체될 수 있고, 중위험은 지연된 기회 포...
+2025-06-26 21:09:10,315 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_1_20250618_014202.json
+2025-06-26 21:09:23,363 [INFO] [요약생성 성공] moon_result_json_2_20250618_014244.json: 저위험은 안정적, 중위험은 특정 호재로 상승할 수 있습니다. 고위험은 급락 후 후반 호재로...
+2025-06-26 21:09:23,364 [INFO] [파일로드 성공] C:\Users\user\Desktop\default-scenario-generator\scenario_app\result_json_files\moon\moon_result_json_2_20250618_014244.json
+2025-06-26 21:09:23,364 [INFO] 총 6개 시나리오 준비 완료!
+2025-06-26 21:09:23,449 [INFO] [1] 업로드 성공: 200
+2025-06-26 21:09:23,499 [INFO] [2] 업로드 성공: 200
+2025-06-26 21:09:23,550 [INFO] [3] 업로드 성공: 200
+2025-06-26 21:09:23,600 [INFO] [4] 업로드 성공: 200
+2025-06-26 21:09:23,654 [INFO] [5] 업로드 성공: 200
+2025-06-26 21:09:23,706 [INFO] [6] 업로드 성공: 200
+2025-06-26 21:09:23,706 [INFO] 업로드 완료! 성공: 6개, 실패: 0개

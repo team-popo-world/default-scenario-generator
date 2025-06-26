@@ -33,7 +33,7 @@ dag = DAG(
     'scenario_generation_pipeline',
     default_args=default_args,
     description='시나리오 생성 및 전송 파이프라인',
-    schedule_interval='0 9 * * *',  # 매일 오전 9시 실행
+    schedule_interval='0 0 * * 1',  # 매주 월요일 오전 9시 실행
     catchup=False,
     tags=['scenario', 'generation', 'json'],
 )
@@ -70,7 +70,7 @@ def generate_theme_scenarios(theme):
     def _generate():
         logging.info(f"{theme} 테마 시나리오 생성 시작")
         try:
-            generate_scenarios(theme, 10)
+            generate_scenarios(theme, 1)
             logging.info(f"{theme} 테마 시나리오 생성 완료")
         except Exception as e:
             logging.error(f"{theme} 테마 시나리오 생성 실패: {e}")
