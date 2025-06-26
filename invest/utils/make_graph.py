@@ -208,7 +208,7 @@ def make_buy_sell_ratio(userId, filter: bool = False):
         filtered_df.drop(columns=[
             "investSessionId", "age", 
             "highSellRatio", "midSellRatio", "lowSellRatio", 
-            "highBuyRatio", "midBuyRatio", "lowBuyRatio"
+            "highBuyRatio", "midBuyRatio", "lowBuyRatio", "startedAt"
         ], inplace=True, errors="ignore")
 
         return filtered_df
