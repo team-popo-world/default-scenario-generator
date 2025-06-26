@@ -51,7 +51,7 @@ dag = DAG(
 def start_mlflow_server():
     """MLflow 서버를 백그라운드에서 시작"""
     # 환경변수가 없으면 기본값 설정
-    mlflow_uri = os.getenv("MLFLOW_URL", "http://localhost:5000")
+    mlflow_uri = os.getenv("MLFLOW_URL", "http://localhost:5001")
     
     try:
         # MLflow 서버가 이미 실행 중인지 확인
@@ -69,7 +69,7 @@ def start_mlflow_server():
         subprocess.Popen([
             mlflow_path, 'server',
                 '--host', '0.0.0.0',
-                '--port', '5000',
+                '--port', '5001',
                 '--backend-store-uri', 
                 'postgresql://postgres:team2%21123@mlflowdb-1.c3gseooicuve.ap-northeast-2.rds.amazonaws.com:5432/mlflowsercer_db',
                 '--default-artifact-root', 's3://team2-mlflow-bucket'
@@ -217,7 +217,7 @@ def update_data(**context):
             raise ValueError("업데이트할 데이터가 없습니다")
  
         print(f"업데이트할 데이터 크기: {len(df)} rows")
-        update_mongo_data(df, "invest_cluster_result")
+        update_mongo_data(df)
         print("데이터베이스 업데이트 완료")
         
     except Exception as e:
