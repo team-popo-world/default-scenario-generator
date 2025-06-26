@@ -1,6 +1,8 @@
 # AI/LLM Libraries
 google-generativeai
 langchain-openai
+langchain-google-genai
+langchain
 
 # Environment & Configuration
 python-dotenv
