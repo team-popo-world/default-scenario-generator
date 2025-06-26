@@ -80,24 +80,26 @@ def sell_ratio_week(userId :str):
 @router.get("/buy_sell_ratio/all")
 def buy_sell_ratio_all(userId :str):
     df = make_buy_sell_ratio(userId, filter=False)
+    fin_df = df.drop_duplicates()
     # if df.empty:
     #     return JSONResponse(
     #         content={"message": "데이터가 없습니다.", "userId": userId},
     #         status_code=200  # 👈 여기 중요!
     #     )
-    json = df.to_dict(orient="records")
+    json = fin_df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_3_all_history")
     return json
 
 @router.get("/buy_sell_ratio/week")
 def buy_sell_ratio_week(userId :str):
-    df = make_buy_sell_ratio(userId, filter=True)    
+    df = make_buy_sell_ratio(userId, filter=True) 
+    fin_df = df.drop_duplicates()   
     # if df.empty:
     #     return JSONResponse(
     #         content={"message": "데이터가 없습니다.", "userId": userId},
     #         status_code=200  # 👈 여기 중요!
     #     )
-    json = df.to_dict(orient="records")
+    json = fin_df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_3_week_history")
     return json
 
