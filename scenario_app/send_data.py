@@ -2,20 +2,22 @@ import os
 import json
 import requests
 import logging
-import asyncio
 from .config import API_URL
 from .summary_generator import generate_story_summary_with_llm, generate_story_summary, initialize_llm
 
-async def send_data():
+def send_data():
     # LLM 초기화
     initialize_llm()
     
-    # logging 설정
+    # logging 설정 (파일 + 콘솔 둘 다 기록)
+    log_path = os.path.join(os.path.dirname(__file__), 'scenario_send_log.log')
     logging.basicConfig(
-        filename=os.path.join(os.path.dirname(__file__),'scenario_send_log.log'),
         level=logging.INFO,
-        encoding="utf-8",
-        format="%(asctime)s [%(levelname)s] %(message)s"
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(log_path, encoding="utf-8"),
+            logging.StreamHandler()  # 이 줄이 핵심! Airflow UI에서 로그가 잘 보임
+        ]
     )
 
     chapter_id_map = {
@@ -46,7 +48,7 @@ async def send_data():
                     
                     # LLM을 통한 요약 생성
                     try:
-                        summary = await generate_story_summary_with_llm(story_str)
+                        summary = generate_story_summary_with_llm(story_str)
                         logging.info(f"[요약생성 성공] {filename}: {summary[:50]}...")
                     except Exception as summary_error:
                         summary = generate_story_summary(story_str)
@@ -63,7 +65,7 @@ async def send_data():
                 except Exception as e:
                     logging.error(f"[파일로드 실패] {file_path}: {e}")
 
-    print(f"총 {len(scenario_list)}개 시나리오 준비 완료!")
+    print(f"총 {len(scenario_list)}개 시나리오 준비 완료!")  # 이 print도 Web UI에 바로 표시됨
     logging.info(f"총 {len(scenario_list)}개 시나리오 준비 완료!")
 
     # 하나씩 반복 전송
@@ -94,4 +96,4 @@ async def send_data():
     logging.info(result_msg)
 
 if __name__ == "__main__":
-    asyncio.run(send_data())
+    send_data()
