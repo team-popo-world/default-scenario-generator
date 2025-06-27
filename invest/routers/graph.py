@@ -152,51 +152,18 @@ def avg_cash_ratio_week(userId :str):
     return json
 
 
-import logging
-import os
-@router.get("/debug/env")
-def check_env():
-    return {
-        "MONGO_URI": os.getenv("MONGO_URI"),
-        "MONGO_DB_NAME": os.getenv("MONGO_DB_NAME"),
-        "INVEST_CLUSTER_RESULT": os.getenv("INVEST_CLUSTER_RESULT")
-    }
-
-
-# 디버깅용 db 연결 확인
-def check_db_connection():
-    try:
-        # MongoDB 연결 테스트
-        from invest.db.mongo_handler import load_mongo_data
-        test_df = load_mongo_data(None, "invest_cluster_result")
-        return not test_df.empty
-    except Exception as e:
-        logging.error(f"DB 연결 오류: {e}")
-        return False
-
 
 @router.get("/invest_style/all")
-def invest_style_all(userId: str):
-    logging.info(f"API 호출 시작 - userId: {userId}")
-
-    if not check_db_connection():
-        return {"error": "데이터베이스 연결 실패"}
-    
+def invest_style_all(userId: str):   
     try:
         df = make_invest_style(userId, filter=False)
-        logging.info(f"DataFrame 크기: {df.shape}")
-        logging.info(f"DataFrame 내용: {df.head()}")
-        
         if df.empty:
-            logging.warning(f"빈 DataFrame 반환 - userId: {userId}")
             return {"message": "데이터가 없습니다.", "userId": userId}
         
         json_data = df.to_dict(orient="records")
-        logging.info(f"JSON 변환 완료 - 레코드 수: {len(json_data)}")
         return json_data
         
     except Exception as e:
-        logging.error(f"API 실행 중 오류: {e}")
         return {"error": str(e), "userId": userId}
 
 @router.get("/invest_style/week")
