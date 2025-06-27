@@ -90,7 +90,7 @@ class SummaryGenerator:
             logger.error(f"기본 요약 생성 중 오류: {e}")
             return "투자 교육을 위한 시나리오입니다."
     
-    async def generate_llm_summary(self, story_json: str) -> str:
+    def generate_llm_summary(self, story_json: str) -> str:
         """
         LLM을 활용하여 스토리의 흐름과 종목별 등락을 자연스럽게 요약합니다.
         
@@ -108,18 +108,13 @@ class SummaryGenerator:
         summary_prompt = self._create_summary_prompt(story_json)
         
         try:
-            # LLM을 통해 요약 생성 (비동기)
+            # LLM을 통해 요약 생성 (동기)
             try:
-                response = await self.llm_model.ainvoke([HumanMessage(content=summary_prompt)])
+                response = self.llm_model.invoke([HumanMessage(content=summary_prompt)])
                 summary_result = response.content
-            except Exception as async_error:
-                logger.warning(f"비동기 요약 생성 실패, 동기 방식으로 재시도: {async_error}")
-                try:
-                    response = self.llm_model.invoke([HumanMessage(content=summary_prompt)])
-                    summary_result = response.content
-                except Exception as sync_error:
-                    logger.error(f"동기 방식 요약 생성도 실패: {sync_error}")
-                    summary_result = None
+            except Exception as sync_error:
+                logger.error(f"동기 방식 요약 생성 실패: {sync_error}")
+                summary_result = None
             
             if not summary_result:
                 logger.warning("LLM 요약 생성 실패, 기본 요약으로 대체합니다.")
@@ -210,9 +205,9 @@ def get_summary_generator() -> SummaryGenerator:
     return _summary_generator
 
 # 편의 함수들
-async def generate_story_summary_with_llm(story_json: str) -> str:
+def generate_story_summary_with_llm(story_json: str) -> str:
     """
-    LLM을 활용한 스토리 요약 생성 (편의 함수)
+    LLM을 활용한 스토리 요약 생성 (동기 함수)
     
     Args:
         story_json (str): 스토리 JSON 문자열
@@ -223,7 +218,7 @@ async def generate_story_summary_with_llm(story_json: str) -> str:
     generator = get_summary_generator()
     if not generator.is_initialized:
         generator.initialize_llm()
-    return await generator.generate_llm_summary(story_json)
+    return generator.generate_llm_summary(story_json)
 
 def generate_story_summary(story_json: str) -> str:
     """
