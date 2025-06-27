@@ -399,6 +399,3 @@ def make_invest_style(userId, filter: bool = False):
         print(f"[ERROR] make_avg_cash_ratio failed for userId {userId}: {e}")
         return pd.DataFrame()
     
-
-df = make_invest_style("f0220d43-513a-4619-973d-4ed84a42bf6a", False)
-print(df)
