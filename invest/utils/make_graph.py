@@ -344,24 +344,33 @@ def make_avg_cash_ratio(userId, filter: bool = False):
         print(f"[ERROR] make_avg_cash_ratio failed for userId {userId}: {e}")
         return pd.DataFrame()
 
+import logging
 
 def make_invest_style(userId, filter: bool = False):
+    logging.info(f"make_invest_style 호출 - userId: {userId}, filter: {filter}")
     try:
         df = load_mongo_data(None, "invest_cluster_result")
+        logging.info(f"MongoDB 데이터 로드 완료 - 크기: {df.shape}")
         if df.empty:
             return pd.DataFrame()
 
         if filter:
             df = filter_date(df)
+            logging.info(f"날짜 필터 적용 후 크기: {df.shape}")
         if df.empty:
             return pd.DataFrame()
 
         filtered_df = df[df["user_id"]==userId]
-        if df.empty:
+        logging.info(f"사용자 필터 적용 후 크기: {filtered_df.shape}")
+        
+        if filtered_df.empty:
+            logging.warning(f"사용자 {userId}에 대한 데이터가 없습니다.")
             return pd.DataFrame()
 
-        df = filtered_df["cluster_num"].value_counts().reset_index()
-        if df.empty:
+        result_df = filtered_df["cluster_num"].value_counts().reset_index()
+        logging.info(f"최종 결과 크기: {result_df.shape}")
+        
+        if result_df.empty:
             return pd.DataFrame()
 
         return df

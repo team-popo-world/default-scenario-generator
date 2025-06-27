@@ -151,17 +151,42 @@ def avg_cash_ratio_week(userId :str):
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_week_history")
     return json
 
+# 디버깅용 db 연결 확인
+def check_db_connection():
+    try:
+        # MongoDB 연결 테스트
+        from invest.db.mongo_handler import load_mongo_data
+        test_df = load_mongo_data(None, "invest_cluster_result", limit=1)
+        return not test_df.empty
+    except Exception as e:
+        logging.error(f"DB 연결 오류: {e}")
+        return False
+
+import logging
+
 @router.get("/invest_style/all")
-def invest_style_all(userId :str):
-    df = make_invest_style(userId, filter=False)
-    # if df.empty:
-    #     return JSONResponse(
-    #         content={"message": "데이터가 없습니다.", "userId": userId},
-    #         status_code=200  # 👈 여기 중요!
-    #     )
-    json = df.to_dict(orient="records")
-    # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_all_history")
-    return json
+def invest_style_all(userId: str):
+    logging.info(f"API 호출 시작 - userId: {userId}")
+
+    if not check_db_connection():
+        return {"error": "데이터베이스 연결 실패"}
+    
+    try:
+        df = make_invest_style(userId, filter=False)
+        logging.info(f"DataFrame 크기: {df.shape}")
+        logging.info(f"DataFrame 내용: {df.head()}")
+        
+        if df.empty:
+            logging.warning(f"빈 DataFrame 반환 - userId: {userId}")
+            return {"message": "데이터가 없습니다.", "userId": userId}
+        
+        json_data = df.to_dict(orient="records")
+        logging.info(f"JSON 변환 완료 - 레코드 수: {len(json_data)}")
+        return json_data
+        
+    except Exception as e:
+        logging.error(f"API 실행 중 오류: {e}")
+        return {"error": str(e), "userId": userId}
 
 @router.get("/invest_style/week")
 def invest_style_week(userId :str):
