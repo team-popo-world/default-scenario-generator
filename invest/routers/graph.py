@@ -163,6 +163,14 @@ def check_db_connection():
         return False
 
 import logging
+import os
+@router.get("/debug/env")
+def check_env():
+    return {
+        "MONGO_URI": os.getenv("MONGO_URI"),
+        "MONGO_DB_NAME": os.getenv("MONGO_DB_NAME"),
+        "INVEST_CLUSTER_RESULT": os.getenv("INVEST_CLUSTER_RESULT")
+    }
 
 @router.get("/invest_style/all")
 def invest_style_all(userId: str):
