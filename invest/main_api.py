@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from invest.routers import graph, cluster
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 import logging
 
 # 환경변수 로드 (최우선으로 실행)
-load_dotenv(override=True)
+load_dotenv(find_dotenv(), override=True)
 
 # 환경변수 확인 로그
 print(f"MONGO_URI: {os.getenv('MONGO_URI')}")
