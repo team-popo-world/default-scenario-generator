@@ -151,6 +151,18 @@ def avg_cash_ratio_week(userId :str):
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_week_history")
     return json
 
+
+import logging
+import os
+@router.get("/debug/env")
+def check_env():
+    return {
+        "MONGO_URI": os.getenv("MONGO_URI"),
+        "MONGO_DB_NAME": os.getenv("MONGO_DB_NAME"),
+        "INVEST_CLUSTER_RESULT": os.getenv("INVEST_CLUSTER_RESULT")
+    }
+
+
 # 디버깅용 db 연결 확인
 def check_db_connection():
     try:
@@ -162,15 +174,6 @@ def check_db_connection():
         logging.error(f"DB 연결 오류: {e}")
         return False
 
-import logging
-import os
-@router.get("/debug/env")
-def check_env():
-    return {
-        "MONGO_URI": os.getenv("MONGO_URI"),
-        "MONGO_DB_NAME": os.getenv("MONGO_DB_NAME"),
-        "INVEST_CLUSTER_RESULT": os.getenv("INVEST_CLUSTER_RESULT")
-    }
 
 @router.get("/invest_style/all")
 def invest_style_all(userId: str):
