@@ -346,12 +346,26 @@ def make_avg_cash_ratio(userId, filter: bool = False):
 
 
 def make_invest_style(userId, filter: bool = False):
-    df = load_mongo_data(None, "invest_cluster_result")
+    try:
+        df = load_mongo_data(None, "invest_cluster_result")
+        if df.empty:
+            return pd.DataFrame()
 
-    if filter:
-        df = filter_date(df)
+        if filter:
+            df = filter_date(df)
+        if df.empty:
+            return pd.DataFrame()
 
-    filtered_df = df[df["user_id"]==userId]
-    df = filtered_df["cluster_num"].value_counts().reset_index()
+        filtered_df = df[df["user_id"]==userId]
+        if df.empty:
+            return pd.DataFrame()
 
-    return df
+        df = filtered_df["cluster_num"].value_counts().reset_index()
+        if df.empty:
+            return pd.DataFrame()
+
+        return df
+
+    except Exception as e:
+        print(f"[ERROR] make_avg_cash_ratio failed for userId {userId}: {e}")
+        return pd.DataFrame()
