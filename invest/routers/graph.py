@@ -153,7 +153,7 @@ def avg_cash_ratio_week(userId :str):
 
 @router.get("/invest_style/all")
 def invest_style_all(userId :str):
-    df = make_invest_style(filter=False)
+    df = make_invest_style(userId, filter=False)
     # if df.empty:
     #     return JSONResponse(
     #         content={"message": "데이터가 없습니다.", "userId": userId},
@@ -165,7 +165,7 @@ def invest_style_all(userId :str):
 
 @router.get("/invest_style/week")
 def invest_style_week(userId :str):
-    df = make_invest_style(filter=True)
+    df = make_invest_style(userId, filter=True)
     # if df.empty:
     #     return JSONResponse(
     #         content={"message": "데이터가 없습니다.", "userId": userId},
