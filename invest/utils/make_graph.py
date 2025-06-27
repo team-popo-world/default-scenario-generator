@@ -344,37 +344,61 @@ def make_avg_cash_ratio(userId, filter: bool = False):
         print(f"[ERROR] make_avg_cash_ratio failed for userId {userId}: {e}")
         return pd.DataFrame()
 
-import logging
 
 def make_invest_style(userId, filter: bool = False):
-    logging.info(f"make_invest_style 호출 - userId: {userId}, filter: {filter}")
+    
+    def load_cluster_data(fields=None):
+        import os
+        import pandas as pd
+        from pymongo import MongoClient
+        from dotenv import load_dotenv
+
+        load_dotenv(override=True)
+
+        # MongoDB 연결 정보
+        uri = os.getenv("MONGO_URI")
+        db_name = os.getenv("MONGO_DB_NAME")
+        collection_name = "invest_cluster_result"
+
+        client = MongoClient(uri)
+        db = client[db_name]
+        collection = db[collection_name]
+
+        # fields 리스트를 projection 딕셔너리로 변환
+        projection = {field: 1 for field in fields} if fields else None
+        if projection is not None:
+            projection['_id'] = 0  # 기본적으로 _id는 제외
+
+        df = pd.DataFrame(list(collection.find({}, projection)))
+
+        return df
+    
     try:
-        df = load_mongo_data(None, "invest_cluster_result")
-        logging.info(f"MongoDB 데이터 로드 완료 - 크기: {df.shape}")
+        df = load_cluster_data(None)
         if df.empty:
             return pd.DataFrame()
 
         if filter:
             df = filter_date(df)
-            logging.info(f"날짜 필터 적용 후 크기: {df.shape}")
         if df.empty:
             return pd.DataFrame()
 
         filtered_df = df[df["user_id"]==userId]
-        logging.info(f"사용자 필터 적용 후 크기: {filtered_df.shape}")
-        
+
         if filtered_df.empty:
-            logging.warning(f"사용자 {userId}에 대한 데이터가 없습니다.")
             return pd.DataFrame()
 
         result_df = filtered_df["cluster_num"].value_counts().reset_index()
-        logging.info(f"최종 결과 크기: {result_df.shape}")
         
         if result_df.empty:
             return pd.DataFrame()
 
-        return df
+        return result_df
 
     except Exception as e:
         print(f"[ERROR] make_avg_cash_ratio failed for userId {userId}: {e}")
         return pd.DataFrame()
+    
+
+df = make_invest_style("f0220d43-513a-4619-973d-4ed84a42bf6a", False)
+print(df)
