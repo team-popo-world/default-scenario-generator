@@ -156,7 +156,7 @@ def check_db_connection():
     try:
         # MongoDB 연결 테스트
         from invest.db.mongo_handler import load_mongo_data
-        test_df = load_mongo_data(None, "invest_cluster_result", limit=1)
+        test_df = load_mongo_data(None, "invest_cluster_result")
         return not test_df.empty
     except Exception as e:
         logging.error(f"DB 연결 오류: {e}")
