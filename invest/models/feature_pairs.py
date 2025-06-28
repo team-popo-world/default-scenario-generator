@@ -18,6 +18,8 @@ def feature_pairs(df, n_clusters, cluster_labels, model, folder_path):
     feature_combinations = list(itertools.combinations(range(n_features), 2))
     n_combinations = len(feature_combinations)
 
+    plot_path = None  # 초기화
+
     if n_combinations > 0:
         # 적절한 그리드 크기 계산
         cols = min(4, n_combinations)
@@ -69,11 +71,7 @@ def feature_pairs(df, n_clusters, cluster_labels, model, folder_path):
         # 시각화 저장
         plot_path = folder_path / "all_feature_pairs.png"
         plt.savefig(str(plot_path), dpi=300, bbox_inches='tight')
-        mlflow.log_artifact(str(plot_path))
         plt.show()
 
-
-    # 파일 정리 (MLflow 업로드 후 로컬 파일 삭제)
-    if os.path.exists(plot_path):
-        os.remove(plot_path)
+    return plot_path
     

@@ -9,7 +9,8 @@ collection_map = {
     "invest": "INVEST_HISTORY",
     "invest_dummy": "INVEST_HISTORY_DUMMY",
     "quest": "QUEST_HISTORY",
-    "saving_account": "SAVING_ACCOUNT_HISTORY"
+    "saving_account": "SAVING_ACCOUNT_HISTORY",
+    "invest_cluster_result": "INVEST_CLUSTER_RESULT"
 }
 
 # 불러온 mongoDB 전처리

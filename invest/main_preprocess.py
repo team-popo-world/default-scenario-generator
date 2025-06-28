@@ -1,7 +1,7 @@
 import pandas as pd
 
-from db.mongo_handler import load_mongo_data
-from db.postgres_handler import load_postgres_data
+# from db.mongo_handler import load_mongo_data
+# from db.postgres_handler import load_postgres_data
 
 # from utils.trading_turn import trading_turn
 # from utils.transaction_num import transaction_num

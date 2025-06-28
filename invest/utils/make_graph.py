@@ -1,4 +1,5 @@
 import pandas as pd
+
 from invest.db.mongo_handler import load_mongo_data
 from invest.db.postgres_handler import load_postgres_data
 from invest.db.merge_df import load_invest_df
@@ -207,7 +208,7 @@ def make_buy_sell_ratio(userId, filter: bool = False):
         filtered_df.drop(columns=[
             "investSessionId", "age", 
             "highSellRatio", "midSellRatio", "lowSellRatio", 
-            "highBuyRatio", "midBuyRatio", "lowBuyRatio"
+            "highBuyRatio", "midBuyRatio", "lowBuyRatio", "startedAt"
         ], inplace=True, errors="ignore")
 
         return filtered_df
@@ -344,10 +345,57 @@ def make_avg_cash_ratio(userId, filter: bool = False):
         return pd.DataFrame()
 
 
-def make_invest_style(filter: bool = False):
-    df = load_mongo_data(None, "invest_cluster_result")
+def make_invest_style(userId, filter: bool = False):
+    
+    def load_cluster_data(fields=None):
+        import os
+        import pandas as pd
+        from pymongo import MongoClient
+        from dotenv import load_dotenv
 
-    if filter:
-        df = filter_date(df)
+        load_dotenv(override=True)
 
-    return df
+        # MongoDB 연결 정보
+        uri = os.getenv("MONGO_URI")
+        db_name = os.getenv("MONGO_DB_NAME")
+        collection_name = "invest_cluster_result"
+
+        client = MongoClient(uri)
+        db = client[db_name]
+        collection = db[collection_name]
+
+        # fields 리스트를 projection 딕셔너리로 변환
+        projection = {field: 1 for field in fields} if fields else None
+        if projection is not None:
+            projection['_id'] = 0  # 기본적으로 _id는 제외
+
+        df = pd.DataFrame(list(collection.find({}, projection)))
+
+        return df
+    
+    try:
+        df = load_cluster_data(None)
+        if df.empty:
+            return pd.DataFrame()
+
+        if filter:
+            df = filter_date(df)
+        if df.empty:
+            return pd.DataFrame()
+
+        filtered_df = df[df["user_id"]==userId]
+
+        if filtered_df.empty:
+            return pd.DataFrame()
+
+        result_df = filtered_df["cluster_num"].value_counts().reset_index()
+        
+        if result_df.empty:
+            return pd.DataFrame()
+
+        return result_df
+
+    except Exception as e:
+        print(f"[ERROR] make_avg_cash_ratio failed for userId {userId}: {e}")
+        return pd.DataFrame()
+    

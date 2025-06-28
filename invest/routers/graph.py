@@ -80,24 +80,26 @@ def sell_ratio_week(userId :str):
 @router.get("/buy_sell_ratio/all")
 def buy_sell_ratio_all(userId :str):
     df = make_buy_sell_ratio(userId, filter=False)
+    fin_df = df.drop_duplicates()
     # if df.empty:
     #     return JSONResponse(
     #         content={"message": "데이터가 없습니다.", "userId": userId},
     #         status_code=200  # 👈 여기 중요!
     #     )
-    json = df.to_dict(orient="records")
+    json = fin_df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_3_all_history")
     return json
 
 @router.get("/buy_sell_ratio/week")
 def buy_sell_ratio_week(userId :str):
-    df = make_buy_sell_ratio(userId, filter=True)    
+    df = make_buy_sell_ratio(userId, filter=True) 
+    fin_df = df.drop_duplicates()   
     # if df.empty:
     #     return JSONResponse(
     #         content={"message": "데이터가 없습니다.", "userId": userId},
     #         status_code=200  # 👈 여기 중요!
     #     )
-    json = df.to_dict(orient="records")
+    json = fin_df.to_dict(orient="records")
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph2_3_week_history")
     return json
 
@@ -162,26 +164,30 @@ def avg_cash_ratio_week(userId :str):
     # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_week_history")
     return json
 
+
+
 @router.get("/invest_style/all")
-def invest_style_all(userId :str):
-    df = make_invest_style(filter=False)
-    # if df.empty:
-    #     return JSONResponse(
-    #         content={"message": "데이터가 없습니다.", "userId": userId},
-    #         status_code=200  # 👈 여기 중요!
-    #     )
-    json = df.to_dict(orient="records")
-    # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_all_history")
-    return json
+def invest_style_all(userId: str):   
+    try:
+        df = make_invest_style(userId, filter=False)
+        if df.empty:
+            return {"message": "데이터가 없습니다.", "userId": userId}
+        
+        json_data = df.to_dict(orient="records")
+        return json_data
+        
+    except Exception as e:
+        return {"error": str(e), "userId": userId}
 
 @router.get("/invest_style/week")
 def invest_style_week(userId :str):
-    df = make_invest_style(filter=True)
-    # if df.empty:
-    #     return JSONResponse(
-    #         content={"message": "데이터가 없습니다.", "userId": userId},
-    #         status_code=200  # 👈 여기 중요!
-    #     )
-    json = df.to_dict(orient="records")
-    # update_mongo_data(user_id=userId, json_data=json, collection_name="graph4_week_history")
-    return json
+    try:
+        df = make_invest_style(userId, filter=True)
+        if df.empty:
+            return {"message": "데이터가 없습니다.", "userId": userId}
+        
+        json_data = df.to_dict(orient="records")
+        return json_data
+        
+    except Exception as e:
+        return {"error": str(e), "userId": userId}

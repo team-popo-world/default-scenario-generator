@@ -3,14 +3,21 @@ import json
 import requests
 import logging
 from .config import API_URL
+from .summary_generator import generate_story_summary_with_llm, generate_story_summary, initialize_llm
 
 def send_data():
-    # logging 설정
+    # LLM 초기화
+    initialize_llm()
+    
+    # logging 설정 (파일 + 콘솔 둘 다 기록)
+    log_path = os.path.join(os.path.dirname(__file__), 'scenario_send_log.log')
     logging.basicConfig(
-        filename=os.path.join(os.path.dirname(__file__),'scenario_send_log.log'),
         level=logging.INFO,
-        encoding="utf-8",
-        format="%(asctime)s [%(levelname)s] %(message)s"
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(log_path, encoding="utf-8"),
+            logging.StreamHandler()  # 이 줄이 핵심! Airflow UI에서 로그가 잘 보임
+        ]
     )
 
     chapter_id_map = {
@@ -35,9 +42,22 @@ def send_data():
                 try:
                     with open(file_path, "r", encoding="utf-8") as f:
                         scenario_json = json.load(f)
+                    
+                    # JSON을 문자열로 변환
+                    story_str = json.dumps(scenario_json, ensure_ascii=False)
+                    
+                    # LLM을 통한 요약 생성
+                    try:
+                        summary = generate_story_summary_with_llm(story_str)
+                        logging.info(f"[요약생성 성공] {filename}: {summary[:50]}...")
+                    except Exception as summary_error:
+                        summary = generate_story_summary(story_str)
+                        logging.warning(f"[요약생성 실패, 기본요약 사용] {filename}: {summary_error}")
+                    
                     scenario_data = {
                         "chapterId": chapter_id,
-                        "story": json.dumps(scenario_json, ensure_ascii=False),  # 문자열 변환
+                        "story": story_str,  # 문자열 변환
+                        "summary": summary,  # 요약 추가
                         "isCustom": False
                     }
                     scenario_list.append(scenario_data)
@@ -45,7 +65,7 @@ def send_data():
                 except Exception as e:
                     logging.error(f"[파일로드 실패] {file_path}: {e}")
 
-    print(f"총 {len(scenario_list)}개 시나리오 준비 완료!")
+    print(f"총 {len(scenario_list)}개 시나리오 준비 완료!")  # 이 print도 Web UI에 바로 표시됨
     logging.info(f"총 {len(scenario_list)}개 시나리오 준비 완료!")
 
     # 하나씩 반복 전송

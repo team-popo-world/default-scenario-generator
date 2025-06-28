@@ -66,11 +66,11 @@ def clean_json_files():
     logging.info("파일 정리 완료")
 
 def generate_theme_scenarios(theme):
-    """특정 테마의 시나리오 10개 생성"""
+    """특정 테마의 시나리오 1개 생성"""
     def _generate():
         logging.info(f"{theme} 테마 시나리오 생성 시작")
         try:
-            generate_scenarios(theme, 10)
+            generate_scenarios(theme, 1)
             logging.info(f"{theme} 테마 시나리오 생성 완료")
         except Exception as e:
             logging.error(f"{theme} 테마 시나리오 생성 실패: {e}")
