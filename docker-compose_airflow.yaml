@@ -11,7 +11,9 @@ services:
       - pg_data:/var/lib/postgresql/data
 
   airflow-webserver:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
     depends_on:
       - postgres
     env_file:
@@ -33,7 +35,9 @@ services:
       bash -c "sleep 10 && airflow db upgrade && airflow users create --username $${AIRFLOW__WEBSERVER__DEFAULT_USER:-admin} --firstname Admin --lastname User --role Admin --email admin@example.com --password $${AIRFLOW__WEBSERVER__DEFAULT_PASSWORD:-admin} && exec airflow webserver"
 
   airflow-scheduler:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
     depends_on:
       - postgres
     env_file:
@@ -51,7 +55,6 @@ services:
       - ./result_json_files:/opt/airflow/result_json_files
     command: airflow scheduler
   
+
 volumes:
   pg_data:
-
-  ## 확인용 올려보기!! commit

@@ -42,5 +42,4 @@ services:
       --port 5000
 
 volumes:
-  pg_data:
   mlflow_pg_data:
