@@ -1,16 +1,12 @@
 import pandas as pd
 
 def filtered_mean(df, col, userId):
-    if "age" not in df.columns:
-        print(f"[INFO] 'age' 컬럼이 없어 filtered_mean을 건너뜁니다. (userId={userId})")
-        return df
-    
     # 우리 아이 나이 추출 (단일 값으로)
     child_age_series = df.loc[df["userId"] == userId, "age"]
 
     if child_age_series.empty or pd.isna(child_age_series.iloc[0]):
         print(f"[WARN] userId '{userId}'에 해당하는 age 정보가 없습니다.")
-        return df  
+        return pd.DataFrame()
 
     child_age = child_age_series.iloc[0]  # 단일 값
 

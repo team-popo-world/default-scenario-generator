@@ -41,7 +41,7 @@ def make_avg_stay_time(userId, filter: bool = False):
         df1 = filtered_mean(df1, "avgStayTime", userId)
         if df1.empty:
             return pd.DataFrame()
-
+        
         # 태그 평균 체류시간 계산
         df2 = tag_avg_stay_time(df)
         if df2.empty:
@@ -49,6 +49,8 @@ def make_avg_stay_time(userId, filter: bool = False):
         df2 = filtered_mean(df2, "tagAvgStayTime", userId)
         if df2.empty:
             return pd.DataFrame()
+        
+        print("df2", df2.columns)
 
         # 병합
         fin_df = pd.merge(df1, df2, on=["investSessionId", "userId"], how="inner")
@@ -77,6 +79,7 @@ def make_buy_ratio(userId, filter: bool = False):
         
         # 데이터 로드
         df = load_invest_df(cols, "invest", False)
+        print("make_buy_ratio", df.columns)
         if df.empty:
             return pd.DataFrame()
 
@@ -117,6 +120,7 @@ def make_sell_ratio(userId, filter: bool = False):
         
         # 데이터 로드
         df = load_invest_df(cols, "invest", False)
+        print("make_sell_ratio", df.columns)
         if df.empty:
             return pd.DataFrame()
 
@@ -156,6 +160,7 @@ def make_buy_sell_ratio(userId, filter: bool = False):
                 "deltaShares"]
         
         df = load_invest_df(cols, "invest", False)
+        print("make_buy_sell_ratio", df.columns)
         if df.empty:
             return pd.DataFrame()
 
@@ -220,11 +225,12 @@ def make_buy_sell_ratio(userId, filter: bool = False):
 def make_bet_ratio(userId, filter: bool = False):
     try:
         cols = [
-            "investSessionId", "userId", "turn", "newsTag", "riskLevel", "age"
+            "investSessionId", "userId", "turn", "newsTag", "riskLevel",
             "beforeValue", "currentValue", "numberOfShares", "startedAt", "transactionType"
         ]
         
         df = load_invest_df(cols, "invest", False)
+        print("make_bet_ratio", df.columns)
         if df.empty:
             return pd.DataFrame()
 
@@ -281,6 +287,7 @@ def make_avg_cash_ratio(userId, filter: bool = False):
                 'currentPoint']
         
         df = load_invest_df(cols, "invest", True)
+        print("make_avg_cash_ratio", df.columns)
         if df.empty:
             return pd.DataFrame()
 
