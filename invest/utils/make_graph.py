@@ -220,7 +220,7 @@ def make_buy_sell_ratio(userId, filter: bool = False):
 def make_bet_ratio(userId, filter: bool = False):
     try:
         cols = [
-            "investSessionId", "userId", "turn", "newsTag", "riskLevel",
+            "investSessionId", "userId", "turn", "newsTag", "riskLevel", "age"
             "beforeValue", "currentValue", "numberOfShares", "startedAt", "transactionType"
         ]
         

@@ -32,6 +32,6 @@ def filtered_mean(df, col, userId):
     filtered_df = same_age_df[same_age_df["userId"]==userId].copy()
 
     # age 컬럼 제거??
-    filtered_df = filtered_df.drop(columns="age", errors="ignore")
+    filtered_df.drop(columns="age", inplace=True, errors="ignore")
 
     return filtered_df
