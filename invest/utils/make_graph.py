@@ -255,6 +255,13 @@ def make_bet_ratio(userId, filter: bool = False):
         if not df1.empty and not df2.empty:
             fin_df = pd.merge(df1, df2, on=["investSessionId", "userId"], how="outer")
             fin_df.drop(columns="investSessionId", inplace=True, errors="ignore")
+            
+            # 👉 NaN/NaT/string 변환 추가
+            fin_df = fin_df.fillna("")
+            if "startedAt" in fin_df.columns:
+                fin_df["startedAt"] = fin_df["startedAt"].astype(str)
+            fin_df["userId"] = fin_df["userId"].astype(str)
+            
             return fin_df
         else:
             return pd.DataFrame()
