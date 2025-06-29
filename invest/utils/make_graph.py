@@ -236,8 +236,9 @@ def make_bet_ratio(userId, filter: bool = False):
         df1 = bet_buy_ratio(df)
         if df1.empty:
             df1 = pd.DataFrame()
-
-        df1 = filtered_mean(df1, "betBuyRatio", userId)
+        
+        if "age" in df1.columns:
+            df1 = filtered_mean(df1, "betBuyRatio", userId)
         if df1.empty:
             df1 = pd.DataFrame()
 
@@ -245,7 +246,8 @@ def make_bet_ratio(userId, filter: bool = False):
         if df2.empty:
             df2 = pd.DataFrame()
 
-        df2 = filtered_mean(df2, "betSellRatio", userId)
+        if "age" in df2.columns:
+            df2 = filtered_mean(df2, "betSellRatio", userId)
         if df2.empty:
             df2 = pd.DataFrame()
 
