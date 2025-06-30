@@ -29,6 +29,7 @@ services:
       - ./invest:/opt/airflow/invest
       - ./news_json_files:/opt/airflow/news_json_files
       - ./result_json_files:/opt/airflow/result_json_files
+      - ./report_llm:/opt/airflow/report_llm
     ports:
       - "8080:8080"
     command: >
