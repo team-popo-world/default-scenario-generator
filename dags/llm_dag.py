@@ -41,36 +41,53 @@ dag = DAG(
 
 # api 불러오기 -> llm으로 report 생성 -> DB에 업데이트
 def call_api(ti):
+    logging.info("🔹 call_api 시작")
+
     user_list = load_userId()
-    invest_merged_df, quest_merged_df, shop_merged_df, cluster_df = load_data(user_list)
+    logging.info(f"✅ user_list 로드 완료: {len(user_list)}명")
     
+    invest_merged_df, quest_merged_df, shop_merged_df, cluster_df = load_data(user_list)
+    logging.info("✅ 데이터 병합 완료")
+
     # XCom으로 푸시
     ti.xcom_push(key="user_list", value=user_list)
     ti.xcom_push(key="invest_merged_df", value=invest_merged_df.to_json())
     ti.xcom_push(key="quest_merged_df", value=quest_merged_df.to_json())
     ti.xcom_push(key="shop_merged_df", value=shop_merged_df.to_json())
     ti.xcom_push(key="cluster_df", value=cluster_df.to_json())
+    logging.info("📤 XCom push 완료")
 
 def generate_analysis_and_update(ti):
+    logging.info("🔹 generate_analysis_and_update 시작")
+
     # XCom에서 데이터 로드
-    user_list = ti.xcom_pull(key="user_list", task_ids='call_api_task')
-    invest_merged_df = pd.read_json(ti.xcom_pull(key="invest_merged_df", task_ids='call_api_task'))
-    quest_merged_df = pd.read_json(ti.xcom_pull(key="quest_merged_df", task_ids='call_api_task'))
-    shop_merged_df = pd.read_json(ti.xcom_pull(key="shop_merged_df", task_ids='call_api_task'))
-    cluster_df = pd.read_json(ti.xcom_pull(key="cluster_df", task_ids='call_api_task'))
+    user_list = ti.xcom_pull(key="user_list", task_ids='call_api')
+    logging.info(f"✅ XCom에서 user_list 로드: {len(user_list)}명")
+
+    invest_merged_df = pd.read_json(ti.xcom_pull(key="invest_merged_df", task_ids='call_api'))
+    quest_merged_df = pd.read_json(ti.xcom_pull(key="quest_merged_df", task_ids='call_api'))
+    shop_merged_df = pd.read_json(ti.xcom_pull(key="shop_merged_df", task_ids='call_api'))
+    cluster_df = pd.read_json(ti.xcom_pull(key="cluster_df", task_ids='call_api'))
+    logging.info("✅ XCom에서 모든 데이터 로드 완료")
 
     chain = get_llm_chain()
+    logging.info("✅ LLM chain 준비 완료")
 
     uri = os.getenv("MONGO_URI")
     db_name = os.getenv("MONGO_DB_NAME")
-
     client = MongoClient(uri) 
     db = client[db_name]
     user_collection = db["user_analysis"]
     graph_collection = db["user_graph"]
 
     for userId in user_list:
-        generate_and_update(userId, chain, invest_merged_df, cluster_df, quest_merged_df, shop_merged_df, user_collection, graph_collection)
+        logging.info(f"🧠 분석 시작: {userId}")
+        try:
+            generate_and_update(userId, chain, invest_merged_df, cluster_df, quest_merged_df, shop_merged_df, user_collection, graph_collection)
+            logging.info(f"✅ 분석 및 저장 완료: {userId}")
+        except Exception as e:
+            logging.error(f"❌ {userId} 분석 실패: {e}")
+
 
 # Task 정의
 call_api_task = PythonOperator(
