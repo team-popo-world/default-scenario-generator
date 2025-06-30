@@ -36,7 +36,7 @@ dag = DAG(
     description='아이 레포트 생성 및 업데이트 파이프라인', # 설명 (UI용)
     schedule_interval='0 0 * * 1',  # 실행 주기: 매주 월요일 자정 (cron 형식)
     catchup=False, # 과거 누락된 실행 여부 무시 (False면 현재 시점부터 실행)
-    tags=['scenario', 'generation', 'json'], # UI에서 DAG 태그로 필터링 가능
+    tags=['api', 'generation_update'], # UI에서 DAG 태그로 필터링 가능
 )
 
 # api 불러오기 -> llm으로 report 생성 -> DB에 업데이트
