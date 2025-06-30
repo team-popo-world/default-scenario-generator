@@ -1,7 +1,6 @@
 import requests
 import pandas as pd
 
-
 # API 호출 함수
 def fetch_graph_data(
     child_id: str,
