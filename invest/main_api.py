@@ -19,10 +19,6 @@ app = FastAPI(
 )
 
 app.include_router(graph.router)
-# app.include_router(cluster.router)
-
-
-
 
 # 데이터베이스 설정 확인
 print(f"MongoDB URI: {os.getenv('MONGODB_URI')}")
