@@ -6,6 +6,7 @@ import os
 import re
 import json
 
+# 수정
 def get_llm_chain():
   template = """
   너는 아이들의 게임 데이터를 분석하여 학습 행동을 파악하고, 각 영역별로 **구체적인 수치와 비교를 통해 피드백과 가이드를 제시하는 AI 학습 분석가**야.
