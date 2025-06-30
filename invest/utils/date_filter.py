@@ -3,7 +3,7 @@ import pandas as pd
 
 def filter_date(df):
     # 날짜 컬럼을 datetime으로 변환
-    df["startedAt"] = pd.to_datetime(df["startedAt"])
+    df["startedAt"] = pd.to_datetime(df["startedAt"], errors="coerce")
 
     # 오늘 자정과 7일 전 자정 계산
     today = datetime.now().date()

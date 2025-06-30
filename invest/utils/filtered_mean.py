@@ -1,14 +1,25 @@
 import pandas as pd
 
 def filtered_mean(df, col, userId):
+    df = df.copy()
+    df["userId"] = df["userId"].astype(str)
+    userId = str(userId)
 
-    # 우리 아이 나이 추출 (단일 값으로)
+    if "age" not in df.columns:
+        print(f"[WARN] 'age' 컬럼이 없습니다.")
+        return pd.DataFrame()
+
     child_age_series = df.loc[df["userId"] == userId, "age"]
-    
-    if child_age_series.empty:
-        raise ValueError(f"userId '{userId}'에 해당하는 age 정보가 없습니다.")
 
-    child_age = child_age_series.iloc[0]  # 단일 값
+    if child_age_series.empty:
+        print(f"[WARN] userId '{userId}'에 해당하는 row가 없습니다.")
+        return pd.DataFrame()
+
+    child_age = child_age_series.iloc[0]
+
+    if pd.isna(child_age):
+        print(f"[WARN] userId '{userId}'에 대한 age 값이 NaN입니다.")
+        return pd.DataFrame()
 
     # 우리 아이와 같은 나이만 필터링
     same_age_df = df[df["age"] == child_age].copy()
@@ -25,9 +36,9 @@ def filtered_mean(df, col, userId):
         same_age_df[f'{c}Mean'] = col_mean
 
     # 우리아이 데이터만 필터링
-    filtered_df = same_age_df[same_age_df["userId"]==userId]
+    filtered_df = same_age_df[same_age_df["userId"]==userId].copy()
 
     # age 컬럼 제거??
-    filtered_df = filtered_df.drop(columns="age")
+    filtered_df.drop(columns="age", inplace=True, errors="ignore")
 
     return filtered_df

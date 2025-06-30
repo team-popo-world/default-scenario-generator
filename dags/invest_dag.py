@@ -48,7 +48,7 @@ dag = DAG(
     description='전처리 및 모델링, 전송 파이프라인',
     schedule_interval='0 3 * * *',  # 매일 오전 3시 실행
     catchup=False,
-    tags=['preprocessing', 'modeling', 'update'],
+    tags=['api', 'generate_update'],
 )
 
 

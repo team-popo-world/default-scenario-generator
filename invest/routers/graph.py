@@ -100,12 +100,13 @@ def bet_ratio_all(userId :str):
     try:
         df = make_bet_ratio(userId, filter=False)
         if df.empty:
-            return JSONResponse(
-                content={"message": "데이터가 없습니다.", "userId": userId},
-                status_code=200  # 👈 여기 중요!
-            )
-        json = df.to_dict(orient="records")
-        return json
+            return JSONResponse(content={"message": "데이터가 없습니다.", "userId": userId}, status_code=200)
+        # 👉 추가적인 직렬화 안전 처리
+        df = df.fillna("")
+        if "startedAt" in df.columns:
+            df["startedAt"] = df["startedAt"].astype(str)
+        df["userId"] = df["userId"].astype(str)
+        return JSONResponse(content=df.to_dict(orient="records"), status_code=200)
     except Exception as e:
         print(f"[API ERROR] /bet_ratio/all failed for userId {userId}: {e}")
         return JSONResponse(
@@ -118,12 +119,13 @@ def bet_ratio_week(userId :str):
     try:
         df = make_bet_ratio(userId, filter=True)
         if df.empty:
-            return JSONResponse(
-                content={"message": "데이터가 없습니다.", "userId": userId},
-                status_code=200  # 👈 여기 중요!
-            )
-        json = df.to_dict(orient="records")
-        return json
+            return JSONResponse(content={"message": "데이터가 없습니다.", "userId": userId}, status_code=200)
+        # 👉 추가적인 직렬화 안전 처리
+        df = df.fillna("")
+        if "startedAt" in df.columns:
+            df["startedAt"] = df["startedAt"].astype(str)
+        df["userId"] = df["userId"].astype(str)
+        return JSONResponse(content=df.to_dict(orient="records"), status_code=200)
     except Exception as e:
         print(f"[API ERROR] /bet_ratio/week failed for userId {userId}: {e}")
         return JSONResponse(
