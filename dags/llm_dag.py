@@ -76,14 +76,12 @@ def generate_analysis_and_update(ti):
 call_api_task = PythonOperator(
     task_id='call_api',
     python_callable=call_api,
-    provide_context=True,
     dag=dag,
 )
 
 generate_and_update_task = PythonOperator(
     task_id='generate_analysis_and_update',
     python_callable=generate_analysis_and_update,
-    provide_context=True,
     dag=dag,
 )
 
