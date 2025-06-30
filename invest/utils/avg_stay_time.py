@@ -8,10 +8,10 @@ def avg_stay_time(df):
                 'turn',
                 'startedAt',
                 'endedAt']].copy()
-    
+
     # 문자열을 datetime으로 변환
-    turn['startedAt'] = pd.to_datetime(turn['startedAt'])
-    turn['endedAt'] = pd.to_datetime(turn['endedAt'])
+    turn['startedAt'] = pd.to_datetime(turn['startedAt'], errors='coerce')
+    turn['endedAt'] = pd.to_datetime(turn['endedAt'], errors='coerce')
 
     turn['stayTime'] = (turn['endedAt'] - turn['startedAt']).dt.total_seconds()
 

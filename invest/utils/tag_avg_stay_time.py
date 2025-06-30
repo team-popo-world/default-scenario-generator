@@ -8,7 +8,7 @@ def tag_avg_stay_time(df):
                         'turn',
                         'newsTag',
                         'startedAt',
-                        'endedAt']].drop_duplicates()
+                        'endedAt']].copy()
 
     tagAvgStayTime = tag_turn_df.drop_duplicates(subset=['investSessionId', 'turn']).copy()
     tagAvgStayTime = tagAvgStayTime[tagAvgStayTime['newsTag'] != "all"]
@@ -17,7 +17,13 @@ def tag_avg_stay_time(df):
     tagAvgStayTime['startedAt'] = pd.to_datetime(tagAvgStayTime['startedAt'])
     tagAvgStayTime['endedAt'] = pd.to_datetime(tagAvgStayTime['endedAt'])
 
-    tagAvgStayTime["turnDuration"] = tagAvgStayTime["endedAt"] - tagAvgStayTime["startedAt"].dt.total_seconds()
-    tagAvgStayTime = tagAvgStayTime.groupby(["investSessionId", 'userId', 'age'])["turnDuration"].mean().reset_index(name="tagAvgStayTime")
+    tagAvgStayTime["turnDuration"] = (tagAvgStayTime["endedAt"] - tagAvgStayTime["startedAt"]).apply(lambda x: x.total_seconds())
+    
+    tagAvgStayTime = (
+        tagAvgStayTime
+        .groupby(["investSessionId", 'userId', 'age'])["turnDuration"]
+        .mean()
+        .reset_index(name="tagAvgStayTime")
+    )
 
     return tagAvgStayTime

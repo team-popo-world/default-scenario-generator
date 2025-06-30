@@ -25,6 +25,7 @@ def make_avg_stay_time(userId, filter: bool = False):
         
         # 데이터 로드
         df = load_invest_df(cols, "invest", False)
+        print("초기 로드 데이터 수:", len(df))
         if df.empty:
             return pd.DataFrame()
 

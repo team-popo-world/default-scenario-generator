@@ -94,6 +94,7 @@ call_api_task = PythonOperator(
     task_id='call_api',
     python_callable=call_api,
     dag=dag,
+    execution_timeout=timedelta(minutes=30),
 )
 
 generate_and_update_task = PythonOperator(

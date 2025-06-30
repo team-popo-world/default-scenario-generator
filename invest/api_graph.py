@@ -9,7 +9,7 @@ from invest.routers.graph import avg_stay_time_all, bet_ratio_all, bet_ratio_wee
 # three = graph3_all("956f51a8-d6a0-4a12-a22b-9da3cdffc879") # success
 # four = graph4_all("956f51a8-d6a0-4a12-a22b-9da3cdffc879") # success
 
-print(avg_stay_time_week("fa975c93-78ec-49c6-b60f-e70435f18c34"))
+print(avg_stay_time_all("fa975c93-78ec-49c6-b60f-e70435f18c34"))
 
 # one = make_bet_ratio("fa975c93-78ec-49c6-b60f-e70435f18c34", filter=False)
 # print(one)
