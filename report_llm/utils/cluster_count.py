@@ -50,12 +50,12 @@ def update_cluster_data(user_list):
     pivot_df = pivot_df.reset_index()
 
     # 누락된 cluster_1 ~ cluster_5 보정
-    for i in range(1, 6):
+    for i in range(1, 4):
         col = f"cluster_{i}"
         if col not in pivot_df.columns:
             pivot_df[col] = 0  # 누락된 경우 0으로 채움
 
     # 순서 정렬
-    pivot_df = pivot_df[["userId"] + [f"cluster_{i}" for i in range(1, 6)]]
+    pivot_df = pivot_df[["userId"] + [f"cluster_{i}" for i in range(1, 4)]]
 
     return pivot_df
